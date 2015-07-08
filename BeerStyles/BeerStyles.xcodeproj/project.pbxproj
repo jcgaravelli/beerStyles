@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3571B4AD24200DE27A5 /* AppDelegate.swift */; };
-		853CB35B1B4AD24200DE27A5 /* BeerStyles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3591B4AD24200DE27A5 /* BeerStyles.xcdatamodeld */; };
 		853CB35D1B4AD24200DE27A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB35C1B4AD24200DE27A5 /* ViewController.swift */; };
 		853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853CB35E1B4AD24200DE27A5 /* Main.storyboard */; };
 		853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3611B4AD24200DE27A5 /* Images.xcassets */; };
@@ -30,7 +29,6 @@
 		853CB3521B4AD24200DE27A5 /* BeerStyles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerStyles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CB3561B4AD24200DE27A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853CB3571B4AD24200DE27A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		853CB35A1B4AD24200DE27A5 /* BeerStyles.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeerStyles.xcdatamodel; sourceTree = "<group>"; };
 		853CB35C1B4AD24200DE27A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		853CB35F1B4AD24200DE27A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		853CB3611B4AD24200DE27A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				853CB35E1B4AD24200DE27A5 /* Main.storyboard */,
 				853CB3611B4AD24200DE27A5 /* Images.xcassets */,
 				853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */,
-				853CB3591B4AD24200DE27A5 /* BeerStyles.xcdatamodeld */,
 				853CB3551B4AD24200DE27A5 /* Supporting Files */,
 			);
 			path = BeerStyles;
@@ -217,7 +214,6 @@
 			files = (
 				853CB35D1B4AD24200DE27A5 /* ViewController.swift in Sources */,
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
-				853CB35B1B4AD24200DE27A5 /* BeerStyles.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +409,7 @@
 				853CB3761B4AD24200DE27A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		853CB3771B4AD24200DE27A5 /* Build configuration list for PBXNativeTarget "BeerStylesTests" */ = {
 			isa = XCConfigurationList;
@@ -421,21 +418,9 @@
 				853CB3791B4AD24200DE27A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		853CB3591B4AD24200DE27A5 /* BeerStyles.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				853CB35A1B4AD24200DE27A5 /* BeerStyles.xcdatamodel */,
-			);
-			currentVersion = 853CB35A1B4AD24200DE27A5 /* BeerStyles.xcdatamodel */;
-			path = BeerStyles.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 853CB34A1B4AD24100DE27A5 /* Project object */;
 }
