@@ -19,13 +19,33 @@ class ViewController: UIViewController {
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Object has been saved.")
         }
+        
+        retriveData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        let query = PFQuery(className: "GameScore")
+//        query.fromLocalDatastore()
+//        query.findObjectsInBackground().continueWithBlock({
+//            (task: BFTask?) -> AnyObject! in
+//            if let error = task?.error {
+//                // There was an error.
+//                return task
+//            }
+//            
+//            // Results were successfully found from the local datastore.
+//            
+//            return task
+//        })
+//        
+    }
 
 }
 
