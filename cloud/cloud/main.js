@@ -47,17 +47,36 @@ Parse.Cloud.job("recreateAll", function(request,status) {
 
   var glassPromises = [];
 
-  glassPromises.push(createGlass('Snifter3','Legal'));
-  glassPromises.push(createGlass('Snifter4','Legal'));
+  glassPromises.push(createGlass('Snifter'));
+  glassPromises.push(createGlass('Pint'));
+  glassPromises.push(createGlass('Tulip'));
+  glassPromises.push(createGlass('Flute'));
+  glassPromises.push(createGlass('Mug'));
+
+
+
 
   var stylePromises = [];
 
-  stylePromises.push(createStyle('Ramon4','Legalzao'));
+  stylePromises.push(createStyle('American Pale Ale'));
+  stylePromises.push(createStyle('American Amber Ale'));
+  stylePromises.push(createStyle('American Brown Ale'));
+  stylePromises.push(createStyle('Ordinary Bitter'));
+  stylePromises.push(createStyle('Best Bitter'));
+  stylePromises.push(createStyle('Strong Bitter'));
+  stylePromises.push(createStyle('British Golden Ale'));
+  stylePromises.push(createStyle('Autralian Sparkling Ale'));
+  stylePromises.push(createStyle('English Porter'));
+  stylePromises.push(createStyle('Baltic Porter'));
+  stylePromises.push(createStyle('Irish Stout'));
+  stylePromises.push(createStyle('English IPA'));
+
+
 
   Parse.Promise.when(stylePromises.concat(glassPromises)).then(function(){
     var relationPromises = [];
 
-    relationPromises.push(relate('Ramon4',['Snifter3','Snifter4']));
+    relationPromises.push(relate('American Pale Ale',['Pint','Mug']));
 
     Parse.Promise.when(relationPromises).then(function(){
       status.success('UHUUUUL');
