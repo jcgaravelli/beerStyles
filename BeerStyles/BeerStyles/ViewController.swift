@@ -31,20 +31,20 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let query = PFQuery(className: "GameScore")
-        query.fromLocalDatastore()
-        query.findObjectsInBackground().continueWithBlock({
-            (task: BFTask?) -> AnyObject! in
-            if let error = task?.error {
-                // There was an error.
-                return task
-            }
-            
-            // Results were successfully found from the local datastore.
-            
-            return task
-        })
-        
+//        let query = PFQuery(className: "GameScore")
+//        query.fromLocalDatastore()
+//        query.findObjectsInBackground().continueWithBlock({
+//            (task: BFTask?) -> AnyObject! in
+//            if let error = task?.error {
+//                // There was an error.
+//                return task
+//            }
+//            
+//            // Results were successfully found from the local datastore.
+//            
+//            return task
+//        })
+//        
     }
 
 }
