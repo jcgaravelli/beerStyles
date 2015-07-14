@@ -1,0 +1,17 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "BeerStyles": {
+      "applicationId": "fQEhXGky4VbrTjOnRmIz5ESUNKSeoVeoCO1vxecc",
+      "masterKey": "ZAR3EteoeSfK9xPavS2wPkKfx7KnWyEiAhgW4KDu"
+    },
+    "_default": {
+      "link": "BeerStyles"
+    },
+    "cloud": {
+      "link": "BeerStyles"
+    }
+  }
+}

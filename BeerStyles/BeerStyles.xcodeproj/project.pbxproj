@@ -17,6 +17,7 @@
 		6357274B1B549E7100F80934 /* FoodsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357274A1B549E7100F80934 /* FoodsCollectionViewController.swift */; };
 		6357274D1B549EC800F80934 /* CupsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357274C1B549EC800F80934 /* CupsCollectionViewCell.swift */; };
 		6357274F1B549EDB00F80934 /* FoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */; };
+		673838F61B4EF604003468AE /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673838F51B4EF604003468AE /* ParseManager.swift */; };
 		67806DF41B4DB50000904925 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806DEE1B4DB50000904925 /* Bolts.framework */; };
 		67806DF51B4DB50000904925 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806DEF1B4DB50000904925 /* Parse.framework */; };
 		67806DF61B4DB50000904925 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806DF01B4DB50000904925 /* ParseCrashReporting.framework */; };
@@ -62,6 +63,7 @@
 		6357274A1B549E7100F80934 /* FoodsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewController.swift; sourceTree = "<group>"; };
 		6357274C1B549EC800F80934 /* CupsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CupsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		673838F51B4EF604003468AE /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
 		67806DEE1B4DB50000904925 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		67806DEF1B4DB50000904925 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		67806DF01B4DB50000904925 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -217,6 +219,8 @@
 				6357272F1B4EC44C00F80934 /* Views */,
 				6357272E1B4EC43E00F80934 /* Controllers */,
 				853CB3571B4AD24200DE27A5 /* AppDelegate.swift */,
+				853CB35C1B4AD24200DE27A5 /* ViewController.swift */,
+				673838F51B4EF604003468AE /* ParseManager.swift */,
 				853CB35E1B4AD24200DE27A5 /* Main.storyboard */,
 				853CB3611B4AD24200DE27A5 /* Images.xcassets */,
 				853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */,
@@ -355,6 +359,8 @@
 				6357274D1B549EC800F80934 /* CupsCollectionViewCell.swift in Sources */,
 				6357273C1B50A33500F80934 /* MenuCollectionViewController.swift in Sources */,
 				635727431B549AE600F80934 /* CategoryCollectionViewCell.swift in Sources */,
+				853CB35D1B4AD24200DE27A5 /* ViewController.swift in Sources */,
+				673838F61B4EF604003468AE /* ParseManager.swift in Sources */,
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
 				635727471B549E0900F80934 /* TutorialCollectionViewController.swift in Sources */,
 				6357273A1B50A31F00F80934 /* MenuCollectionViewCell.swift in Sources */,
