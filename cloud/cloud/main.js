@@ -52,6 +52,18 @@ Parse.Cloud.job("recreateAll", function(request,status) {
   glassPromises.push(createGlass('Tulip'));
   glassPromises.push(createGlass('Flute'));
   glassPromises.push(createGlass('Mug'));
+  glassPromises.push(createGlass('Goblet'));
+  glassPromises.push(createGlass('Pilsner'));
+  glassPromises.push(createGlass('Stange'));
+  glassPromises.push(createGlass('Weizen'));
+  glassPromises.push(createGlass('Oversized Wine'));
+
+
+
+
+
+
+
 
 
 
@@ -70,6 +82,29 @@ Parse.Cloud.job("recreateAll", function(request,status) {
   stylePromises.push(createStyle('Baltic Porter'));
   stylePromises.push(createStyle('Irish Stout'));
   stylePromises.push(createStyle('English IPA'));
+  stylePromises.push(createStyle('American IPA'));
+  stylePromises.push(createStyle('Double IPA'));
+  stylePromises.push(createStyle('Dark Mild'));
+  stylePromises.push(createStyle('English Brown Ale'));
+  stylePromises.push(createStyle('Old Ale'));
+  stylePromises.push(createStyle('American Barleywine'));
+  stylePromises.push(createStyle('Witbier'));
+  stylePromises.push(createStyle('Belgian Pale Ale'));
+  stylePromises.push(createStyle('Saison'));
+  stylePromises.push(createStyle('Bière de Garde'));
+  stylePromises.push(createStyle('Irish Red Ale'));
+  stylePromises.push(createStyle('Scottish Light'));
+  stylePromises.push(createStyle('Scottish Heavy'));
+  stylePromises.push(createStyle('Scottish Export'));
+  stylePromises.push(createStyle('Scottish Wee Heavy'));
+  stylePromises.push(createStyle('Belgian Blond Ale'));
+  stylePromises.push(createStyle('Belgian Golden Strong Ale'));
+  stylePromises.push(createStyle('Belgian Dark Strong Ale'));
+  stylePromises.push(createStyle('Belgian Dubbel'));
+  stylePromises.push(createStyle('Belgian Tripel'));
+  stylePromises.push(createStyle('Weissbier'));
+  stylePromises.push(createStyle('Dunkles Weissbier'));
+  stylePromises.push(createStyle('Weizenbock'));
 
 
 
@@ -77,6 +112,24 @@ Parse.Cloud.job("recreateAll", function(request,status) {
     var relationPromises = [];
 
     relationPromises.push(relate('American Pale Ale',['Pint','Mug']));
+    relationPromises.push(relate('Old Ale',['Snifter','Oversized Wine']));
+    relationPromises.push(relate('Saison',['Tulip','Oversized Wine']));
+    relationPromises.push(relate('Bière de Garde',['Tulip','Oversized Wine']));
+    relationPromises.push(relate('Belgian Dark Strong Ale',['Snifter', 'Tulip', 'Goblet']));
+    relationPromises.push(relate('Scottish Wee Heavy',['Snifter','Tulip']));
+    relationPromises.push(relate('Belgian Dubbel',['Goblet']));
+    relationPromises.push(relate('Belgian Tripel',['Snifter', 'Goblet']));
+    relationPromises.push(relate('Weizenbock',['Flute', 'Weizen']));
+
+
+
+
+
+
+
+
+
+
 
     Parse.Promise.when(relationPromises).then(function(){
       status.success('UHUUUUL');
