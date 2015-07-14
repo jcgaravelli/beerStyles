@@ -1,80 +1,222 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv1-ah-5qu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Menu Collection View Controller-->
+        <scene sceneID="b0h-cR-5B0">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <collectionViewController id="4bT-bv-6nv" customClass="MenuCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Mbs-YF-gn7">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8IM-sM-fZL">
+                            <size key="itemSize" width="108" height="112"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Upi-An-RYu" customClass="MenuCollectionViewCell" customModule="BeerStyles">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="108" height="112"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vbD-Wc-5cK">
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="112"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vbD-Wc-5cK" secondAttribute="trailing" id="5dq-gp-VYf"/>
+                                    <constraint firstItem="vbD-Wc-5cK" firstAttribute="top" secondItem="Upi-An-RYu" secondAttribute="top" id="9ef-nz-Iph"/>
+                                    <constraint firstAttribute="bottom" secondItem="vbD-Wc-5cK" secondAttribute="bottom" id="PSn-D1-hW7"/>
+                                    <constraint firstItem="vbD-Wc-5cK" firstAttribute="leading" secondItem="Upi-An-RYu" secondAttribute="leading" id="VgB-Vl-tIZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageMenu" destination="vbD-Wc-5cK" id="pf2-8Q-GfP"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="4bT-bv-6nv" id="g6d-6Q-tr9"/>
+                            <outlet property="delegate" destination="4bT-bv-6nv" id="PiE-vr-nc7"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="9p5-y9-PHn"/>
+                    <connections>
+                        <segue destination="ari-jT-L4c" kind="show" identifier="ShowStyles" id="0MB-J0-kdz"/>
+                        <segue destination="EfK-SK-JAk" kind="show" identifier="ShowTutorial" id="BCl-aD-7Yj"/>
+                        <segue destination="2hb-CT-Fm2" kind="show" identifier="ShowCups" id="XUG-l9-idd"/>
+                        <segue destination="fYM-be-J61" kind="show" identifier="ShowFoods" id="IH2-Nx-2u0"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSd-If-KEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="193"/>
+            <point key="canvasLocation" x="189" y="189"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="q1a-vf-6XZ">
+        <!--Styles-->
+        <scene sceneID="3gP-iv-aio">
             <objects>
-                <viewController id="8Fl-Qk-GwG" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XtU-ag-UQ0"/>
-                        <viewControllerLayoutGuide type="bottom" id="Z7y-Vp-txM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1HK-Yg-Ide">
+                <collectionViewController title="Styles" id="ari-jT-L4c" customClass="CategoryCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fGv-t7-FoI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zHx-qg-Ypf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IOb-cm-nNL">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="X64-uT-Hoi">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ari-jT-L4c" id="Ift-6l-wPF"/>
+                            <outlet property="delegate" destination="ari-jT-L4c" id="B4r-3g-snF"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Styles" id="kbq-sa-sTI"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJX-Lo-SWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="193"/>
+            <point key="canvasLocation" x="1019" y="-593"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="XrA-Yu-F7S">
+        <!--Tutorial-->
+        <scene sceneID="1L8-NQ-DSB">
             <objects>
-                <viewController id="lIB-8Y-YKe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G1z-42-jIB"/>
-                        <viewControllerLayoutGuide type="bottom" id="bCB-rF-fIP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="F30-8n-c5Q">
+                <collectionViewController id="EfK-SK-JAk" customClass="TutorialCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GUf-YP-Zml">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nsw-T4-bIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fY5-mA-CNP">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="jM1-CQ-7Xl">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="EfK-SK-JAk" id="qay-Xg-c67"/>
+                            <outlet property="delegate" destination="EfK-SK-JAk" id="Utg-fR-j4N"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Tutorial" id="3Sx-vM-qTp"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3V-wW-KuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344" y="189"/>
+            <point key="canvasLocation" x="1713" y="189"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="p6V-TW-gHJ">
+        <!--Cups-->
+        <scene sceneID="MbN-qS-cba">
             <objects>
-                <viewController id="AdV-2d-shJ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Z9w-lt-edj"/>
-                        <viewControllerLayoutGuide type="bottom" id="8ze-wA-xm9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3PD-zh-czE">
+                <collectionViewController id="2hb-CT-Fm2" customClass="CupsCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rb5-Hs-biJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yhc-2X-eFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nzd-3k-qZS">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Cyq-kN-lZe">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="2hb-CT-Fm2" id="o1r-1T-JmR"/>
+                            <outlet property="delegate" destination="2hb-CT-Fm2" id="sjk-kl-BrT"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Cups" id="mr2-Y8-dkT"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q2R-AB-Iqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991" y="189"/>
+            <point key="canvasLocation" x="1713" y="979"/>
+        </scene>
+        <!--foods-->
+        <scene sceneID="X3A-md-f7v">
+            <objects>
+                <collectionViewController title="foods" id="fYM-be-J61" customClass="FoodsCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="XLe-yJ-6LU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ect-0c-Wdv">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="v7B-u9-ecJ">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fYM-be-J61" id="i4c-2L-SVx"/>
+                            <outlet property="delegate" destination="fYM-be-J61" id="f1d-26-i3z"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="foods" id="gly-5o-VgQ"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8n-Nb-Cb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="1797"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AR3-gq-cGn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sv1-ah-5qu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6oL-ZV-GVv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4bT-bv-6nv" kind="relationship" relationship="rootViewController" id="F44-Ie-O7w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqK-KW-uOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-663" y="189"/>
         </scene>
     </scenes>
 </document>
