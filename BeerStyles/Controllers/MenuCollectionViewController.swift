@@ -14,7 +14,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
 
     let reuseIdentifier = "cell"
     var imagesMenu : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
-        var screenSize : CGRect!
+    var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
     

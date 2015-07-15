@@ -66,7 +66,7 @@
 		6357274A1B549E7100F80934 /* FoodsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewController.swift; sourceTree = "<group>"; };
 		6357274C1B549EC800F80934 /* CupsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CupsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewCell.swift; sourceTree = "<group>"; };
-		673838F51B4EF604003468AE /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseManager.swift; sourceTree = "<group>"; };
+		673838F51B4EF604003468AE /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseManager.swift; path = ../BeerStyles/ParseManager.swift; sourceTree = "<group>"; };
 		674272461B553A520018D7EC /* FatherStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatherStyleViewController.swift; sourceTree = "<group>"; };
 		674272481B557A7E0018D7EC /* StyleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleTableViewController.swift; path = Controllers/StyleTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		6742724A1B557F220018D7EC /* StyleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleDetailViewController.swift; path = Controllers/StyleDetailViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -144,6 +144,7 @@
 				674272461B553A520018D7EC /* FatherStyleViewController.swift */,
 				674272481B557A7E0018D7EC /* StyleTableViewController.swift */,
 				6742724A1B557F220018D7EC /* StyleDetailViewController.swift */,
+				673838F51B4EF604003468AE /* ParseManager.swift */,
 			);
 			name = Controllers;
 			path = ../Controllers;
@@ -228,7 +229,6 @@
 				6357272F1B4EC44C00F80934 /* Views */,
 				6357272E1B4EC43E00F80934 /* Controllers */,
 				853CB3571B4AD24200DE27A5 /* AppDelegate.swift */,
-				673838F51B4EF604003468AE /* ParseManager.swift */,
 				853CB35E1B4AD24200DE27A5 /* Main.storyboard */,
 				853CB3611B4AD24200DE27A5 /* Images.xcassets */,
 				853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */,

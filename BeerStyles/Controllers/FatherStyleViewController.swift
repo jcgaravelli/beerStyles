@@ -13,6 +13,10 @@ import Parse
 
 
 class FatherStyleViewController: PFQueryTableViewController {
+    
+    
+    
+    
     // Initialise the PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -31,6 +35,7 @@ class FatherStyleViewController: PFQueryTableViewController {
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
         var query = PFQuery(className: "FatherStyle")
+        
         query.orderByAscending("name")
         return query
     }
@@ -50,11 +55,56 @@ class FatherStyleViewController: PFQueryTableViewController {
         
         return cell
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        
+        
+        var row = Int(indexPath.row)
+       
+        
+        performSegueWithIdentifier("fatherToSon", sender: objects?[row])
+    }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "fatherToSon" {
+            if let destination = segue.destinationViewController as? StyleTableViewController {
+
+                    destination.fatherObject = (sender as! PFObject)
+                }
+            }
+    
+    }
+//
+
+        
+
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        println("break1")
+//        if segue.identifier == "fatherToSon" {
+//             println(segue.identifier)
+//            
+//                    }var destination = segue.destinationViewController as! PFQueryCollectionViewController
+//            println("break3")
+//                if let indexPath = tableView.indexPathForSelectedRow()?.row
+//                {
+//                    println("break4")
+//                    let row = Int(indexPath)
+//                   
+//                    fatherObject = (objects?[row] as! PFObject)
+//                }
+//            }
+
+
     
     
     
 }
-    
-    
+
+
+
 
 

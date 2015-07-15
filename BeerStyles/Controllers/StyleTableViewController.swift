@@ -13,7 +13,7 @@ import Parse
 class StyleTableViewController: PFQueryTableViewController {
 
     
-    
+    var fatherObject: PFObject!
     
     // Initialise the PFQueryTable tableview
    
@@ -35,10 +35,15 @@ class StyleTableViewController: PFQueryTableViewController {
     
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
+        var objectID = fatherObject
+        //var pointer: AnyObject! = objectID["objectID"]
         var query = PFQuery(className: "Style")
         query.orderByAscending("name")
+        query.whereKey("fatherStyle", equalTo:fatherObject)
+
         return query
     }
+
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
@@ -59,8 +64,7 @@ class StyleTableViewController: PFQueryTableViewController {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Rovinha é o novo campeão")
-        performSegueWithIdentifier("tableToDetail", sender: indexPath)
+        performSegueWithIdentifier("tableToDetail", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -82,19 +86,7 @@ class StyleTableViewController: PFQueryTableViewController {
     
     
     
-    //In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        // Get the new view controller using [segue destinationViewController].
-//        var detailScene = segue.destinationViewController as! StyleDetailViewController
-//        
-//        // Pass the selected object to the destination view controller.
-//        if let indexPath = self.tableView.indexPathForSelectedRow() {
-//            let row = Int(indexPath.row)
-//            //detailScene.currentObject = (objects?[row] as! PFObject)
-//        }
-//    }
-//    
+
 
     
     
