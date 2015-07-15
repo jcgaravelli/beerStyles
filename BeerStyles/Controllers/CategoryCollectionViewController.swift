@@ -12,7 +12,9 @@ import UIKit
 class CategoryCollectionViewController: UICollectionViewController {
     
     let reuseIdentifier = "cell"
-
+    var imagesMenu : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,13 +46,12 @@ class CategoryCollectionViewController: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
-        return 0
-    }
+        return imagesMenu.count    }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return 0
+        return 1
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
