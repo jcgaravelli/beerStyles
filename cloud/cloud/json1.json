@@ -1,0 +1,32 @@
+{
+   "Style":[
+      {
+         "name":"Argentina",
+         "country":"Uruguai",
+         "description":"HUEHUE",
+         "characteristics":"",
+         "abvMin":3,
+         "abvMax":5,
+         "tempMin":-2,
+         "tempMax":15,
+         "food":"Steak",
+         "glasses":["Pint","Tulip"],
+         "fatherStyle":"Stout"
+      },
+         {
+            "name":"Argentina",
+            "country":"Uruguai",
+            "description":"HUEHUE",
+            "characteristics":"",
+            "abvMin":3,
+            "abvMax":5,
+            "tempMin":-2,
+            "tempMax":15,
+            "food":"Steak",
+            "glasses":["Pint","Tulip"],
+            "fatherStyle":"Stout"
+         }
+   ],
+   "Glass":[],
+   "FatherStyle":[]
+}
