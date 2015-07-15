@@ -61,10 +61,10 @@ class CategoryCollectionViewController: UICollectionViewController {
         return cell
     }
 
-    @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
+//    @IBAction func cancel(sender: UIBarButtonItem) {
+//        dismissViewControllerAnimated(true, completion: nil)
+//    }
+//    
     // MARK: UICollectionViewDelegate
 
     /*

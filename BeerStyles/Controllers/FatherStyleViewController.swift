@@ -34,6 +34,22 @@ class FatherStyleViewController: PFQueryTableViewController {
         query.orderByAscending("name")
         return query
     }
+    //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! PFTableViewCell!
+        if cell == nil {
+            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        }
+        
+        // Extract values from the PFObject to display in the table cell
+        if let nameEnglish = object?["name"] as? String {
+            cell?.textLabel?.text = nameEnglish
+        }
+   
+        
+        return cell
+    }
     
     
     
