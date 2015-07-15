@@ -1,725 +1,857 @@
 
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <title>Tibia - Free Multiplayer Online Role Playing Game - Account</title>
-  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />  <meta name="description" content="Tibia is a free massively multiplayer online role-playing game (MMORPG). Join this fascinating game that has thousands of fans from all over the world! - http://www.tibia.com" />
-  <meta name="author" content="CipSoft GmbH" />
-  <meta http-equiv="content-language" content="en" />
-  <meta name="keywords" content="free online game, free multiplayer game, free online rpg, free mmorpg, mmorpg, mmog, online role playing game, online multiplayer game, internet game, online rpg, rpg" />
-  <meta name="google-site-verification" content="DnO3wR8m-XUPrU02NoZt9x3vMB0fjpOXXJshbKucEj8" />
+<script type="text/javascript" src="http://blog.dota2.com/wp-includes/js/jquery/jquery.js"></script>
+<script language="javascript">
+var bForceClientView = false;
+var languageMap = {
+	'english': 'blog',
+	'russian': 'ru',
+	'spanish': 'es',
+	'french': 'fr',
+	'german': 'de',
+	'chinese': 'cn',
+	'schinese': 'cn',
+	'tchinese': 'cn',
+	'portuguese': 'br',
+	'brazilian': 'br',
+	'korean': 'kr',
+	'koreana': 'kr'
+};
 
-  <!--  regular browsers -->
-  <link rel="shortcut icon" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/favicon.ico" type="image/x-icon">
-  <!-- For iPad with high-resolution Retina display running iOS = 7: -->
-  <link rel="apple-touch-icon" sizes="152x152" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon-152x152.png">
-  <!-- For iPad with high-resolution Retina display running iOS = 6: -->
-  <link rel="apple-touch-icon" sizes="144x144" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon-144x144.png">
-  <!-- For iPhone with high-resolution Retina display running iOS = 7: -->
-  <link rel="apple-touch-icon" sizes="120x120" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon-120x120.png">
-  <!-- For iPhone with high-resolution Retina display running iOS = 6: -->
-  <link rel="apple-touch-icon" sizes="114x114" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon-114x114.png">
-  <!-- For the iPad mini and the first- and second-generation iPad on iOS = 7: -->
-  <link rel="apple-touch-icon" sizes="76x76" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon-76x76.png">
-  <!-- For the iPad mini and the first- and second-generation iPad on iOS = 6: -->
-  <link rel="apple-touch-icon" sizes="72x72" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon-72x72.png">
-  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-  <link rel="apple-touch-icon" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon.png">
-  <!-- Fallback for older devices: -->
-  <link rel="apple-touch-icon-precomposed" href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/apple-touch-icon-precomposed.png">
+var queryArgs = document.location.search.substring(1).split('&');
+argsParsed = {};
+for (i=0; i < queryArgs.length; i++)
+{
+    arg = unescape(queryArgs[i]);
+    if (arg.indexOf('=') == -1)
+    {
+        argsParsed[arg.trim()] = true;
+    }
+    else
+    {
+        keyValuePair = arg.split('=');
+        argsParsed[keyValuePair[0].trim()] = keyValuePair[1].trim();
+    }
+}
+if ( argsParsed['l'] && languageMap[argsParsed['l']] )
+{
+	domain = languageMap[argsParsed['l']] + '.dota2.com';
+	if ( location.href.indexOf( domain ) == -1 && location.href.indexOf( 'blog.dota2.com' ) != -1 )
+	{
+		newURL = location.href.replace( 'blog.dota2.com', domain );
+		location.href = newURL;
+	}
 
-  <link href="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/styles/basic_d.css?version=420a0cf1302f34c0ea26436b26dd6bd6" rel="stylesheet" type="text/css">
-
-  <script type="text/javascript" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/javascripts/extern/jquery.js" ></script>
-  <script type="text/javascript" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/javascripts/extern/jquery_ui/jquery-ui.core.js" ></script>
-  <script type="text/javascript" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/javascripts/extern/jquery_ui/jquery-ui.widgets.js" ></script>
-  <script type="text/javascript" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/javascripts/ajax/ajaxcip.js" ></script>
-    <script type="text/javascript" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/javascripts/generic.js?version=162424c1525895fb7aa44914903651ca" ></script>
-  <script type='text/javascript'>  var loginStatus=0; loginStatus='false';  var activeSubmenuItem='accountmanagement';  var JS_DIR_IMAGES=0; JS_DIR_IMAGES='https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/';  var JS_DIR_ACCOUNT=0; JS_DIR_ACCOUNT='https://secure.tibia.com/account/';  var g_FormName='';  var g_FormField='';  var g_Deactivated=false;  var g_FlashClientInPopUp=true;var FB_TryLogin = 0;var FB_ForceReload = 0;</script><script type="text/javascript" >
-  if(top.location != window.location) {
-    g_FlashClientInPopUp = false;
-  }
+}
+if ( argsParsed['clientview'] )
+{
+	bForceClientView = true;
+}
+var locSuffix = '';
+for ( var lang in languageMap )
+{
+	if ( lang == 'english' )
+		continue;
+	domain = languageMap[lang] + '.dota2.com';
+	if ( location.href.indexOf( domain ) != -1 )
+	{
+		locSuffix = '_' + languageMap[lang];
+	}
+}
 </script>
-  <script type="text/javascript" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/javascripts/initialize.js?version=84b006a17f10638ad20e77ad1647b8df" ></script>
+<link rel="shortcut icon" href="http://www.dota2.com/images/favicon.ico" type="image/x-icon" />
+<meta charset="UTF-8" />
+<title>Dota 2</title>
 
+<link rel="stylesheet" href="http://br.dota2.com/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=3.1.9.6" type="text/css" media="all" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://br.dota2.com/wp-content/themes/dota2_2014/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="http://cdn.dota2.com/apps/dota2/css/static/font_goudytrajan.css" />
+<link rel="pingback" href="http://br.dota2.com/xmlrpc.php" />
+<!-- image for sharing on reddit/facebook -->
+<link rel="image_src" href="http://br.dota2.com/images/logo_112.png" />
+<link rel="alternate" type="application/rss+xml" title="Dota 2 &raquo; Feed" href="http://br.dota2.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dota 2 &raquo; Comments Feed" href="http://br.dota2.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"http:\/\/br.dota2.com\/wp-includes\/js\/wp-emoji.js?ver=4.2.2","twemoji":"http:\/\/br.dota2.com\/wp-includes\/js\/twemoji.js?ver=4.2.2"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://br.dota2.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://br.dota2.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.2.2" />
+<meta name="generator" content="WPML ver:3.1.9.6 stt:44,61,1,4,3,47,2,29;0" />
+<link rel="alternate" hreflang="en-US" href="http://blog.dota2.com/" />
+<link rel="alternate" hreflang="zh-CN" href="http://cn.dota2.com/" />
+<link rel="alternate" hreflang="fr-FR" href="http://fr.dota2.com/" />
+<link rel="alternate" hreflang="de-DE" href="http://de.dota2.com/" />
+<link rel="alternate" hreflang="ru-RU" href="http://ru.dota2.com/" />
+<link rel="alternate" hreflang="es-ES" href="http://es.dota2.com/" />
+<link rel="alternate" hreflang="pt-BR" href="http://br.dota2.com/" />
+<link rel="alternate" hreflang="ko-KR" href="http://kr.dota2.com/" />
+
+<style type="text/css">#lang_sel_list a.lang_sel_sel, #lang_sel_list ul a, #lang_sel_list ul a:visited, #lang_sel_list_list ul a:visited, #lang_sel_list a, #lang_sel_list a:visited, #lang_sel_list li { border:none; border-width:0; padding:0; margin:0; color: #9c3021; font-family: Georgia, \\\"Bitstream Charter\\\", serif; background-color:transparent; font-size:12px; line-height:16px; }
+
+</style><script language="javascript">
+function populateUniqueUsers( dataJSON )
+{
+	if ( dataJSON['users_last_month'] )
+	{
+		jQuery('#rightColPlayerCountNum').html( addCommas( dataJSON['users_last_month'] ) );
+	}
+}
+function populatePrizePool( dataJSON )
+{
+	if ( dataJSON['dollars'] )
+	{
+		jQuery('#prizeVal').html( '$' + addCommas( dataJSON['dollars'] ) );
+	}
+}
+function addCommas(nStr)
+{
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1))
+	{
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
+jQuery(document).ready(
+	function()
+	{
+//		topLocImage = 'http://cdn.dota2.com/apps/dota2/images/blogfiles/bg_compendium_2014' + locSuffix + '.jpg';
+//		jQuery('#calloutHeader').css( 'background-image', 'url('+topLocImage+')' );
+		var baseURL = ( location.protocol == 'https:' ) ? 'https://www.dota2.com/' : 'http://www.dota2.com/';
+		URL = baseURL + 'jsfeed/uniqueusers';
+		jQuery.ajax(
+			{
+				type:'GET',
+				cache:true,
+				url: URL,
+				dataType:'jsonp',
+				jsonpCallback:'populateUniqueUsers'
+			}
+		);
+//		URL = baseURL + 'jsfeed/intlprizepool';
+//		jQuery.ajax(
+//			{
+//				type:'GET',
+//				cache:true,
+//				url: URL,
+//				dataType:'jsonp',
+//				jsonpCallback:'populatePrizePool'
+//			}
+//		);
+	}
+);
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33822635-11']);
+  _gaq.push(['_setDomainName', 'dota2.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 
-<body onBeforeUnLoad="SaveMenu();" onUnload="SaveMenu();" onLoad="SetFormFocus()" >
-  <script type="text/javascript" >
-var g_FB_LoginURL = "";
+<body class="home blog">
+<div id="navBarShadowOnly"></div>
+<div id="navBarBGRepeat" style="display:none;">
+	<div id="navBarBGRepeat">
+		<div id="navBarShadow"></div>
+		<div id="navBarBG">
+			<div id="navBar">
+				<div id="navLoginAndLanguage">
+					<div id="languageSelector">
+						<a href="javascript:void(0)">Language</a> <img style="padding-bottom: 2px;" src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/btn_arrow_down.png" width="9" height="4" border="0" /><br />
+						<div style="display:none;" id="languageList">
+								<a class="languageItem" href="http://blog.dota2.com">English</a>
+								<a class="languageItem" href="http://es.dota2.com">Spanish</a>
+								<a class="languageItem" href="http://de.dota2.com">German</a>
+								<a class="languageItem" href="http://fr.dota2.com">French</a>
+								<a class="languageItem" href="http://kr.dota2.com">Korean</a>
+								<a class="languageItem" href="http://br.dota2.com">Portuguese</a>
+								<a class="languageItem" href="http://ru.dota2.com">Russian</a>
+								<a class="languageItem" href="http://cn.dota2.com">Chinese</a>
+						</div>
+					</div>
+				</div>
+				<span class="navItem">
+					<a class="navBarItem" href="http://blog.dota2.com/">
+						<img border="0" class="top" src="http://cdn.dota2.com/apps/dota2/images/nav/en_dota_logo_over.png"/>
+						<img border="0" class="bottom" src="http://cdn.dota2.com/apps/dota2/images/nav/en_dota_logo.png"/>
+					</a>
+				</span>
+				<span class="navItem">
+					<a class="navBarItem" href="http://www.dota2.com/store/">Store</a>
+				</span>
+				<span class="navItem">
+					<a class="navBarItem" href="javascript:void(0)">Heropedia</a>
+					<div style="display:none;" class="menuSubItemList">
+						<a href="http://www.dota2.com/heroes/">Heroes</a>
+						<a href="http://www.dota2.com/items/">Item Explorer</a>
+						<a href="http://www.dota2.com/workshop/builds">Builds</a>
+						<a href="http://steamcommunity.com/app/570/guides" target="_blank">Steam Guides</a>
+						<a href="http://www.dota2.com/quiz">The Shopkeeper's Quiz</a>
+					</div>
+					<img class="dn_arrow" src="http://cdn.dota2.com/apps/dota2/images/nav/arrow.png"/>
+				</span>
+				<span class="navItem">
+					<a class="navBarItem" href="http://steamcommunity.com/workshop/dota2/" target="_blank">Workshop<img class="external_img" src="http://cdn.dota2.com/apps/dota2/images/nav/external.png" /></a>
+				</span>
+				<!--<span class="navItem">
+					<a class="navBarItem" href="http://www.playdota.com/forums/" target="_blank">Forums<img class="external_img" src="http://cdn.dota2.com/apps/dota2/images/nav/external.png" /></a>
+				</span> -->
+			</div>
+		</div>
+	</div>
+</div>
+<script language="javascript">
+
+	function MM_preloadImages() { //v3.0
+	  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}
+
+	function PreloadHeaderImages()
+	{
+		//  Preload header rollover images
+		MM_preloadImages(
+			'http://cdn.dota2.com/apps/dota2/images/nav/en_dota_logo_over.png'
+		);
+	}
+
+			if ( document.addEventListener ) {
+		document.addEventListener( "DOMContentLoaded", PreloadHeaderImages, false );
+	} else if ( document.attachEvent ) {
+		document.attachEvent( 'onDomContentLoaded', PreloadHeaderImages );
+	}
+
 </script>
-<div id="fb-root" ></div><script type="text/javascript" >
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : 497232093667125, // App ID
-      status     : true,              // check login status
-      cookie     : true,              // enable cookies to allow the server to access the session
-      xfbml      : true,              // parse XFBML
-      version    : "v2.3"             // API version
-    });
-    FB.Event.subscribe('auth.login', function() {
-      var URLHelper = "?";
-      if (window.location.search.replace("?", "").length > 0) {
-        URLHelper = "&";
-      }
-      if (FB_TryLogin == 1) {
-        window.location = "https://secure.tibia.com/mmorpg/free-multiplayer-online-role-playing-game.php" + window.location.search + URLHelper + "step=facebooktrylogin&wasreloaded=1";
-      } else if (FB_TryLogin == 2) {
-        window.location = window.location + URLHelper + "page=facebooktrylogin&wasreloaded=1";
-      } else {
-      }
-    });
-    FB.Event.subscribe('auth.logout', function(a_Response) {
-      if (a_Response.status !== 'connected') {
-        window.location.href=window.location.href;
-      } else {
-        /* nothing to do here*/
-      }
-    });
-    FB.Event.subscribe('auth.statusChange', function(response) {
-      if (FB_ForceReload == 1 && response.status == "connected") {
-        var URLHelper = "?";
-        if (window.location.search.replace("?", "").length > 0) {
-          URLHelper = "&";
-        }
-        window.location = window.location + URLHelper + "step=facebooktrylogin&wasreloaded=1";
-      }
-    });
-  };
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+<script language="javascript">
+function closeSubMenu( target ) {
+	jQuery(target).find('.dn_arrow').attr( "src", "http://cdn.dota2.com/apps/dota2/images/nav/arrow.png" );
+	jQuery(target).find('.menuSubItemList').hide();
+}
+
+function closeAllSubMenus() {
+	jQuery('.navItem').each( function() {
+		closeSubMenu( jQuery(this) );
+	});
+}
+
+function openSubMenu( target ) {
+	closeAllSubMenus();
+
+	jQuery(target).find('.dn_arrow').attr( "src", "http://cdn.dota2.com/apps/dota2/images/nav/arrow_over.png" );
+
+	// Show the sub-menu
+	var subItemList = jQuery(target).find('.menuSubItemList');
+	if ( subItemList.length ) {
+		var itemTop = jQuery(target).position().top + jQuery(target).outerHeight();
+		var itemLeft = jQuery(target).position().left;
+		subItemList
+			.css({
+				"top": itemTop,
+				"left": itemLeft
+			})
+			.fadeIn( 'fast' );
+	}
+}
+
+jQuery(document).ready( function () {
+	// Deal with the nav bars
+	jQuery('.navItem').each( function() {
+		jQuery(this).hover( function () {
+			jQuery(this)
+				.find('a.navBarItem img.top')
+				.animate({
+					"opacity": 1
+				}, 100 );
+			if ( jQuery(this).find('.menuSubItemList').length !== 0 ) {
+				openSubMenu( this );
+			}
+		},
+		function () {
+			jQuery(this)
+			.find('a.navBarItem img.top')
+			.animate({
+				"opacity": 0
+			}, 100 );
+			if ( jQuery(this).find('.menuSubItemList').length !== 0 ) {
+				closeSubMenu(this);
+			}
+		}
+		);
+	});
+
+	// Deal with header drop-downs
+	var strMenus = '#languageSelector';
+					strMenus += ',#adminSelector';
+		strMenus += ',#supportSelector';
+
+	jQuery(strMenus).each( function() {
+		jQuery(this).hover( function () {
+			//show its submenu
+			jQuery( this ).find( 'div' ).fadeIn( 'fast' );
+		},
+		function () {
+			//hide its submenu
+			jQuery( this ).find( 'div' ).hide();
+		}
+		);
+	});
+});
+</script>
+<!--
+<div id="calloutHeader">
+	<div id="calloutHeaderLink">
+		<div id="calloutHeaderLink"><a href="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/keyart_rubik.png"><img src="http://br.dota2.com/wp-includes/images/blank.gif" width="938" height="377" border="0" /></a></div>
+	</div>
+</div>
+-->
+<script language="javascript">
+//var rand = Math.random();
+//var which = ( rand < .34 ) ? 'ezalor' : ( rand < .67 ? 'nyx' : 'visage' );
+//document.write( '<div id="calloutHeader" style="background-image:url(\'http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/bg_'+which+'.jpg\');">' );
+//document.write( '<div id="calloutHeaderLink"><a href="http://www.dota2.com/hero/'+(which == 'ezalor' ? 'Keeper_of_the_Light/' : ( which == 'nyx' ? 'Nyx_Assassin/' : 'Visage/'))+'"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="938" height="377" border="0" /></a></div>' );
+//document.write( '</div>' );
+</script>
+<div id="calloutHeader" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/bg_thebetaisover.jpg');">
+	<div id="calloutHeaderLink"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="938" height="377" border="0" /></div>
+</div>
+<div id="calloutHeaderCompendium" style="display:none; background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/bg_ti5_compendium_header.jpg');">
+	<div id="calloutHeaderCompendiumLink"><a href="http://www.dota2.com/international/compendium/"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="938" height="377" border="0" /></a></div>
+</div>
+<div id="mainContentSideBG">
+	<div id="mainContentBG">
+		<div id="mainContent">
+			<div id="rightColHeaderImage"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rightcol_bg_top.png" width="292" height="24" border="0" /></div>
+			<div id="noTabArea"></div>
+			<div id="tabArea" style="display:none;">
+				<!--<img id="tabAreaBG" src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/tabs_bg.png" width="659" height="61" border="0" />-->
+				<div style="margin-left:4px;">
+					<a href="?" class="btn_tab_on fl_left">
+						<div class="btn_left"></div>
+						<div class="btn_right"></div>
+						BLOG					</a>
+						<div class="tab_split"></div>
+					<a href="http://www.dota2.com/news/updates/" class="btn_tab fl_left">
+						<div class="btn_left"></div>
+						<div class="btn_right"></div>
+						UPDATES					</a>
+					<div class="tab_split"></div>
+				</div>
+			</div>
+<script language="javascript">
+if ( navigator.userAgent.toLowerCase().indexOf('dota 2 client') == -1 && !bForceClientView )
+{
+	document.getElementById('navBarShadowOnly').style.display = 'none';
+	document.getElementById('navBarBGRepeat').style.display = 'block';
+	document.getElementById('noTabArea').style.display = 'none';
+	document.getElementById('tabArea').style.display = 'block';
+}
+else
+{
+	document.getElementById('calloutHeader').style.display = 'none';
+	document.getElementById('calloutHeaderCompendium').style.display = 'block';
+}
+</script>
+		<div id="primary" >
+
+			<a class="hoverBG" style="display:none" id="rightColGetDotaLink" href="http://store.steampowered.com/app/570/"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="264" height="77" border="0" /></a>
+				<div id="rightColPlayerCount"><div id="rightColPlayerCountNum">Loading..</div></div>
+<script language="javascript">
+if ( navigator.userAgent.toLowerCase().indexOf('dota 2 client') == -1 && !bForceClientView )
+{
+	document.getElementById('rightColGetDotaLink').style.display = 'block';
+}
+jQuery( function()
+	{
+		if ( navigator.userAgent.toLowerCase().indexOf('dota 2 client') != -1 || bForceClientView )
+		{
+			jQuery('.rcbLink').each( function() {
+				if ( !jQuery(this).hasClass( 'noClientHide' ) )
+					jQuery(this).hide();
+			} );
+		}
+	}
+);
 </script>
 
-  <div id="DeactivationContainer" onClick="DisableDeactivationContainer();" ></div>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/international/compendium/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_ti5compendium.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
 
-  <a name="top" ></a>
-  <div id="DeactivationContainer" onClick="DisableDeactivationContainer();" ></div>
+			<div id="recentPostsTopBar"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rightcol_recentposts_top.png" width="294" height="10" border="0" /></div>
+			<div id="recentPostsSearchArea">
+				<div id="rightColSearchArea">
+					<form role="search" method="get" id="searchform" action="http://br.dota2.com/">
+					<input id="rightColSearchInput" type="text" value="Search" onfocus="if(this.value=='Search'){this.value=''}" onblur="if(this.value==''){this.value='Search'}" name="s" id="s" />
+					<input type="image" id="rightColSearchSubmit" src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/searchbar_submit.jpg" width="21" height="20" border="0" />
+					</form>
+				</div>
+						<div class="widget valve_widget_recent_entries">
+									<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/07/tesouro-imortal-iii-e-novos-visuais-de-mascote/" title="Tesouro Imortal III e novos visuais de mascote">Tesouro Imortal III e novos visuais de mascote</a>
+				<div class="recent_entry_date">Jul. 13 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/07/a-egide-dos-colecionadores/" title="A Égide dos Colecionadores">A Égide dos Colecionadores</a>
+				<div class="recent_entry_date">Jul. 8 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/dota-2-renascido-que-o-beta-comece/" title="Dota 2 renascido: Que o beta comece">Dota 2 renascido: Que o beta comece</a>
+				<div class="recent_entry_date">Jun. 17 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/dota-2-renascido-modos-personalizados/" title="Dota 2 renascido: Modos personalizados">Dota 2 renascido: Modos personalizados</a>
+				<div class="recent_entry_date">Jun. 16 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/estamos-apresentando-hoje-a-fase-beta-dedota-2-reborn-trazendo-uma-nova-interface-motor-e-jogos-personalizados-o-painel-foi-completamente-redesenhado-utilizando-uma-nova-estrutura-de-interface-de/" title="Dota 2 Reborn">Dota 2 Reborn</a>
+				<div class="recent_entry_date">Jun. 12 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/suplemento-de-colecionador/" title="Suplemento de Colecionador">Suplemento de Colecionador</a>
+				<div class="recent_entry_date">Jun. 5 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/novas-recompensas-do-compendio-e-efigies-de-espectador/" title="Novas recompensas do Compêndio e Efígies de Espectador">Novas recompensas do Compêndio e Efígies de Espectador</a>
+				<div class="recent_entry_date">May. 28 2015</div>
+			</div>
+									</div>				<div id="recentPostsBottomBar"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rightcol_recentposts_bot.png" width="294" height="10" border="0" /></div>
+			</div>
 
-  <div id="MainHelper1" >
-    <div id="MainHelper2" >
-      <div id="ArtworkHelper1" >
-        <div id="ArtworkHelper2" >
-          <div id="HeaderArtworkDiv" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/header/background-artwork.jpg);" ></div>
-        </div>
-      </div>
+			<a class="hoverBG" id="lbLink" href="http://www.dota2.com/leaderboards/" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_leaderboards.png');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="262" height="48" border="0" /></a>
 
-      <div id="Bodycontainer" >
-        <div id="ContentRow">
-          <div id="MenuColumn">
-            <div id="LeftArtwork">
-              <a href="https://secure.tibia.com/mmorpg/free-multiplayer-online-role-playing-game.php" ><img id="TibiaLogoArtworkTop" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/header/tibia-logo-artwork-top.gif" alt="logoartwork" /></a>
-              <img id="LogoLink" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/header/tibia-logo-artwork-string.gif" onClick="window.location = 'http://www.tibia.com/abouttibia/?subtopic=aboutcipsoft';" alt="logoartwork" />
-            </div>
+			<div id="rightColDotaLinks">
+				<a id="dotaLinkImgPlayDota" class="rightColDotaLinkImg" href="http://www.playdota.com/forums/" target="_blank"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/link_icon_playdota.png" width="25" height="28" border="0" /></a>
+				<a id="dotaLinkPlayDota" class="rightColDotaLink" href="http://www.playdota.com/forums/" target="_blank">PlayDota Forums</a>
 
-  <div id="Loginbox" >
-    <div id="LoginTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/box-top.gif)" ></div>
-    <div id="BorderLeft" class="LoginBorder" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif)" ></div>
-    <div id="LoginButtonContainer" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/loginbox/loginbox-textfield-background.gif)" >
-      <div id="PlayNowContainer" ><form class="MediumButtonForm" action="https://secure.tibia.com/account/?subtopic=accountmanagement" method="post" ><input type="hidden" name="page" value="overview" ><div class="MediumButtonBackground" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/mediumbutton.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ><div class="MediumButtonOver" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/mediumbutton-over.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ></div><input class="MediumButtonText" type="image" name="Play Now" alt="Play Now" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/mediumbutton_playnow.png" /></div></form></div>
-    </div>
-    <div class="Loginstatus" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/loginbox/loginbox-textfield-background.gif)" >
-      <div id="LoginstatusText" onClick="LoginstatusTextAction(this);" onMouseOver="MouseOverLoginBoxText(this);" onMouseOut="MouseOutLoginBoxText(this);" ><div id="LoginstatusText_1" class="LoginstatusText" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/loginbox/loginbox-font-create-account.gif)" ></div><div id="LoginstatusText_2" class="LoginstatusText" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/loginbox/loginbox-font-create-account-over.gif)" ></div></div>
-    </div>
-    <div id="BorderRight" class="LoginBorder" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif)" ></div>
-    <div id="LoginBottom" class="Loginstatus" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/box-bottom.gif)" ></div>
-  </div>
-<div id='Menu'>
-<div id='MenuTop' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/box-top.gif);'></div>
-<div id='news' class='menuitem'>
-<span onClick="MenuItemAction('news')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='news_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='news_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-news.gif);'></div>
-      <div id='news_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-news.gif);'></div>
-      <div id='news_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='news_Submenu' class='Submenu'>
-<a href='http://www.tibia.com/news/?subtopic=latestnews'>
-  <div id='submenu_latestnews' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_latestnews' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_latestnews' class='SubmenuitemLabel'>Latest News</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/news/?subtopic=newsarchive'>
-  <div id='submenu_newsarchive' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_newsarchive' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_newsarchive' class='SubmenuitemLabel'>News Archive</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='abouttibia' class='menuitem'>
-<span onClick="MenuItemAction('abouttibia')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='abouttibia_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='abouttibia_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-abouttibia.gif);'></div>
-      <div id='abouttibia_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-abouttibia.gif);'></div>
-      <div id='abouttibia_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='abouttibia_Submenu' class='Submenu'>
-<a href='http://www.tibia.com/abouttibia/?subtopic=whatistibia'>
-  <div id='submenu_whatistibia' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_whatistibia' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_whatistibia' class='SubmenuitemLabel'>What Is Tibia?</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/abouttibia/?subtopic=screenshots'>
-  <div id='submenu_screenshots' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_screenshots' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_screenshots' class='SubmenuitemLabel'>Screenshots</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/abouttibia/?subtopic=gamefeatures'>
-  <div id='submenu_gamefeatures' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_gamefeatures' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_gamefeatures' class='SubmenuitemLabel'>Game Features</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/abouttibia/?subtopic=premiumfeatures'>
-  <div id='submenu_premiumfeatures' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_premiumfeatures' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_premiumfeatures' class='SubmenuitemLabel'>Premium Features</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/abouttibia/?subtopic=aboutcipsoft'>
-  <div id='submenu_aboutcipsoft' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_aboutcipsoft' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_aboutcipsoft' class='SubmenuitemLabel'>About CipSoft</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='gameguides' class='menuitem'>
-<span onClick="MenuItemAction('gameguides')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='gameguides_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='gameguides_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-gameguides.gif);'></div>
-      <div id='gameguides_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-gameguides.gif);'></div>
-      <div id='gameguides_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='gameguides_Submenu' class='Submenu'>
-<a href='http://www.tibia.com/gameguides/?subtopic=quickstart'>
-  <div id='submenu_quickstart' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_quickstart' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_quickstart' class='SubmenuitemLabel'>Quickstart</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/gameguides/?subtopic=manual'>
-  <div id='submenu_manual' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_manual' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_manual' class='SubmenuitemLabel'>Manual</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/gameguides/?subtopic=securityhints'>
-  <div id='submenu_securityhints' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_securityhints' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_securityhints' class='SubmenuitemLabel'>Security Hints</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='library' class='menuitem'>
-<span onClick="MenuItemAction('library')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='library_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='library_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-library.gif);'></div>
-      <div id='library_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-library.gif);'></div>
-      <div id='library_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='library_Submenu' class='Submenu'>
-<a href='http://www.tibia.com/library/?subtopic=creatures'>
-  <div id='submenu_creatures' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_creatures' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_creatures' class='SubmenuitemLabel'>Creatures</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/library/?subtopic=spells'>
-  <div id='submenu_spells' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_spells' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_spells' class='SubmenuitemLabel'>Spells</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/library/?subtopic=achievements'>
-  <div id='submenu_achievements' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_achievements' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_achievements' class='SubmenuitemLabel'>Achievements</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/library/?subtopic=worldquests'>
-  <div id='submenu_worldquests' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_worldquests' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_worldquests' class='SubmenuitemLabel'>World Quests</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/library/?subtopic=experiencetable'>
-  <div id='submenu_experiencetable' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_experiencetable' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_experiencetable' class='SubmenuitemLabel'>Experience Table</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/library/?subtopic=maps'>
-  <div id='submenu_maps' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_maps' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_maps' class='SubmenuitemLabel'>Maps</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/library/?subtopic=genesis'>
-  <div id='submenu_genesis' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_genesis' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_genesis' class='SubmenuitemLabel'>Genesis</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='community' class='menuitem'>
-<span onClick="MenuItemAction('community')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='community_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='community_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-community.gif);'></div>
-      <div id='community_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-community.gif);'></div>
-      <div id='community_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='community_Submenu' class='Submenu'>
-<a href='https://secure.tibia.com/community/?subtopic=characters'>
-  <div id='submenu_characters' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_characters' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_characters' class='SubmenuitemLabel'>Characters</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=worlds'>
-  <div id='submenu_worlds' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_worlds' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_worlds' class='SubmenuitemLabel'>Worlds</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=highscores'>
-  <div id='submenu_highscores' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_highscores' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_highscores' class='SubmenuitemLabel'>Highscores</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=killstatistics'>
-  <div id='submenu_killstatistics' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_killstatistics' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_killstatistics' class='SubmenuitemLabel'>Kill Statistics</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=houses'>
-  <div id='submenu_houses' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_houses' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_houses' class='SubmenuitemLabel'>Houses</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=guilds'>
-  <div id='submenu_guilds' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_guilds' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_guilds' class='SubmenuitemLabel'>Guilds</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=polls'>
-  <div id='submenu_polls' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_polls' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_polls' class='SubmenuitemLabel'>Polls</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=feedbackform'>
-  <div id='submenu_feedbackform' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_feedbackform' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_feedbackform' class='SubmenuitemLabel'>Feedback Form</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=conventions'>
-  <div id='submenu_conventions' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_conventions' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_conventions' class='SubmenuitemLabel'>Conventions</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=fansites'>
-  <div id='submenu_fansites' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_fansites' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_fansites' class='SubmenuitemLabel'>Fansites</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/community/?subtopic=resellers'>
-  <div id='submenu_resellers' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_resellers' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_resellers' class='SubmenuitemLabel'>Resellers</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='forum' class='menuitem'>
-<span onClick="MenuItemAction('forum')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='forum_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='forum_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-forum.gif);'></div>
-      <div id='forum_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-forum.gif);'></div>
-      <div id='forum_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='forum_Submenu' class='Submenu'>
-<a href='http://forum.tibia.com/forum/?subtopic=worldboards'>
-  <div id='submenu_worldboards' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_worldboards' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_worldboards' class='SubmenuitemLabel'>World Boards</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://forum.tibia.com/forum/?subtopic=tradeboards'>
-  <div id='submenu_tradeboards' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_tradeboards' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_tradeboards' class='SubmenuitemLabel'>Trade Boards</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://forum.tibia.com/forum/?subtopic=communityboards'>
-  <div id='submenu_communityboards' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_communityboards' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_communityboards' class='SubmenuitemLabel'>Community Boards</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://forum.tibia.com/forum/?subtopic=councilboards'>
-  <div id='submenu_councilboards' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_councilboards' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_councilboards' class='SubmenuitemLabel'>Council Boards</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://forum.tibia.com/forum/?subtopic=supportboards'>
-  <div id='submenu_supportboards' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_supportboards' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_supportboards' class='SubmenuitemLabel'>Support Boards</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://forum.tibia.com/forum/?subtopic=guildboards'>
-  <div id='submenu_guildboards' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_guildboards' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_guildboards' class='SubmenuitemLabel'>Guild Boards</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='account' class='menuitem'>
-<span onClick="MenuItemAction('account')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='account_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='account_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-account.gif);'></div>
-      <div id='account_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-account.gif);'></div>
-      <div id='account_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='account_Submenu' class='Submenu'>
-<a href='https://secure.tibia.com/account/?subtopic=accountmanagement&amp;page=overview'>
-  <div id='submenu_accountmanagement' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_accountmanagement' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_accountmanagement' class='SubmenuitemLabel'>Account Management</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/account/?subtopic=createaccount'>
-  <div id='submenu_createaccount' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_createaccount' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_createaccount' class='SubmenuitemLabel'>Create Account</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/account/?subtopic=downloadclient&step=downloadagreement'>
-  <div id='submenu_downloadclient' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_downloadclient' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_downloadclient' class='SubmenuitemLabel'>Download Client</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='https://secure.tibia.com/account/?subtopic=lostaccount'>
-  <div id='submenu_lostaccount' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_lostaccount' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_lostaccount' class='SubmenuitemLabel'>Lost Account?</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='support' class='menuitem'>
-<span onClick="MenuItemAction('support')">
-  <div class='MenuButton' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background.gif);'>
-    <div onMouseOver='MouseOverMenuItem(this);' onMouseOut='MouseOutMenuItem(this);'><div class='Button' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/button-background-over.gif);'></div>
-      <span id='support_Lights' class='Lights'>
-        <div class='light_lu' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ld' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-        <div class='light_ru' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/green-light.gif);'></div>
-      </span>
-      <div id='support_Icon' class='Icon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-support.gif);'></div>
-      <div id='support_Label' class='Label' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/label-support.gif);'></div>
-      <div id='support_Extend' class='Extend' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/plus.gif);'></div>
-    </div>
-  </div>
-</span>
-<div id='support_Submenu' class='Submenu'>
-<a href='http://www.tibia.com/support/?subtopic=faq'>
-  <div id='submenu_faq' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_faq' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_faq' class='SubmenuitemLabel'>FAQ</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/support/?subtopic=tibiarules'>
-  <div id='submenu_tibiarules' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_tibiarules' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_tibiarules' class='SubmenuitemLabel'>Tibia Rules</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/support/?subtopic=tutorguide'>
-  <div id='submenu_tutorguide' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_tutorguide' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_tutorguide' class='SubmenuitemLabel'>Tutor Guide</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/support/?subtopic=parentsguide'>
-  <div id='submenu_parentsguide' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_parentsguide' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_parentsguide' class='SubmenuitemLabel'>Parents' Guide</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-<a href='http://www.tibia.com/support/?subtopic=legaldocuments'>
-  <div id='submenu_legaldocuments' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-    <div class='LeftChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-    <div id='ActiveSubmenuItemIcon_legaldocuments' class='ActiveSubmenuItemIcon' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/menu/icon-activesubmenu.gif);'></div>
-    <div id='ActiveSubmenuItemLabel_legaldocuments' class='SubmenuitemLabel'>Legal Documents</div>
-    <div class='RightChain' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/chain.gif);'></div>
-  </div>
-</a>
-</div>
-</div>
-<div id='MenuBottom' style='background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/box-bottom.gif);'></div>
-</div>
-<script type='text/javascript'>InitializePage();</script>          </div>
-          <div id="ContentColumn">
-            <div id="Content" class="Content">
-              <div id="ContentHelper">
+				<a id="dotaLinkImgFacebook" class="rightColDotaLinkImg" href="http://www.facebook.com/pages/Dota-2/106876872711112" target="_blank"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/link_icon_facebook.png" width="23" height="23" border="0" /></a>
+				<a id="dotaLinkFacebook" class="rightColDotaLink" href="http://www.facebook.com/pages/Dota-2/106876872711112" target="_blank">Facebook Page</a>
+
+				<a id="dotaLinkImgTwitter" class="rightColDotaLinkImg" href="http://twitter.com/DOTA2" target="_blank"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/link_icon_twitter.png" width="24" height="24" border="0" /></a>
+				<a id="dotaLinkTwitter" class="rightColDotaLink" href="http://twitter.com/DOTA2" target="_blank">Twitter Profile</a>
+
+				<a id="dotaLinkImgYoutube" class="rightColDotaLinkImg" href="http://www.youtube.com/user/dota2" target="_blank"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/link_icon_youtube.png" width="20" height="24" border="0" /></a>
+				<a id="dotaLinkYoutube" class="rightColDotaLink" href="http://www.youtube.com/user/dota2" target="_blank">YouTube Channel</a>
+
+				<a id="dotaLinkImgSteam" class="rightColDotaLinkImg" href="http://store.steampowered.com/app/570/" target="_blank"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/link_icon_steam.png" width="24" height="24" border="0" /></a>
+				<a id="dotaLinkSteam" class="rightColDotaLink" href="http://store.steampowered.com/app/570/" target="_blank">Dota 2 on Steam</a>
 
 
-  <div id="accountmanagement" class="Box">
-    <div class="Corner-tl" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/corner-tl.gif);"></div>
-    <div class="Corner-tr" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/corner-tr.gif);"></div>
-    <div class="Border_1" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/border-1.gif);"></div>
-    <div class="BorderTitleText" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/title-background-green.gif);"></div>
-    <img id="ContentBoxHeadline" class="Title" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/strings/headline-accountmanagement.gif" alt="Contentbox headline" />
-    <div class="Border_2">
-      <div class="Border_3">
-        <div class="BoxContent" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/scroll.gif);">
-<div class="TableContainer" >  <table class="Table4" cellpadding="0" cellspacing="0">    <div class="CaptionContainer" >      <div class="CaptionInnerContainer" >        <span class="CaptionEdgeLeftTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionBorderTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionVerticalLeft" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-vertical.gif);" /></span>        <div class="Text" >Account Login</div>        <span class="CaptionVerticalRight" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-vertical.gif);" /></span>        <span class="CaptionBorderBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>      </div>    </div>    <tr>      <td>        <div class="InnerTableContainer" >          <table style="width:100%;" ><tr><td><div class="TableShadowContainerRightTop" >  <div class="TableShadowRightTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rt.gif);" ></div></div><div class="TableContentAndRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rm.gif);" >  <div class="TableContentContainer" >    <table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" ><form action="https://secure.tibia.com/account/?subtopic=accountmanagement" method="post" name="AccountLoginForm" style="margin: 0px; padding: 0px;" ><tr><td><table style="float: left; width: 370px;" cellpadding="0" cellspacing="0" ><tr><td class="LabelV120" ><span >Account Name:</span></td><td><input type="password" name="loginname" size="35" maxlength="30" /></td></tr><tr><td class="LabelV120" ><span >Password:</span></td><td><input type="password" name="loginpassword" size="35" maxlength="29" /></td></tr></table><div style="float: right; font-size: 1px;" ><input type="hidden" name="page" value="overview" ><div class="BigButton" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="Login" alt="Login" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/_sbutton_login.gif" ></div></div></form><div style="width: 2px; height: 2px;" > </div><form action="https://secure.tibia.com/account/?subtopic=lostaccount" method="post" style="padding:0px;margin:0px;" ><div class="BigButton" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="Account lost?" alt="Account lost?" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/_sbutton_accountlost.gif" ></div></div></form></div></td></tr>    </table>  </div></div><div class="TableShadowContainer" >  <div class="TableBottomShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bm.gif);" >    <div class="TableBottomLeftShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bl.gif);" ></div>    <div class="TableBottomRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-br.gif);" ></div>  </div></div></td></tr><tr><td><div class="TableShadowContainerRightTop" >  <div class="TableShadowRightTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rt.gif);" ></div></div><div class="TableContentAndRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rm.gif);" >  <div class="TableContentContainer" >    <table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" ><tr><td><div style="float: right; width: 135px;" ><form action="https://secure.tibia.com/account/?subtopic=accountmanagement" method="post" style="padding:0px;margin:0px;" ><input type="hidden" name="page" value="useauthenticator" ><div class="BigButton" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="Use Authenticator" alt="Use Authenticator" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/_sbutton_useauthenticator.gif" ></div></div></form></div>If your Tibia Account is already connected to an authenticator, click on "Use Authenticator". A field will be displayed which allows you to provide your authenticator token along with your account data upon login. Otherwise, you will be asked for your authenticator token in the next step.<p>An authenticator is a security feature which helps to prevent any unauthorised access to your Tibia account! You can connect your account to an authenticator via your account management page.</p></td></tr>    </table>  </div></div><div class="TableShadowContainer" >  <div class="TableBottomShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bm.gif);" >    <div class="TableBottomLeftShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bl.gif);" ></div>    <div class="TableBottomRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-br.gif);" ></div>  </div></div></td></tr>          </table>        </div>      </td>    </tr>  </table></div><br/><center><h1>Do you have a Facebook profile?</h1></center><div class="TableContainer" >  <table class="Table4" cellpadding="0" cellspacing="0">    <div class="CaptionContainer" >      <div class="CaptionInnerContainer" >        <span class="CaptionEdgeLeftTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionBorderTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionVerticalLeft" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-vertical.gif);" /></span>        <div class="Text" >Facebook Linkup</div>        <span class="CaptionVerticalRight" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-vertical.gif);" /></span>        <span class="CaptionBorderBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>      </div>    </div>    <tr>      <td>        <div class="InnerTableContainer" >          <table style="width:100%;" ><tr><td><div class="TableShadowContainerRightTop" >  <div class="TableShadowRightTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rt.gif);" ></div></div><div class="TableContentAndRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rm.gif);" >  <div class="TableContentContainer" >    <table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" ><tr><td><div><div id="FB_LoginButton" onclick="FB.login(function(response) { }, {scope: 'email'});" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/fb_original_button_small.png);" /><span>Log in</span></div>Log into Facebook to create a Tibia account via Facebook or to play Tibia if you already have a Tibia account connected to your Facebook profile!<div></td></tr>    </table>  </div></div><div class="TableShadowContainer" >  <div class="TableBottomShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bm.gif);" >    <div class="TableBottomLeftShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bl.gif);" ></div>    <div class="TableBottomRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-br.gif);" ></div>  </div></div></td></tr>          </table>        </div>      </td>    </tr>  </table></div><br/><script type="text/javascript" >
-FB_TryLogin = 2;</script>
-<center><h1>New to Tibia?</h1></center><div class="TableContainer" >  <table class="Table4" cellpadding="0" cellspacing="0">    <div class="CaptionContainer" >      <div class="CaptionInnerContainer" >        <span class="CaptionEdgeLeftTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionBorderTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionVerticalLeft" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-vertical.gif);" /></span>        <div class="Text" >New Player</div>        <span class="CaptionVerticalRight" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-vertical.gif);" /></span>        <span class="CaptionBorderBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-headline-border.gif);" ></span>        <span class="CaptionEdgeLeftBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>        <span class="CaptionEdgeRightBottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/box-frame-edge.gif);" /></span>      </div>    </div>    <tr>      <td>        <div class="InnerTableContainer" >          <table style="width:100%;" ><tr><td><div class="TableShadowContainerRightTop" >  <div class="TableShadowRightTop" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rt.gif);" ></div></div><div class="TableContentAndRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-rm.gif);" >  <div class="TableContentContainer" >    <table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" ><tr ><td  ><div style="float: right; margin-top: 20px;" ><form class="MediumButtonForm" action="https://secure.tibia.com/account/?subtopic=createaccount" method="post" ><div class="MediumButtonBackground" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/mediumbutton.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ><div class="MediumButtonOver" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/mediumbutton-over.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ></div><input class="MediumButtonText" type="image" name="Create Account" alt="Create Account" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/mediumbutton_createaccount.png" /></div></form></div><div id="LoginCreateAccountBox" ><p><b>Tibia...</b></p><div style="margin-left: 10px;" ><p>... where hardcore gaming meets fantasy.</p><p>... where friendships last a lifetime.</p><p>... unites adventurers since 1997!</p></div></div>    </table>  </div></div><div class="TableShadowContainer" >  <div class="TableBottomShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bm.gif);" >    <div class="TableBottomLeftShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-bl.gif);" ></div>    <div class="TableBottomRightShadow" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/table-shadow-br.gif);" ></div>  </div></div></td></tr>          </table>        </div>      </td>    </tr>  </table></div><script type="text/javascript" >
-var g_FormName = "AccountLoginForm";
-var g_FieldName = "loginname";
+			</div>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/newbloom/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_newbloom15.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/shiftingsnows/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_shiftingsnows.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/oracle/day2/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_foreseerscontract.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/rekindlingsoul/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_rekindlingsoul.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/techies/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_techies.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/international2014/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_international4.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/springcleaning/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_springcleaning.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+		<a class="hoverBG rcbLink noClientHide" href="http://www.freetoplaythemovie.com/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_freetoplay.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/newbloom2014/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_newbloom.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/wraithnight/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_wraithnight.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/threespirits/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_3spirits.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/firstblood/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_firstblood.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/thebetaisover/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_betaover.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/international2013/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_international3.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/greeviling/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_greeviling.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/diretide/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_diretide.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/aegisofchampions/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_aegis.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/tournaments/international2012/mainevent/results/champions/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_international2.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/spoilsofwar/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_spoils.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/tournaments/international2011/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_international1.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://store.steampowered.com/video/570/81026" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_trailer.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+			<a class="hoverBG rcbLink" href="http://www.dota2.com/comics/are_we_heroes_yet/" target="_blank" style="background-image:url('http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/rcb_comic.jpg');"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/2014/trans.gif" width="256" height="164" border="0" /></a>
+
+			<div id="rightColFeedback">
+				<div id="feedbackForums">
+					<a href="http://dev.dota2.com" target="_blank">Feedback Forums</a><br />
+					For general feedback about the game.				</div>
+				<div id="feedbackSupport">
+					<a href="http://support.steampowered.com" target="_blank">Steam Support</a><br />
+					Visit the support site for any issues you may be having with your account.				</div>
+				<div id="feedbackContact">
+					<a href="http://www.valvesoftware.com/email.php?recipient=Dota+2+Team" target="_blank">Contact the Team</a><br />
+					To contact us directly about specific matters.				</div>
+			</div>
+
+			<!--
+			<div id="rightColLanguages">
+			<a class="languageLink" href="http://blog.dota2.com/">English</a><br /><a class="languageLink" href="http://es.dota2.com/">Español</a><br /><a class="languageLink" href="http://de.dota2.com/">Deutsch</a><br /><a class="languageLink" href="http://fr.dota2.com/">Français</a><br /><a class="languageLink" href="http://kr.dota2.com/">한국어</a><br /><span class="languageActive">Português</span><br /><a class="languageLink" href="http://ru.dota2.com/">Русский</a><br /><a class="languageLink" href="http://cn.dota2.com/">简体中文</a><br />			</div>
+			-->
+			<p><br /></p>
+			<p><br /></p>
+			<br /><br />
+
+		</div>
+
+			<div id="mainLoop">
+
+	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="http://br.dota2.com/page/2/?l=portuguese" ><span class="meta-nav">&larr;</span> Posts mais antigos</a></div>
+		<div class="nav-next"></div>
+	</div><!-- #nav-above -->
+
+
+		<div id="post-8410" class="post-8410 post type-post status-publish format-standard hentry category-uncategorized-pt-br">
+			<h2 class="entry-title"><a href="http://br.dota2.com/2015/07/tesouro-imortal-iii-e-novos-visuais-de-mascote/" title="Link permanente para Tesouro Imortal III e novos visuais de mascote" rel="bookmark">Tesouro Imortal III e novos visuais de mascote</a></h2>
+
+			<div class="entry-meta">
+				July 13, 2015 - Dota Team			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p><a href="http://www.dota2.com/international/compendium/0/2/0?l=brazilian"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/immortal_treasure_c_blog_v8c7dhd6v7gj.jpg" width="100%" /></a></p>
+<p>Exclusivo para quem tem o compêndio, o Tesouro Imortal III chegou trazendo novo itens para Bristleback, Gyrocopter, Witch Doctor, Invoker, Nature’s Prophet, Meepo, Templar Assassin e Zeus. Caso você tenha sorte, você pode ganhar uma versão dourada do item imortal do Gyrocopter ou uma versão dourada para Almond, a tatu-erva. Aumente seu nível do compêndio para ganhar mais tesouros e completar sua coleção.</p>
+<p><a href="http://www.dota2.com/international/compendium/1/2/0?l=brazilian"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/red_frondillo_upgrade_frewrajra98er9.jpg" alt="" width="100%" /></a></p>
+<p>Nós também lançamos uma versão alternativa de Almond, a tatu-erva. Se você alcançou ou passou o nível 125 do compêndio, a versão vermelha será liberada em sua conta. Vá para a <a href='http://www.dota2.com/international/compendium/0/2/0?l=brazilian'>página do compêndio</a> para conferir tudo. </p>
+					<br clear="left" />
+							</div><!-- .entry-content -->
+
+		</div><!-- #post-## -->
+
+
+				<!-- inter-post rule -->
+		<div class="dota_rule">
+		</div>
+			<div id="post-8367" class="post-8367 post type-post status-publish format-standard hentry category-uncategorized-pt-br">
+			<h2 class="entry-title"><a href="http://br.dota2.com/2015/07/a-egide-dos-colecionadores/" title="Link permanente para A Égide dos Colecionadores" rel="bookmark">A Égide dos Colecionadores</a></h2>
+
+			<div class="entry-meta">
+				July 8, 2015 - Dota Team			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>Estamos aqui para anunciar uma recompensa exclusiva: A Égide dos Colecionadores. Este item de colecionador é uma réplica do troféu dos vencedores do International feita em liga metálica com escala 1/5, com chapeamento em bronze. O ano está inscrito na parte traseira e contém também uma insígnia com a temática dourada deste ano. A Égide dos Colecionadores é uma recompensa simbólica para aqueles que atingirem o nível 1000 do Compêndio.</p>
+<p><a href="http://cdn.dota2.com/apps/dota2/images/blogfiles/mini_aegis_full.jpg"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/mini_aegis_blog.jpg" alt="" width="100%" /></a></p>
+<p>Após a conclusão do International, nós vamos enviar a Égide dos Colecionadores para todos que tenham atingido ou superado o milésimo nível. Além disso, durante uma partida, A Égide dos Campeões na fonte do jogador receberá um efeito especial que durará até o próximo International. </p>
+<p>Caso você atinja o nível 1000 até o término da grande final, você pode inserir seu endereço <a href="http://www.dota2.com/ti5aegisregistration/">nesta página</a>.</p>
+<p>Quanto a outras notícias do Compêndio, o Tesouro Immortal III está quase pronto para ser lançado. Vocês poderão conferir o tesouro e o visual adicional da mascote do Compêndio até o fim desta semana.</p>
+<p>O International 2015 tornou-se o maior evento na história de Dota, e um dos maiores eventos dos jogos competitivos. Isso não seria possível sem o apoio ininterrupto e a paixão de toda a comunidade do jogo. </p>
+					<br clear="left" />
+							</div><!-- .entry-content -->
+
+		</div><!-- #post-## -->
+
+
+				<!-- inter-post rule -->
+		<div class="dota_rule">
+		</div>
+			<div id="post-8314" class="post-8314 post type-post status-publish format-standard hentry category-uncategorized-pt-br">
+			<h2 class="entry-title"><a href="http://br.dota2.com/2015/06/dota-2-renascido-que-o-beta-comece/" title="Link permanente para Dota 2 renascido: Que o beta comece" rel="bookmark">Dota 2 renascido: Que o beta comece</a></h2>
+
+			<div class="entry-meta">
+				June 17, 2015 - Dota Team			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p><a href="http://www.dota2.com/reborn/part3/?l=brazilian"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/reborn_beta_day3_engine_and_install.jpg" alt="" width="100%" /></a></p>
+<p>O beta do Dota 2 renascido já está disponível para baixar e acessar. Veja a <a href="http://www.dota2.com/reborn/part3/?l=brazilian">página da atualização</a> para instruções de instalação e saber mais sobre inúmeras novas tecnologias que estamos usando para aprimorar o Dota 2.</p>
+<p>Diferentemente do nosso cliente de testes tradicional, o seu histórico de partidas, avaliação de criação de partidas (MMR), itens cosméticos e amigos são compartilhados entre as duas versões, porém ainda não será possível usar a criação de partidas competitivas. Esperamos ativá-la dentro de alguns dias, mas antes precisamos de mais testes das funcionalidades básicas. Além disso, é possível que alguns itens estréiem em apenas um dos clientes; esses itens não estarão disponíveis no outro cliente até que os seus recursos sejam convertidos.</p>
+<p>Ao explorar o beta, você deverá perceber que alguns recursos ainda não estão em pleno funcionamento, mas encorajamos que use-o com regularidade e nos envie o seu feedback. Estaremos atualizando o cliente com frequência durante as próximas semanas enquanto trabalhamos para colocar tudo em funcionamento.</p>
+					<br clear="left" />
+							</div><!-- .entry-content -->
+
+		</div><!-- #post-## -->
+
+
+				<!-- inter-post rule -->
+		<div class="dota_rule">
+		</div>
+			<div id="post-8285" class="post-8285 post type-post status-publish format-standard hentry category-uncategorized-pt-br">
+			<h2 class="entry-title"><a href="http://br.dota2.com/2015/06/dota-2-renascido-modos-personalizados/" title="Link permanente para Dota 2 renascido: Modos personalizados" rel="bookmark">Dota 2 renascido: Modos personalizados</a></h2>
+
+			<div class="entry-meta">
+				June 16, 2015 - Dota Team			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p><a href="http://www.dota2.com/reborn/part2/?l=BR"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/reborn_beta_day2.jpg" alt="" width="100%" /></a></p>
+<p>Modos personalizados são novas experiências criadas pela comunidade que podem ser jogadas dentro do Dota 2. Esses modos vão de grandes batalhas com dez Invokers e aventuras com enredos complexos a algo criativo nunca antes visto. Para nós, os modos personalizados representam uma continuação da tradição que deu vida a Dota, Team Fortress e Counter-Strike. Desejamos criar um ecossistema pelo qual você pode experimentar algo totalmente novo toda vez que jogar Dota 2.</p>
+<p>Caso queira começar a criar o seu modo personalizado, veja <a href="http://www.dota2.com/reborn/part2/?l=BR">a segunda parte do site da atualização</a> para saber mais sobre o ecossistema que criamos.</p>
+<p>No fim desta semana exploraremos algumas das tecnologias por baixo da nova engine.</p>
+					<br clear="left" />
+							</div><!-- .entry-content -->
+
+		</div><!-- #post-## -->
+
+
+				<!-- inter-post rule -->
+		<div class="dota_rule">
+		</div>
+			<div id="post-8261" class="post-8261 post type-post status-publish format-standard hentry category-uncategorized-pt-br">
+			<h2 class="entry-title"><a href="http://br.dota2.com/2015/06/estamos-apresentando-hoje-a-fase-beta-dedota-2-reborn-trazendo-uma-nova-interface-motor-e-jogos-personalizados-o-painel-foi-completamente-redesenhado-utilizando-uma-nova-estrutura-de-interface-de/" title="Link permanente para Dota 2 Reborn" rel="bookmark">Dota 2 Reborn</a></h2>
+
+			<div class="entry-meta">
+				June 12, 2015 - Dota Team			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p><a title="We're back in beta!" href="http://www.dota2.com/reborn/part1/?l=BR"><img src="http://cdn.dota2.com/apps/dota2/images/blogfiles/reborn_beta_day1.png" alt="" width="100%" /></a></p>
+<p>Estamos apresentando hoje a fase beta de<a href="http://www.dota2.com/reborn/part1/">Dota 2 Reborn</a>, trazendo uma nova interface, motor e jogos personalizados. O painel foi completamente redesenhado utilizando uma nova estrutura de interface de usuário, e o motor que da potência ao jogo foi substituído. Mostramos agora uma prévia dessa nova interface, e no começo da semana que vem começaremos a falar sobre jogos personalizados, para depois então concluir com mais detalhes sobre o motor novo e o lançamento da fase beta aberta.</p>
+<p>Durante a fase beta lançaremos atualizações frequentes para consertar problemas e realizar alterações baseadas em suas opiniões. Enquanto você explora o novo cliente, você notará que algumas coisas ainda não estarão funcionando totalmente.  Além disso, o painel tomou toda a nossa atenção, então você notará que a interface de jogo permanece a mesma por enquanto.</p>
+<p>Queremos que vocês nos ajudem durante a fase beta com sugestões e relatos de bugs. Nossa intenção é manter a jogabilidade e os heróis com a mesma impressão e aparência, então nos avise caso vocês notem algo inesperado. A fase beta deve se encerrar após o International para nos certificarmos de que houve tempo suficiente para respondermos ao seu feedback.</p>
+					<br clear="left" />
+							</div><!-- .entry-content -->
+
+		</div><!-- #post-## -->
+
+
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://br.dota2.com/page/2/?l=portuguese" ><span class="meta-nav">&larr;</span> Posts mais antigos</a></div>
+					<div class="nav-next"></div>
+				</div><!-- #nav-below -->
+				<br clear="right" />
+			</div>
+		</div><!-- /mainContent -->
+		<div id="mainContentBottomBG"></div>
+	</div><!-- /mainContentBG -->
+</div><!-- /mainContentSideBG -->
+<div id="footer" role="contentinfo">
+
+
+
+			<div id="footer-widget-area" role="complementary">
+
+				<div id="first" class="widget-area">
+					<ul class="xoxo">
+								<li id="dota2-recent-posts-4" class="widget-container valve_widget_recent_entries">		<div class="rightLinksTitle">Previous Entries</div>
+					<div class="archive_column">
+									<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/07/tesouro-imortal-iii-e-novos-visuais-de-mascote/" title="Tesouro Imortal III e novos visuais de mascote">Tesouro Imortal III e novos visuais de mascote</a>
+				<div class="recent_entry_date">Jul. 13 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/07/a-egide-dos-colecionadores/" title="A Égide dos Colecionadores">A Égide dos Colecionadores</a>
+				<div class="recent_entry_date">Jul. 8 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/dota-2-renascido-que-o-beta-comece/" title="Dota 2 renascido: Que o beta comece">Dota 2 renascido: Que o beta comece</a>
+				<div class="recent_entry_date">Jun. 17 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/dota-2-renascido-modos-personalizados/" title="Dota 2 renascido: Modos personalizados">Dota 2 renascido: Modos personalizados</a>
+				<div class="recent_entry_date">Jun. 16 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/estamos-apresentando-hoje-a-fase-beta-dedota-2-reborn-trazendo-uma-nova-interface-motor-e-jogos-personalizados-o-painel-foi-completamente-redesenhado-utilizando-uma-nova-estrutura-de-interface-de/" title="Dota 2 Reborn">Dota 2 Reborn</a>
+				<div class="recent_entry_date">Jun. 12 2015</div>
+			</div>
+							</div>
+				<div class="archive_column">
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/06/suplemento-de-colecionador/" title="Suplemento de Colecionador">Suplemento de Colecionador</a>
+				<div class="recent_entry_date">Jun. 5 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/novas-recompensas-do-compendio-e-efigies-de-espectador/" title="Novas recompensas do Compêndio e Efígies de Espectador">Novas recompensas do Compêndio e Efígies de Espectador</a>
+				<div class="recent_entry_date">May. 28 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/8171/" title="As classificatórias do International">As classificatórias do International</a>
+				<div class="recent_entry_date">May. 26 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/8169/" title="Concurso de curta-metragens Dota 2">Concurso de curta-metragens Dota 2</a>
+				<div class="recent_entry_date">May. 26 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/compendio-subindo-de-nivel/" title="Compêndio subindo de nível">Compêndio subindo de nível</a>
+				<div class="recent_entry_date">May. 15 2015</div>
+			</div>
+							</div>
+				<div class="archive_column">
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/progresso-do-compendio/" title="Progresso do Compêndio">Progresso do Compêndio</a>
+				<div class="recent_entry_date">May. 11 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/sentinelas-do-compendio-e-tesouro-de-provocacoes/" title="Sentinelas do compêndio e tesouro de provocações">Sentinelas do compêndio e tesouro de provocações</a>
+				<div class="recent_entry_date">May. 7 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/as-equipes-do-international-2/" title="As Equipes do International">As Equipes do International</a>
+				<div class="recent_entry_date">May. 6 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/mais-recompensas-do-compendio-lancadas/" title="Mais recompensas do compêndio lançadas">Mais recompensas do compêndio lançadas</a>
+				<div class="recent_entry_date">May. 6 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/compendio-do-international-2015/" title="Compêndio do International 2015">Compêndio do International 2015</a>
+				<div class="recent_entry_date">May. 4 2015</div>
+			</div>
+							</div>
+				<div class="archive_column">
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/05/tesouro-imortal-i/" title="Tesouro Imortal I">Tesouro Imortal I</a>
+				<div class="recent_entry_date">May. 3 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/04/atualizacao-de-jogabilidade-6-84/" title="Atualização de Jogabilidade 6.84">Atualização de Jogabilidade 6.84</a>
+				<div class="recent_entry_date">Apr. 28 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/04/os-campeonatos-dota-majors/" title="Os Campeonatos Dota Majors">Os Campeonatos Dota Majors</a>
+				<div class="recent_entry_date">Apr. 25 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/03/perguntas-frequentes-sobre-ingressos-para-o-international/" title="Perguntas frequentes sobre ingressos para o International">Perguntas frequentes sobre ingressos para o International</a>
+				<div class="recent_entry_date">Mar. 27 2015</div>
+			</div>
+								<div class="recent_entry">
+				<a href="http://br.dota2.com/2015/03/7832/" title="Ingressos para o International">Ingressos para o International</a>
+				<div class="recent_entry_date">Mar. 20 2015</div>
+			</div>
+							</div>
+				<div class="archive_column">
+										</div>
+				</li>					</ul>
+				</div><!-- #first .widget-area -->
+
+
+
+
+			</div><!-- #footer-widget-area -->
+
+
+	<div class="legal_footer">
+		<img id="valveLogoLegal" src="http://media.steampowered.com/apps/dota2/images/blogfiles/valve_logo_footer.png" width="112" height="34" border="0" />
+		&copy; Valve Corporation, all rights reserved. Valve, the Valve logo, Steam, the Steam logo, Source, the Source logo, Valve Source and Dota are trademarks and/or registered trademarks of Valve Corporation.
+	</div>
+</div><!-- #footer -->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var icl_vars = {"current_language":"pt-br","icl_home":"http:\/\/br.dota2.com\/"};
+/* ]]> */
 </script>
-        </div>
-      </div>
-    </div>
-    <div class="Border_1" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/border-1.gif);"></div>
-    <div class="CornerWrapper-b"><div class="Corner-bl" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/corner-bl.gif);"></div></div>
-    <div class="CornerWrapper-b"><div class="Corner-br" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/corner-br.gif);"></div></div>
-  </div>
-              <div id="ThemeboxesColumn" >
-                <div id="DeactivationContainerThemebox" onClick="DisableDeactivationContainer();" ></div>
-                <div id="RightArtwork">
-                  <img id="Monster" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/header/monsters/moohtant.gif" onClick="window.location = 'http://www.tibia.com/library/?subtopic=creatures&amp;race=moohtant';" alt="Monster of the Week" />
-                  <img id="PedestalAndOnline" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/header/pedestal-and-online.gif" alt="Monster Pedestal and Players Online Box"/>
-                  <div id="PlayersOnline" onClick="window.location = 'https://secure.tibia.com/community/?subtopic=worlds';">16986<br />Players Online</div>
-                </div>
-                <div id="Themeboxes">
-                  <!-- premium theme box -->
-<div id="PremiumBox" class="Themebox" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/themeboxes/premium/premiumbox.gif);">
-    <div class="ThemeboxButton" >
-    <form action="https://secure.tibia.com/account/index.php?subtopic=redirectlogin&redirect=https%3A%2F%2Fsecure.tibia.com%2Faccount%2F%3Fsubtopic%3Daccountmanagement%23Products%2BAvailable" method="post" style="padding:0px;margin:0px;" ><div class="BigButton" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton_green.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton_green_over.gif);" ></div><input class="ButtonText" type="image" name="Get Premium" alt="Get Premium" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/_sbutton_getpremium.gif" ></div></div></form>  </div>
-  <div class="Bottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/box-bottom.gif);"></div>
-</div>
-
-<!-- networks theme box -->
-<div id="NetworksBox" class="Themebox"  style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/themeboxes/networks/networksbox.png);" >
-  <div id="FacebookBlock" >
-    <a id="FacebookPageLink" target="_blank" href="https://www.facebook.com/tibia" ><img src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/themeboxes/networks/tibia-facebook-page-logo.png" /></a>
-    <div id="FacebookLikeButton" >
-      <div class="fb-like" data-href="https://www.facebook.com/tibia" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-    </div>
-    <div id="FacebookShareButton" >
-      <div class="fb-share-button" data-href="https://www.facebook.com/tibia" data-layout="button"></div>
-    </div>
-    <div id="FacebookLikes" >
-      <div class="fb-like" data-href="https://www.facebook.com/tibia" data-width="250" data-layout="standard" data-action="recommend" data-show-faces="false" ></div>
-    </div>
-  </div>
-  <div id="TwitterBlock" >
-    <a href="https://twitter.com/Tibia" class="twitter-follow-button" data-show-count="false">Follow @Tibia</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  </div>
-  <div class="Bottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/box-bottom.gif);"></div>
-</div>
-
-    <!-- random fansite theme box -->
-    <div id="FansiteBox" class="Themebox" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/themeboxes/fansites/fansites_themebox.gif);">
-      <div id="FansiteLogoFrame" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/themeboxes/fansites/border_supported.gif);">
-        <a href="http://www.tibiaml.com" target="_blank" ><img id="FansiteLogo" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/community/fansitelogos/TibiaML.com.gif" /></a>
-      </div>
-      <div class="ThemeboxButton" >
-        <form action="https://secure.tibia.com/community/?subtopic=fansites" method="post" style="padding:0px;margin:0px;" ><div class="BigButton" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton.gif)" ><div onMouseOver="MouseOverBigButton(this);" onMouseOut="MouseOutBigButton(this);" ><div class="BigButtonOver" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/sbutton_over.gif);" ></div><input class="ButtonText" type="image" name="View all Fansites" alt="View all Fansites" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/buttons/_sbutton_viewallfansites.gif" ></div></div></form>      </div>
-      <div class="Bottom" style="background-image:url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/general/box-bottom.gif);"></div>
-    </div>
-                </div>
-              </div>
-            </div>
-            <div id="Footer">
-              Copyright by CipSoft GmbH. All rights reserved.<br/>
-              <a href="http://www.tibia.com/abouttibia/?subtopic=aboutcipsoft">About CipSoft</a> | <a href="http://www.tibia.com/support/?subtopic=legaldocuments&amp;page=agreement">Service Agreement</a> | <a href="http://www.tibia.com/support/?subtopic=legaldocuments&amp;page=privacy">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript" >
-    // disable all control elements which are not part of the content container element
-    if (g_Deactivated == true) {
-      document.getElementById('LoginButtonContainer').style.zIndex = "1";
-      document.getElementById('DeactivationContainer').style.display = "block";
-      document.getElementById('DeactivationContainer').style.zIndex = "50";
-      document.getElementById('DeactivationContainerThemebox').style.display = "block";
-      document.getElementById('Monster').style.cursor = "auto";
-      document.getElementById('PlayersOnline').style.cursor = "auto";
-      document.getElementById('ThemeboxesColumn').style.opacity = "0.30";
-      document.getElementById('ThemeboxesColumn').style.MozOpacity = "0.30";
-      document.getElementById('ThemeboxesColumn').filters.alpha.opacity = "0.75";
-      document.getElementById('ThemeboxesColumn').style.filter = "alpha(opacity=50); opacity: 0.30";
-      document.getElementById('Monster').setAttribute("onclick", "");
-      document.getElementById('PlayersOnline').setAttribute("onclick", "");
-    }
-  </script>
-  <div id="HelperDivContainer" style="background-image: url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/scroll.gif);" ><div class="HelperDivArrow" style="background-image: url(https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/helper-div-arrow.png);" ></div><div id="HelperDivHeadline" ></div><div id="HelperDivText" ></div><center><img class="Ornament" src="https://a248.e.akamai.net/cipsoft.download.akamai.com/118500/tibia/static.tibia.com/images/global/content/ornament.gif" /></center><br/></div></body>
+<script type='text/javascript' src='http://br.dota2.com/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=4.2.2'></script>
+</body>
 </html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk
+Database Caching 84/114 queries in 0.038 seconds using disk
+
+ Served from: br.dota2.com @ 2015-07-15 11:20:13 by W3 Total Cache -->
