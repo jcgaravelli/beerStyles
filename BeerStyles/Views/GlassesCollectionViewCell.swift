@@ -8,6 +8,7 @@
 
 import UIKit
 
-class CupsCollectionViewCell: UICollectionViewCell {
+class GlassesCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageGlass: UIImageView!
 }
