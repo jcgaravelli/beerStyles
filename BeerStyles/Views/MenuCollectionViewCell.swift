@@ -13,8 +13,8 @@ import UIKit
 class MenuCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageMenu: UIImageView!
-    @IBOutlet weak var title: UILabel!
     
+    @IBOutlet weak var nameMenu: UILabel!
     
 }
 
