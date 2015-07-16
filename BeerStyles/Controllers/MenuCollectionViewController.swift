@@ -10,11 +10,11 @@ import UIKit
 import Parse
 
 
-class MenuCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MenuCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
 
     let reuseIdentifier = "cell"
-    var imagesMenu : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
-        var screenSize : CGRect!
+    var imagesMenu : [String] = ["cerveja","cerveja","cerveja","cerveja"]
+    var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
     
@@ -56,9 +56,8 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
     */
 
     // MARK: UICollectionViewDataSource
-
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return imagesMenu.count
     }
@@ -74,7 +73,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
     }
     
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         
 
@@ -98,7 +97,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         
         switch indexPath.row

@@ -10,4 +10,6 @@ import UIKit
 
 class TutorialCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageMenu: UIImageView!
+    
 }

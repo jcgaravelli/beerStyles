@@ -10,4 +10,9 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var imageMenu: UIImageView!
+    
+    
+    
 }

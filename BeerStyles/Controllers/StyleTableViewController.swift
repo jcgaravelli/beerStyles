@@ -1,5 +1,5 @@
 //
-//  FatherStyleViewController.swift
+//  StyleTableViewController.swift
 //  BeerStyles
 //
 //  Created by Paulo César Morandi Massuci on 14/07/15.
@@ -7,17 +7,18 @@
 //
 
 import UIKit
-import Foundation
 import ParseUI
 import Parse
 
+class StyleTableViewController: PFQueryTableViewController {
 
-class FatherStyleViewController: PFQueryTableViewController {
     
-    
-    
+    var fatherObject: PFObject!
     
     // Initialise the PFQueryTable tableview
+   
+    
+    
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
     }
@@ -26,7 +27,7 @@ class FatherStyleViewController: PFQueryTableViewController {
         super.init(coder: aDecoder)
         
         // Configure the PFQueryTableView
-        self.parseClassName = "FatherStyle"
+        self.parseClassName = "Style"
         self.textKey = "name"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = false
@@ -34,11 +35,15 @@ class FatherStyleViewController: PFQueryTableViewController {
     
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
-        var query = PFQuery(className: "FatherStyle")
-        
+        var objectID = fatherObject
+        //var pointer: AnyObject! = objectID["objectID"]
+        var query = PFQuery(className: "Style")
         query.orderByAscending("name")
+        query.whereKey("fatherStyle", equalTo:fatherObject)
+
         return query
     }
+
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
@@ -51,60 +56,48 @@ class FatherStyleViewController: PFQueryTableViewController {
         if let nameEnglish = object?["name"] as? String {
             cell?.textLabel?.text = nameEnglish
         }
-   
+        
         
         return cell
     }
+    
+    
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-        
-        
-        var row = Int(indexPath.row)
-       
-        
-        performSegueWithIdentifier("fatherToSon", sender: objects?[row])
+        performSegueWithIdentifier("tableToDetail", sender: nil)
     }
-    
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "fatherToSon" {
-            if let destination = segue.destinationViewController as? StyleTableViewController {
-
-                    destination.fatherObject = (sender as! PFObject)
-                }
-            }
-    
+        if segue.identifier == "tableToDetail" {
+                if let destination = segue.destinationViewController as? StyleDetailViewController {
+                    if let indexPath = tableView.indexPathForSelectedRow()?.row
+                    {
+                        
+                            let row = Int(indexPath)
+                            destination.currentObject = (objects?[row] as! PFObject)
+                    }
+        }
     }
-//
+    }
+    
+    
+    
+    
+    
+    
+    
 
-        
 
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        println("break1")
-//        if segue.identifier == "fatherToSon" {
-//             println(segue.identifier)
-//            
-//                    }var destination = segue.destinationViewController as! PFQueryCollectionViewController
-//            println("break3")
-//                if let indexPath = tableView.indexPathForSelectedRow()?.row
-//                {
-//                    println("break4")
-//                    let row = Int(indexPath)
-//                   
-//                    fatherObject = (objects?[row] as! PFObject)
-//                }
-//            }
-
-
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
 }
-
-
-
-
-
