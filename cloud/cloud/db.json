@@ -989,7 +989,7 @@
          "fatherStyle":"Belgian Strong Ale"
       },
       {
-         "name":"Belgian Dark Strong Ale",
+         "name":"Old Ale",
          "country":"",
          "description":"",
          "characteristics":"",
@@ -999,21 +999,73 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":"Belgian Strong Ale"
+         "fatherStyle":"Strong Ale"
       },
       {
-          "name":"",
-          "country":"",
-          "description":"",
-          "characteristics":"",
-          "abvMin":3,
-          "abvMax":5,
-          "tempMin":-2,
-          "tempMax":15,
-          "food":"",
-          "glasses":["Pint","Tulip"],
-          "fatherStyle":""
-         }
+         "name":"English Strong Ale",
+         "country":"",
+         "description":"",
+         "characteristics":"",
+         "abvMin":3,
+         "abvMax":5,
+         "tempMin":-2,
+         "tempMax":15,
+         "food":"",
+         "glasses":["Pint","Tulip"],
+         "fatherStyle":"Strong Ale"
+      },
+      {
+         "name":"American Strong Ale",
+         "country":"",
+         "description":"",
+         "characteristics":"",
+         "abvMin":3,
+         "abvMax":5,
+         "tempMin":-2,
+         "tempMax":15,
+         "food":"",
+         "glasses":["Pint","Tulip"],
+         "fatherStyle":"Strong Ale"
+      },
+      {
+         "name":"English Barleywine",
+         "country":"",
+         "description":"",
+         "characteristics":"",
+         "abvMin":3,
+         "abvMax":5,
+         "tempMin":-2,
+         "tempMax":15,
+         "food":"",
+         "glasses":["Pint","Tulip"],
+         "fatherStyle":"Strong Ale"
+      },
+      {
+         "name":"American Barleywine",
+         "country":"",
+         "description":"",
+         "characteristics":"",
+         "abvMin":3,
+         "abvMax":5,
+         "tempMin":-2,
+         "tempMax":15,
+         "food":"",
+         "glasses":["Pint","Tulip"],
+         "fatherStyle":"Strong Ale"
+      },
+      {
+         "name":"Wheatwine",
+         "country":"",
+         "description":"",
+         "characteristics":"",
+         "abvMin":3,
+         "abvMax":5,
+         "tempMin":-2,
+         "tempMax":15,
+         "food":"",
+         "glasses":["Pint","Tulip"],
+         "fatherStyle":"Strong Ale"
+      }
    ],
    "Glass":[],
    "FatherStyle":[]
