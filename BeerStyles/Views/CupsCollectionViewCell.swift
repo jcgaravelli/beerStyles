@@ -10,4 +10,10 @@ import UIKit
 
 class CupsCollectionViewCell: UICollectionViewCell {
     
+  
+    
+    
+    @IBOutlet weak var glassLabe: UILabel!
+    
+    @IBOutlet weak var glassImage: UIImageView!
 }
