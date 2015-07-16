@@ -11,8 +11,8 @@ import UIKit
 
 class CategoryCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
-    let reuseIdentifier = "cell"
-    var imagesMenu : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
+    let reuseIdentifier = "cellCategory"
+    var imagesStyles : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
     var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
@@ -47,7 +47,7 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return imagesMenu.count
+        return imagesStyles.count
     }
     
     
@@ -67,7 +67,7 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
         
         
         
-        let cell : CategoryCollectionViewCell   = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CategoryCollectionViewCell
+        let cell: CategoryCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellCategory", forIndexPath: indexPath) as! CategoryCollectionViewCell
         
         
         if indexPath.row == 0
@@ -76,7 +76,7 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
         }else
         {
             //cell.backgroundColor = UIColor.whiteColor()
-            cell.imageMenu.image = UIImage(named: imagesMenu[indexPath.row])
+            cell.imageCategory.image = UIImage(named: imagesStyles[indexPath.row])
         }
         
         
@@ -87,20 +87,20 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        
-        switch indexPath.row
-        {
-        case 1:
-            performSegueWithIdentifier("ShowStyles", sender: nil)
-        case 2:
-            performSegueWithIdentifier("ShowTutorial", sender: nil)
-        case 3:
-            performSegueWithIdentifier("ShowCups", sender: nil)
-        case 4:
-            performSegueWithIdentifier("ShowFoods", sender: nil)
-        default:
-            break
-        }
+//        
+//        switch indexPath.row
+//        {
+//        case 1:
+//            performSegueWithIdentifier("ShowStyles", sender: nil)
+//        case 2:
+//            performSegueWithIdentifier("ShowTutorial", sender: nil)
+//        case 3:
+//            performSegueWithIdentifier("ShowCups", sender: nil)
+//        case 4:
+//            performSegueWithIdentifier("ShowFoods", sender: nil)
+//        default:
+//            break
+//        }
         
         
 }

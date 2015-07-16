@@ -104,7 +104,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
         switch indexPath.row
         {
         case 1:
-             performSegueWithIdentifier("ShowStyles", sender: nil)
+             performSegueWithIdentifier("ShowCategories", sender: nil)
         case 2:
              performSegueWithIdentifier("ShowTutorial", sender: nil)
         case 3:
