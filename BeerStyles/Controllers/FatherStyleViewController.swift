@@ -13,7 +13,7 @@ import Parse
 
 
 class FatherStyleViewController: PFQueryTableViewController {
-    
+    var categoryObject: PFObject!
     
     
     
@@ -37,6 +37,7 @@ class FatherStyleViewController: PFQueryTableViewController {
         var query = PFQuery(className: "FatherStyle")
         
         query.orderByAscending("name")
+        query.whereKey("category", equalTo:categoryObject)
         return query
     }
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
