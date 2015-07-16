@@ -40,6 +40,7 @@ class FatherStyleViewController: PFQueryTableViewController {
         return query
     }
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! PFTableViewCell!
@@ -56,9 +57,7 @@ class FatherStyleViewController: PFQueryTableViewController {
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-        
+
         
         var row = Int(indexPath.row)
        
