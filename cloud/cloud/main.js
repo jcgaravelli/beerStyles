@@ -25,14 +25,13 @@ var createStyles = function (list) {
     list.forEach(function(style){
       var p = createStyleJSON(style);
       p.then(function(){
-        console.log('sucesso')
       },function(error){
         console.log(error);
       });
       promises.push(p);
     });
   }
-
+  console.log('Finished creating new styles');
   return Parse.Promise.when(promises);
 };
 
@@ -60,7 +59,7 @@ var createGlasses = function (list) {
       promises.push(createGlassJSON(glass));
     });
   }
-
+  console.log('Finished creating new glasses');
   return Parse.Promise.when(promises);
 };
 
@@ -71,7 +70,6 @@ var relate = function(styleName,glassNames) {
 	styleQuery.equalTo('name',styleName);
 
   return styleQuery.first().then(function(style) {
-    console.log('Achou o estilo');
 
     if (style) {
       var glassQuery = new Parse.Query(Glass);
@@ -79,7 +77,6 @@ var relate = function(styleName,glassNames) {
 
       return glassQuery.find().then(function(glasses){
         if (glasses) {
-          console.log('Achou o copo');
           var relation = style.relation('glasses');
           relation.add(glasses);
           style.save();
@@ -101,7 +98,7 @@ var relateStylesGlasses = function (styleList) {
       promises.push(relate(json.name,json.glasses));
     });
   }
-
+  console.log('Finished relating styles to glasses');
   return Parse.Promise.when(promises);
 };
 
@@ -112,7 +109,6 @@ var pointFather = function (styleName, fatherStyleName) {
   styleQuery.equalTo('name',styleName);
 
   return styleQuery.first().then(function(style) {
-    console.log('Achou o estilo');
 
     if (style) {
       var fatherQuery = new Parse.Query(FatherStyle);
@@ -120,16 +116,16 @@ var pointFather = function (styleName, fatherStyleName) {
 
       return fatherQuery.first().then(function(fatherStyle){
         if (fatherStyle) {
-          console.log('Achou o estilo-pai');
           style.set('fatherStyle',fatherStyle);
           var p = style.save();
           return p.then(function(){
-            console.log('Setou o estilo-pai');
+            return fatherStyle;
           }, function(error) {
             console.log(error);
+            return fatherStyle;
           });
         } else {
-          return Parse.Promise.as(glasses);
+          return Parse.Promise.as(fatherStyle);
         }
       });
     } else {
@@ -147,6 +143,7 @@ var pointFatherList = function (styleList) {
     }
   });
 
+  console.log('Finished connecting styles to their fathers.');
   return Parse.Promise.when(promises);
 };
 
@@ -167,96 +164,23 @@ Parse.Cloud.job("AddFromJSON", function(request,status) {
   });
 
   p3.then(function(){
-    status.success('Tudo beleza, hora da cerveja.');
+    console.log('Finished job');
+    status.success('Happy hour xD');
   },function() {
-    status.error('Fudeu o server.');
+    status.error('Oops, shit is up.');
   });
 });
 
-// Parse.Cloud.job("recreateAll", function(request,status) {
-//   console.log('Creating all beers');
-//
-//   var glassPromises = [];
-//
-//   glassPromises.push(createGlass('Snifter'));
-//   glassPromises.push(createGlass('Pint'));
-//   glassPromises.push(createGlass('Tulip'));
-//   glassPromises.push(createGlass('Flute'));
-//   glassPromises.push(createGlass('Mug'));
-//   glassPromises.push(createGlass('Goblet'));
-//   glassPromises.push(createGlass('Pilsner'));
-//   glassPromises.push(createGlass('Stange'));
-//   glassPromises.push(createGlass('Weizen'));
-//   glassPromises.push(createGlass('Oversized Wine'));
-//
-//
-//   var stylePromises = [];
-//
-//   stylePromises.push(createStyle('American Pale Ale'));
-//   stylePromises.push(createStyle('American Amber Ale'));
-//   stylePromises.push(createStyle('American Brown Ale'));
-//   stylePromises.push(createStyle('Ordinary Bitter'));
-//   stylePromises.push(createStyle('Best Bitter'));
-//   stylePromises.push(createStyle('Strong Bitter'));
-//   stylePromises.push(createStyle('British Golden Ale'));
-//   stylePromises.push(createStyle('Autralian Sparkling Ale'));
-//   stylePromises.push(createStyle('English Porter'));
-//   stylePromises.push(createStyle('Baltic Porter'));
-//   stylePromises.push(createStyle('Irish Stout'));
-//   stylePromises.push(createStyle('English IPA'));
-//   stylePromises.push(createStyle('American IPA'));
-//   stylePromises.push(createStyle('Double IPA'));
-//   stylePromises.push(createStyle('Dark Mild'));
-//   stylePromises.push(createStyle('English Brown Ale'));
-//   stylePromises.push(createStyle('Old Ale'));
-//   stylePromises.push(createStyle('American Barleywine'));
-//   stylePromises.push(createStyle('Witbier'));
-//   stylePromises.push(createStyle('Belgian Pale Ale'));
-//   stylePromises.push(createStyle('Saison'));
-//   stylePromises.push(createStyle('Bière de Garde'));
-//   stylePromises.push(createStyle('Irish Red Ale'));
-//   stylePromises.push(createStyle('Scottish Light'));
-//   stylePromises.push(createStyle('Scottish Heavy'));
-//   stylePromises.push(createStyle('Scottish Export'));
-//   stylePromises.push(createStyle('Scottish Wee Heavy'));
-//   stylePromises.push(createStyle('Belgian Blond Ale'));
-//   stylePromises.push(createStyle('Belgian Golden Strong Ale'));
-//   stylePromises.push(createStyle('Belgian Dark Strong Ale'));
-//   stylePromises.push(createStyle('Belgian Dubbel'));
-//   stylePromises.push(createStyle('Belgian Tripel'));
-//   stylePromises.push(createStyle('Weissbier'));
-//   stylePromises.push(createStyle('Dunkles Weissbier'));
-//   stylePromises.push(createStyle('Weizenbock'));
-//
-//
-//
-//   Parse.Promise.when(stylePromises.concat(glassPromises)).then(function(){
-//     var relationPromises = [];
-//
-//     relationPromises.push(relate('American Pale Ale',['Pint','Mug']));
-//     relationPromises.push(relate('Old Ale',['Snifter','Oversized Wine']));
-//     relationPromises.push(relate('Saison',['Tulip','Oversized Wine']));
-//     relationPromises.push(relate('Bière de Garde',['Tulip','Oversized Wine']));
-//     relationPromises.push(relate('Belgian Dark Strong Ale',['Snifter', 'Tulip', 'Goblet']));
-//     relationPromises.push(relate('Scottish Wee Heavy',['Snifter','Tulip']));
-//     relationPromises.push(relate('Belgian Dubbel',['Goblet']));
-//     relationPromises.push(relate('Belgian Tripel',['Snifter', 'Goblet']));
-//     relationPromises.push(relate('Weizenbock',['Flute', 'Weizen']));
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//     Parse.Promise.when(relationPromises).then(function(){
-//       status.success('UHUUUUL');
-//     });
-//   });
-//
-//   console.log('All beers created');
-// });
+Parse.Cloud.job("deleteAllStyles", function(request,status) {
+  var query = new Parse.Query(Style);
+  query.limit(1000);
+  query.find().then(function(styles){
+    Parse.Object.destroyAll(styles).then(function(){
+      status.success("Deleted up to 1000 items successfuly.");
+    },function(error){
+      status.success(error);
+    });
+  },function(error){
+    status.error(error);
+  });
+});
