@@ -1,32 +1,47 @@
 //
-//  TutorialCollectionViewController.swift
+//  MenuCollectionViewController.swift
 //  BeerStyles
 //
-//  Created by Matheus Santos Lopes on 13/07/15.
+//  Created by Matheus Santos Lopes on 10/07/15.
 //  Copyright (c) 2015 Fernando H M Bastos. All rights reserved.
 //
 
 import UIKit
+import Parse
 
 
+class MenuCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-class TutorialCollectionViewController: UICollectionViewController {
-let reuseIdentifier = "Cell"
+    let reuseIdentifier = "cell"
+    var imagesMenu : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
+    var screenSize : CGRect!
+    var screenWidth : CGFloat!
+    var screenHeight : CGFloat!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
+        screenSize = self.view.frame
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
         gradientColor()
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("Object has been saved.")
+        }
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
+     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -43,23 +58,65 @@ let reuseIdentifier = "Cell"
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        //#warning Incomplete method implementation -- Return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //#warning Incomplete method implementation -- Return the number of items in the section
-        return 0
-    }
-
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
     
-        // Configure the cell
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return imagesMenu.count
+    }
     
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        if indexPath.row == 0
+        {
+            return CGSize(width: screenWidth, height: screenWidth/3)
+        }
+        return CGSize(width: 180, height: 180);
+        
+    }
+    
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        
+
+        
+        
+        let cell : MenuCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! MenuCollectionViewCell
+        
+        
+        if indexPath.row == 0
+        {
+            //cell.backgroundColor = UIColor.blueColor()
+        }else
+        {
+            //cell.backgroundColor = UIColor.whiteColor()
+            cell.imageMenu.image = UIImage(named: imagesMenu[indexPath.row])
+        }
+        
+        
+        
+        
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        switch indexPath.row
+        {
+        case 1:
+             performSegueWithIdentifier("ShowCategories", sender: nil)
+        case 2:
+             performSegueWithIdentifier("ShowTutorial", sender: nil)
+        case 3:
+             performSegueWithIdentifier("ShowCups", sender: nil)
+        case 4:
+             performSegueWithIdentifier("ShowFoods", sender: nil)
+        default:
+            break
+        }
+        
+        
     }
     
     func gradientColor(){
@@ -76,6 +133,8 @@ let reuseIdentifier = "Cell"
         self.view.layer.insertSublayer(gradient, atIndex: 0)
         
     }
+    
+    
 
     // MARK: UICollectionViewDelegate
 
@@ -107,5 +166,4 @@ let reuseIdentifier = "Cell"
     
     }
     */
-
 }

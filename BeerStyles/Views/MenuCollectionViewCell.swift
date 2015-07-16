@@ -14,8 +14,6 @@ class MenuCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageMenu: UIImageView!
     
-    @IBOutlet weak var nameMenu: UILabel!
-    
 }
 
 

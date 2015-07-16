@@ -17,6 +17,10 @@ class StyleTableViewController: PFQueryTableViewController {
     
     // Initialise the PFQueryTable tableview
    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        gradientColor()
+    }
     
     
     override init(style: UITableViewStyle, className: String!) {
@@ -47,15 +51,15 @@ class StyleTableViewController: PFQueryTableViewController {
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! PFTableViewCell!
-        if cell == nil {
-            cell = PFTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        }
+        var cell =         tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PFTableViewCell
+    
         
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["name"] as? String {
-            cell?.textLabel?.text = nameEnglish
+            cell.textLabel?.text = nameEnglish
         }
+        
+        
         
         
         return cell
@@ -81,6 +85,20 @@ class StyleTableViewController: PFQueryTableViewController {
     }
     
     
+    func gradientColor(){
+        
+        
+        let gradient: CAGradientLayer = CAGradientLayer()
+        
+        gradient.colors = [UIColor(red:0.92, green:0.87, blue:0.17, alpha:1.0).CGColor,UIColor(red:0.69, green:0.34, blue:0.17, alpha:1.0).CGColor]
+        gradient.locations = [0.0 , 1.0]
+        gradient.startPoint = CGPoint(x: 1.0, y: 0.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        
+        self.view.layer.insertSublayer(gradient, atIndex: 0)
+        
+    }
     
     
     

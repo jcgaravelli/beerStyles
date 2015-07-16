@@ -38,7 +38,8 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.resultSearchController.searchResultsUpdater = self
         
         self.resultSearchController.dimsBackgroundDuringPresentation = false
-//        self.resultSearchController.searchBar.backgroundImage = UIImage.new()
+        
+        //self.resultSearchController.searchBar.backgroundImage = UIImage.new()
         self.resultSearchController.searchBar.sizeToFit()
         
         self.tableView.tableHeaderView = self.resultSearchController.searchBar
@@ -131,12 +132,15 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
+        NSLog("%d", imagesMenu.count);
         return imagesMenu.count
     }
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        if indexPath.row == 0
+        if indexPath.row == -1
+    ////if indexPath.row == -1
+            
         {
             return CGSize(width: screenWidth, height: screenWidth/3)
         }
@@ -154,7 +158,8 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell : MenuCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellMenu", forIndexPath: indexPath) as! MenuCollectionViewCell
         
         
-        if indexPath.row == 0
+        if indexPath.row == -1
+    ////if indexPath.row == -1
         {
             //cell.backgroundColor = UIColor.blueColor()
         }else
@@ -174,13 +179,13 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         switch indexPath.row
         {
-        case 1:
+        case 0:
             performSegueWithIdentifier("ShowCategories", sender: nil)
-        case 2:
+        case 1:
             performSegueWithIdentifier("ShowTutorial", sender: nil)
-        case 3:
+        case 2:
             performSegueWithIdentifier("ShowGlasses", sender: nil)
-        case 4:
+        case 3:
             performSegueWithIdentifier("ShowFoods", sender: nil)
         default:
             break
