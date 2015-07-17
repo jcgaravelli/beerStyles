@@ -97,6 +97,7 @@
                             </collectionView>
                             <searchBar hidden="YES" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIq-6D-YWc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="ab2-3o-MEm" id="VMO-AM-jgP"/>
@@ -512,35 +513,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-y9-Wh2">
-                                <rect key="frame" x="16" y="334" width="218" height="177"/>
-                                <state key="normal" title="LAGER" image="hipsterlogogenerator_1437065340688">
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-cI-cyD">
+                                <rect key="frame" x="2" y="393" width="200" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="GgV-qr-1QY"/>
+                                    <constraint firstAttribute="width" constant="200" id="W2d-yA-dBe"/>
+                                    <constraint firstAttribute="width" constant="230" id="Zs0-LA-DZa"/>
+                                    <constraint firstAttribute="height" constant="200" id="joN-x2-q28"/>
+                                </constraints>
+                                <state key="normal" title="Hybrid" image="Spontaneous">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="lagerSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="1uv-Bw-nio"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-cI-cyD">
-                                <rect key="frame" x="210" y="177" width="246" height="207"/>
-                                <state key="normal" title="Hybrid" image="hipsterlogogenerator_1437067118760">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GgV-qr-1QY"/>
+                                        <exclude reference="W2d-yA-dBe"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="spontaneousSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="iXk-W7-CIf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
-                                <rect key="frame" x="32" y="57" width="229" height="197"/>
-                                <state key="normal" title="ALE" image="hipsterlogogenerator_1437079202358">
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
+                                <rect key="frame" x="0.0" y="57" width="200" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="HQo-FG-8DL"/>
+                                    <constraint firstAttribute="width" constant="230" id="c1s-vl-mNM"/>
+                                </constraints>
+                                <state key="normal" title="ALE" image="Ale">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="aleSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="Zc2-tv-1LM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-y9-Wh2">
+                                <rect key="frame" x="2" y="228" width="200" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="7dT-7x-gCT"/>
+                                    <constraint firstAttribute="height" constant="200" id="JqC-LO-KRW"/>
+                                    <constraint firstAttribute="width" constant="170" id="MVu-TN-EI8"/>
+                                    <constraint firstAttribute="height" constant="230" id="WfM-tz-sgq"/>
+                                    <constraint firstAttribute="height" constant="200" id="onp-WH-9FN"/>
+                                    <constraint firstAttribute="width" constant="230" id="ooo-dG-riF"/>
+                                    <constraint firstAttribute="height" constant="200" id="v4o-ft-BNH"/>
+                                </constraints>
+                                <state key="normal" title="LAGER" image="Lager">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7dT-7x-gCT"/>
+                                        <exclude reference="JqC-LO-KRW"/>
+                                        <exclude reference="MVu-TN-EI8"/>
+                                        <exclude reference="WfM-tz-sgq"/>
+                                        <exclude reference="onp-WH-9FN"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="lagerSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="1uv-Bw-nio"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EgW-Jo-vXS" firstAttribute="top" secondItem="YKy-7c-pz8" secondAttribute="bottom" constant="15" id="3r4-zB-sBQ"/>
+                            <constraint firstItem="dbS-y9-Wh2" firstAttribute="top" secondItem="YKy-7c-pz8" secondAttribute="bottom" constant="200" id="L3g-DR-UHK"/>
+                            <constraint firstAttribute="centerX" secondItem="dbS-y9-Wh2" secondAttribute="centerX" id="cyb-TC-uYY"/>
+                            <constraint firstItem="oLG-G3-r1C" firstAttribute="top" secondItem="mRH-cI-cyD" secondAttribute="bottom" constant="15" id="egG-6n-ptT"/>
+                            <constraint firstAttribute="centerX" secondItem="EgW-Jo-vXS" secondAttribute="centerX" id="hmM-68-12J"/>
+                            <constraint firstAttribute="centerX" secondItem="mRH-cI-cyD" secondAttribute="centerX" id="l6Q-Tf-x1O"/>
+                            <constraint firstItem="oLG-G3-r1C" firstAttribute="top" secondItem="dbS-y9-Wh2" secondAttribute="bottom" constant="200" id="u8d-nS-ng3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bd4-Lj-cOr"/>
                     <connections>
@@ -553,8 +597,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hipsterlogogenerator_1437065340688" width="600" height="500"/>
-        <image name="hipsterlogogenerator_1437067118760" width="600" height="500"/>
-        <image name="hipsterlogogenerator_1437079202358" width="600" height="500"/>
+        <image name="Ale" width="600" height="500"/>
+        <image name="Lager" width="600" height="500"/>
+        <image name="Spontaneous" width="600" height="500"/>
     </resources>
 </document>
