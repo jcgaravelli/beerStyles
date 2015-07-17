@@ -20,6 +20,7 @@ class StyleDetailViewController: UIViewController {
     @IBOutlet weak var tempMAX: UILabel!
     @IBOutlet weak var glasses: UILabel!
     var currentObject : PFObject!
+    @IBOutlet weak var Construction: UILabel!
     
     
     
@@ -36,8 +37,9 @@ class StyleDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         if let object = currentObject {
                         name.text = object["name"] as? String
-                            tempMAX.text = object["nameLocal"] as? String
-                    }
+                            //tempMAX.text = object["nameLocal"] as? String
+            self.name.sizeToFit()
+        }
         
     }
     

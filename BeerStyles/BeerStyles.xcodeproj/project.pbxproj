@@ -46,6 +46,7 @@
 		853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3611B4AD24200DE27A5 /* Images.xcassets */; };
 		853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */; };
 		853CB3711B4AD24200DE27A5 /* BeerStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */; };
+		858D535E1B599BE30044F1C7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 853CB36F1B4AD24200DE27A5 /* Info.plist */; };
 		D26E14971B5947850097F975 /* SearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E14961B5947850097F975 /* SearchDisplayViewController.swift */; };
 		D2F3EA0F1B57F407003D1B14 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -359,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858D535E1B599BE30044F1C7 /* Info.plist in Resources */,
 				6378222A1B593C7200163D75 /* bubble.mp3 in Resources */,
 				853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */,
 				853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */,

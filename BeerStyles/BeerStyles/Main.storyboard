@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv1-ah-5qu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -220,22 +219,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="P0r-ah-6tc">
-                                <rect key="frame" x="13" y="72" width="568" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="nCx-kj-mdu"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0r-ah-6tc">
+                                <rect key="frame" x="16" y="72" width="568" height="71"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="TSi-Xo-buY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSi-Xo-buY">
                                 <rect key="frame" x="16" y="184" width="568" height="383"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
-                                <rect key="frame" x="112" y="95" width="390" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
+                                <rect key="frame" x="112" y="89" width="390" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Under Construction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-qH-7Gd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Under Construction" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCz-qH-7Gd">
                                 <rect key="frame" x="112" y="247" width="371" height="257"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -243,19 +239,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Z4f-od-z3E" firstAttribute="centerY" secondItem="P0r-ah-6tc" secondAttribute="centerY" id="14H-vS-xIW"/>
-                            <constraint firstItem="P0r-ah-6tc" firstAttribute="trailing" secondItem="v6u-dP-1Nh" secondAttribute="trailingMargin" constant="5" id="206-bE-bcM"/>
-                            <constraint firstItem="TSi-Xo-buY" firstAttribute="leading" secondItem="v6u-dP-1Nh" secondAttribute="leadingMargin" constant="5" id="7by-EG-g1p"/>
-                            <constraint firstItem="P0r-ah-6tc" firstAttribute="top" secondItem="nu3-2e-n1B" secondAttribute="bottom" constant="5" id="GdD-eZ-nf7"/>
-                            <constraint firstItem="vw8-Ys-OE8" firstAttribute="top" secondItem="TSi-Xo-buY" secondAttribute="bottom" constant="5" id="IRO-XI-7q2"/>
-                            <constraint firstItem="rCz-qH-7Gd" firstAttribute="centerX" secondItem="TSi-Xo-buY" secondAttribute="centerX" constant="-2.5" id="T2I-RA-Hzo"/>
-                            <constraint firstItem="P0r-ah-6tc" firstAttribute="leading" secondItem="v6u-dP-1Nh" secondAttribute="leadingMargin" constant="5" id="jTM-m4-WaP"/>
-                            <constraint firstItem="TSi-Xo-buY" firstAttribute="top" secondItem="P0r-ah-6tc" secondAttribute="bottom" constant="10" id="kY3-lh-2G7"/>
-                            <constraint firstItem="rCz-qH-7Gd" firstAttribute="centerY" secondItem="TSi-Xo-buY" secondAttribute="centerY" id="p37-bs-tcO"/>
-                            <constraint firstItem="Z4f-od-z3E" firstAttribute="centerX" secondItem="P0r-ah-6tc" secondAttribute="centerX" constant="10" id="rWm-CY-awT"/>
-                            <constraint firstItem="TSi-Xo-buY" firstAttribute="trailing" secondItem="v6u-dP-1Nh" secondAttribute="trailingMargin" constant="5" id="rpD-ek-Ohv"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Construction" destination="rCz-qH-7Gd" id="coH-vt-qXp"/>
@@ -616,6 +599,5 @@
         <image name="Ale" width="600" height="500"/>
         <image name="Lager" width="600" height="500"/>
         <image name="Spontaneous" width="600" height="500"/>
-        <image name="box" width="682" height="398"/>
     </resources>
 </document>
