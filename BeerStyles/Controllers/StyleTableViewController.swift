@@ -95,6 +95,7 @@ class StyleTableViewController: PFQueryTableViewController {
     }
     }
     
+<<<<<<< HEAD
     
     func gradientColor(){
         
@@ -138,4 +139,6 @@ class StyleTableViewController: PFQueryTableViewController {
     
     
     
+=======
+>>>>>>> 0fb76477be4925ae12cd04a2d57b686b0316b9ae
 }

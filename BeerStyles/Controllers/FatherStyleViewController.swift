@@ -108,6 +108,7 @@ class FatherStyleViewController: PFQueryTableViewController {
             }
     
     }
+<<<<<<< HEAD
 
 
         
@@ -152,6 +153,8 @@ class FatherStyleViewController: PFQueryTableViewController {
             index += 1
         }
     }
+=======
+>>>>>>> 0fb76477be4925ae12cd04a2d57b686b0316b9ae
     
 }
 

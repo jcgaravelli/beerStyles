@@ -20,6 +20,7 @@
 		673B0B1B1B590B6C00493344 /* GlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B1A1B590B6C00493344 /* GlassViewController.swift */; };
 		673B0B1D1B590B8000493344 /* GlassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B1C1B590B8000493344 /* GlassCollectionViewCell.swift */; };
 		673B0B1F1B59219D00493344 /* GlassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B1E1B59219D00493344 /* GlassDetailViewController.swift */; };
+		673B0B211B59352800493344 /* UIViewController+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B201B59352800493344 /* UIViewController+Gradient.swift */; };
 		674272471B553A520018D7EC /* FatherStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674272461B553A520018D7EC /* FatherStyleViewController.swift */; };
 		674272491B557A7E0018D7EC /* StyleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674272481B557A7E0018D7EC /* StyleTableViewController.swift */; };
 		6742724B1B557F220018D7EC /* StyleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6742724A1B557F220018D7EC /* StyleDetailViewController.swift */; };
@@ -45,6 +46,7 @@
 		853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3611B4AD24200DE27A5 /* Images.xcassets */; };
 		853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */; };
 		853CB3711B4AD24200DE27A5 /* BeerStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */; };
+		D26E14971B5947850097F975 /* SearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E14961B5947850097F975 /* SearchDisplayViewController.swift */; };
 		D2F3EA0F1B57F407003D1B14 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +73,8 @@
 		673B0B141B57E17600493344 /* CategotyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategotyViewController.swift; sourceTree = "<group>"; };
 		673B0B1A1B590B6C00493344 /* GlassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlassViewController.swift; path = BeerStyles/GlassViewController.swift; sourceTree = SOURCE_ROOT; };
 		673B0B1C1B590B8000493344 /* GlassCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlassCollectionViewCell.swift; path = Views/GlassCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
-		673B0B1E1B59219D00493344 /* GlassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassDetailViewController.swift; sourceTree = "<group>"; };
+		673B0B1E1B59219D00493344 /* GlassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlassDetailViewController.swift; path = ../BeerStyles/GlassDetailViewController.swift; sourceTree = "<group>"; };
+		673B0B201B59352800493344 /* UIViewController+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Gradient.swift"; sourceTree = "<group>"; };
 		674272461B553A520018D7EC /* FatherStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatherStyleViewController.swift; sourceTree = "<group>"; };
 		674272481B557A7E0018D7EC /* StyleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleTableViewController.swift; path = Controllers/StyleTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		6742724A1B557F220018D7EC /* StyleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleDetailViewController.swift; path = Controllers/StyleDetailViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -101,6 +104,7 @@
 		853CB36A1B4AD24200DE27A5 /* BeerStylesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerStylesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CB36F1B4AD24200DE27A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerStylesTests.swift; sourceTree = "<group>"; };
+		D26E14961B5947850097F975 /* SearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayViewController.swift; sourceTree = "<group>"; };
 		D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,14 +149,15 @@
 				D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */,
 				635727401B5403AE00F80934 /* CategoryCollectionViewController.swift */,
 				673B0B141B57E17600493344 /* CategotyViewController.swift */,
-				673B0B1C1B590B8000493344 /* GlassCollectionViewCell.swift */,
 				673B0B1A1B590B6C00493344 /* GlassViewController.swift */,
 				635727461B549E0900F80934 /* TutorialCollectionViewController.swift */,
 				6357274A1B549E7100F80934 /* FoodsCollectionViewController.swift */,
 				674272461B553A520018D7EC /* FatherStyleViewController.swift */,
 				674272481B557A7E0018D7EC /* StyleTableViewController.swift */,
 				6742724A1B557F220018D7EC /* StyleDetailViewController.swift */,
+				673B0B1E1B59219D00493344 /* GlassDetailViewController.swift */,
 				673838F51B4EF604003468AE /* ParseManager.swift */,
+				D26E14961B5947850097F975 /* SearchDisplayViewController.swift */,
 			);
 			name = Controllers;
 			path = ../Controllers;
@@ -165,6 +170,7 @@
 				635727421B549AE600F80934 /* CategoryCollectionViewCell.swift */,
 				635727441B549DD500F80934 /* TutorialCollectionViewCell.swift */,
 				6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */,
+				673B0B1C1B590B8000493344 /* GlassCollectionViewCell.swift */,
 			);
 			name = Views;
 			path = ../Views;
@@ -212,6 +218,7 @@
 		853CB3491B4AD24100DE27A5 = {
 			isa = PBXGroup;
 			children = (
+				673B0B201B59352800493344 /* UIViewController+Gradient.swift */,
 				67806E101B4DB7E100904925 /* Framework */,
 				67806DED1B4DB50000904925 /* parseFramework */,
 				853CB3541B4AD24200DE27A5 /* BeerStyles */,
@@ -237,7 +244,6 @@
 				6357272E1B4EC43E00F80934 /* Controllers */,
 				853CB3571B4AD24200DE27A5 /* AppDelegate.swift */,
 				853CB35E1B4AD24200DE27A5 /* Main.storyboard */,
-				673B0B1E1B59219D00493344 /* GlassDetailViewController.swift */,
 				853CB3611B4AD24200DE27A5 /* Images.xcassets */,
 				853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */,
 				853CB3551B4AD24200DE27A5 /* Supporting Files */,
@@ -377,9 +383,11 @@
 				635727451B549DD500F80934 /* TutorialCollectionViewCell.swift in Sources */,
 				635727431B549AE600F80934 /* CategoryCollectionViewCell.swift in Sources */,
 				673838F61B4EF604003468AE /* ParseManager.swift in Sources */,
+				D26E14971B5947850097F975 /* SearchDisplayViewController.swift in Sources */,
 				6742724B1B557F220018D7EC /* StyleDetailViewController.swift in Sources */,
 				673B0B151B57E17600493344 /* CategotyViewController.swift in Sources */,
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
+				673B0B211B59352800493344 /* UIViewController+Gradient.swift in Sources */,
 				635727471B549E0900F80934 /* TutorialCollectionViewController.swift in Sources */,
 				674272471B553A520018D7EC /* FatherStyleViewController.swift in Sources */,
 				6357273A1B50A31F00F80934 /* MenuCollectionViewCell.swift in Sources */,
