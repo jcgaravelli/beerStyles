@@ -12,7 +12,7 @@ import Parse
 class GlassViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate{
 
     
-    var countries = [PFObject]()
+    var glasses = [PFObject]()
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
         
         // Build a parse query object
         var query = PFQuery(className:"Glass")
-        
+
         // Check to see if there is a search term
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -46,23 +46,25 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
             if error == nil {
                 
                 // Clear existing country data
-                self.countries.removeAll(keepCapacity: true)
+                self.glasses.removeAll(keepCapacity: true)
                 
                 // Add country objects to our array
                 if let objects = objects as? [PFObject] {
-                    self.countries = Array(objects.generate())
+                    self.glasses = Array(objects.generate())
                 }
                 
                 // reload our data into the collection view
                 self.collectionView.reloadData()
-                
+
             } else {
                 // Log details of the failure
               
-                println("Error: \(error!) \(error!.userInfo!)")
+                //println("Error: \(error!) \(error!.userInfo!)")
             }
         }
-    }
+ 
+
+}
     
     
     //CollectionView
@@ -72,7 +74,7 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var alfa = self.countries.count
+        var alfa = self.glasses.count
          println(alfa)
         
         return alfa
@@ -84,22 +86,22 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! GlassCollectionViewCell
         
         // Display the country name
-        if let value = self.countries[indexPath.row]["name"] as? String {
+        if let value = self.glasses[indexPath.row]["name"] as? String {
             cell.glassLabel.text = value
         } 
         
         // Display "initial" flag image
         var initialThumbnail = UIImage(named: "name")
-        cell.glassImage.image = initialThumbnail
+       // cell.glassImage.image = initialThumbnail
         
         // Fetch final flag image - if it exists
-        if let value = countries[indexPath.row]["flag"] as? PFFile {
-            let finalImage = self.countries[indexPath.row]["flag"] as? PFFile
+        if let value = glasses[indexPath.row]["flag"] as? PFFile {
+            let finalImage = self.glasses[indexPath.row]["flag"] as? PFFile
             finalImage!.getDataInBackgroundWithBlock {
                 (imageData: NSData?, error: NSError?) -> Void in
                 if error == nil {
                     if let imageData = imageData {
-                        cell.glassImage.image = UIImage(data:imageData)
+                     //   cell.glassImage.image = UIImage(data:imageData)
                     }
                 }
             }

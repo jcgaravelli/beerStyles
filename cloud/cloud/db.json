@@ -336,7 +336,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":"Amber Hybrid Lager"
+         "fatherStyle":"Amber Hybrid Beer"
       },
       {
          "name":"California Common",
@@ -349,7 +349,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":"Amber Hybrid Lager"
+         "fatherStyle":"Amber Hybrid Beer"
       },
       {
          "name":"Altbier",
@@ -362,7 +362,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":"Amber Hybrid Lager"
+         "fatherStyle":"Amber Hybrid Beer"
       },
       {
          "name":"Ordinary Bitter",
@@ -895,7 +895,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":"Sour Ale"
+         "fatherStyle":"Sour"
       },
       {
          "name":"Gueuze",
@@ -908,7 +908,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":"Sour Ale"
+         "fatherStyle":"Sour"
       },
       {
          "name":"Fruit Lambic",
@@ -921,7 +921,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":"Sour Ale"
+         "fatherStyle":"Sour"
       },
       {
          "name":"Belgian Blond Ale",

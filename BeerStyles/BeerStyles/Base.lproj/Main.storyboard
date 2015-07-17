@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv1-ah-5qu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv1-ah-5qu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -155,7 +155,9 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NdR-cN-fTh" id="9rN-pP-WdP">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -283,7 +285,7 @@
         <!--Cups-->
         <scene sceneID="MbN-qS-cba">
             <objects>
-                <collectionViewController id="2hb-CT-Fm2" customClass="CupsCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="2hb-CT-Fm2" customClass="FoodsCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rb5-Hs-biJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,6 +352,90 @@
             </objects>
             <point key="canvasLocation" x="96" y="-360"/>
         </scene>
+        <!--Glass View Controller-->
+        <scene sceneID="VOf-M2-x81">
+            <objects>
+                <viewController id="Xge-wu-bLR" customClass="GlassViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="869-Ii-QkT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sia-4c-S1c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kuo-p1-XYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Akp-nH-LAQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tqA-4C-Zg7">
+                                    <size key="itemSize" width="229" height="214"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="EEl-NB-j4u" customClass="GlassCollectionViewCell" customModule="BeerStyles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="229" height="214"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-TQ-6vg">
+                                                    <rect key="frame" x="81" y="86" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="glassLabel" destination="7bq-TQ-6vg" id="51y-Va-tfs"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xge-wu-bLR" id="E8s-Fo-H4m"/>
+                                    <outlet property="delegate" destination="Xge-wu-bLR" id="ZF4-KZ-NyH"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Akp-nH-LAQ" secondAttribute="centerY" id="32x-7U-Kqi"/>
+                            <constraint firstItem="Akp-nH-LAQ" firstAttribute="width" secondItem="Kuo-p1-XYJ" secondAttribute="width" id="GWO-7P-NT0"/>
+                            <constraint firstAttribute="centerX" secondItem="Akp-nH-LAQ" secondAttribute="centerX" id="c8L-RE-6xK"/>
+                            <constraint firstItem="Akp-nH-LAQ" firstAttribute="height" secondItem="Kuo-p1-XYJ" secondAttribute="height" id="cXQ-0u-5vP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Akp-nH-LAQ" id="RcW-1D-COV"/>
+                        <segue destination="JfQ-3Q-hd6" kind="show" identifier="glassColectToDetails" id="Cdt-hr-4ew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iht-lH-88y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="485"/>
+        </scene>
+        <!--Glass Detail View Controller-->
+        <scene sceneID="khd-Hi-zSu">
+            <objects>
+                <viewController id="JfQ-3Q-hd6" customClass="GlassDetailViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bsm-fb-bMz"/>
+                        <viewControllerLayoutGuide type="bottom" id="G5K-WG-UER"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXG-tk-orO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAG-rr-iGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="485"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="AR3-gq-cGn">
             <objects>
@@ -371,33 +457,34 @@
         <!--Category-->
         <scene sceneID="TV8-dS-VwR">
             <objects>
-                <collectionViewController id="FLe-3n-71n" customClass="CategoryCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="FLe-3n-71n" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="EbZ-g0-RbG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KFI-Oj-eTy">
-                            <size key="itemSize" width="282" height="283"/>
+                            <size key="itemSize" width="195" height="146"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCategory" id="5nH-ak-6vP" customClass="CategoryCollectionViewCell" customModule="BeerStyles">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCategory" id="5nH-ak-6vP" customClass="GlassCollectionViewCell" customModule="BeerStyles">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="282" height="283"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="195" height="146"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rss-R3-aXX">
-                                            <rect key="frame" x="0.0" y="0.0" width="245" height="255"/>
-                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acp-xp-D3S">
+                                            <rect key="frame" x="61" y="59" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <outlet property="imageCategory" destination="Rss-R3-aXX" id="mUX-gL-nZJ"/>
-                                </connections>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -423,31 +510,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-cI-cyD">
-                                <rect key="frame" x="227" y="271" width="46" height="30"/>
-                                <state key="normal" title="Hybrid">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-y9-Wh2">
+                                <rect key="frame" x="16" y="334" width="218" height="177"/>
+                                <state key="normal" title="LAGER" image="hipsterlogogenerator_1437065340688">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lagerSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="1uv-Bw-nio"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-cI-cyD">
+                                <rect key="frame" x="210" y="177" width="246" height="207"/>
+                                <state key="normal" title="Hybrid" image="hipsterlogogenerator_1437067118760">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="spontaneousSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="iXk-W7-CIf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
-                                <rect key="frame" x="29" y="72" width="114" height="179"/>
-                                <state key="normal" title="ALE">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
+                                <rect key="frame" x="32" y="57" width="229" height="197"/>
+                                <state key="normal" title="ALE" image="hipsterlogogenerator_1437079202358">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="aleSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="Zc2-tv-1LM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-y9-Wh2">
-                                <rect key="frame" x="213" y="167" width="50" height="30"/>
-                                <state key="normal" title="LAGER">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="lagerSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="1uv-Bw-nio"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -463,4 +550,9 @@
             <point key="canvasLocation" x="96" y="-1207"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hipsterlogogenerator_1437065340688" width="600" height="500"/>
+        <image name="hipsterlogogenerator_1437067118760" width="600" height="500"/>
+        <image name="hipsterlogogenerator_1437079202358" width="600" height="500"/>
+    </resources>
 </document>

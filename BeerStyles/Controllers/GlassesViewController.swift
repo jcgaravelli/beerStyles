@@ -1,18 +1,17 @@
 //
-//  EmbebedoCollectionViewController.swift
+//  GlassesViewController.swift
 //  BeerStyles
 //
-//  Created by Matheus Santos Lopes on 13/07/15.
-//  Copyright (c) 2015 Fernando H M Bastos. All rights reserved.
+//  Created by Matheus Santos Lopes on 16/07/15.
+//
 //
 
 import UIKit
 
+class GlassesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-class CategoryCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate{
-    
-    let reuseIdentifier = "cellCategory"
-    var imagesStyles : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
+    let reuseIdentifier = "cellGlass"
+    var imagesGlasses : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
     var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
@@ -23,8 +22,8 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
         screenSize = self.view.frame
         screenWidth = screenSize.width
         screenHeight = screenSize.height
-        }
-        
+    }
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -45,14 +44,13 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
     // MARK: UICollectionViewDataSource
     
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return imagesStyles.count
+        return imagesGlasses.count
     }
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
         if indexPath.row == 0
         {
             return CGSize(width: screenWidth, height: screenWidth/3)
@@ -62,13 +60,13 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
     }
     
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         
         
         
         
-        let cell: CategoryCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellCategory", forIndexPath: indexPath) as! CategoryCollectionViewCell
+        let cell: GlassesCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellGlass", forIndexPath: indexPath) as! GlassesCollectionViewCell
         
         
         if indexPath.row == 0
@@ -77,7 +75,7 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
         }else
         {
             //cell.backgroundColor = UIColor.whiteColor()
-            cell.imageCategory.image = UIImage(named: imagesStyles[indexPath.row])
+            cell.imageGlass.image = UIImage(named: imagesGlasses[indexPath.row])
         }
         
         
@@ -86,27 +84,26 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-//        
-//        switch indexPath.row
-//        {
-//        case 1:
-//            performSegueWithIdentifier("ShowStyles", sender: nil)
-//        case 2:
-//            performSegueWithIdentifier("ShowTutorial", sender: nil)
-//        case 3:
-//            performSegueWithIdentifier("ShowCups", sender: nil)
-//        case 4:
-//            performSegueWithIdentifier("ShowFoods", sender: nil)
-//        default:
-//            break
-//        }
+        //
+        //        switch indexPath.row
+        //        {
+        //        case 1:
+        //            performSegueWithIdentifier("ShowStyles", sender: nil)
+        //        case 2:
+        //            performSegueWithIdentifier("ShowTutorial", sender: nil)
+        //        case 3:
+        //            performSegueWithIdentifier("ShowCups", sender: nil)
+        //        case 4:
+        //            performSegueWithIdentifier("ShowFoods", sender: nil)
+        //        default:
+        //            break
+        //        }
         
         
+    }
+    
+    
 }
-
-
-}
-
 

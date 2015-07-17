@@ -13,7 +13,7 @@ import Parse
 class MenuCollectionViewController: UICollectionViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     let reuseIdentifier = "cell"
-    var imagesMenu : [String] = ["","cerveja","cerveja","cerveja","cerveja"]
+    var imagesMenu : [String] = ["","teste62","teste2","teste3","teste7"]
     var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
@@ -109,7 +109,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
         case 2:
              performSegueWithIdentifier("ShowTutorial", sender: nil)
         case 3:
-             performSegueWithIdentifier("ShowCups", sender: nil)
+             performSegueWithIdentifier("ShowGlasses", sender: nil)
         case 4:
              performSegueWithIdentifier("ShowFoods", sender: nil)
         default:
@@ -124,7 +124,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
         
         let gradient: CAGradientLayer = CAGradientLayer()
         
-        gradient.colors = [UIColor(red:0.92, green:0.87, blue:0.17, alpha:1.0).CGColor,UIColor(red:0.69, green:0.34, blue:0.17, alpha:1.0).CGColor]
+        gradient.colors = [UIColor(red:1.0, green:0.85, blue:0.20, alpha:1.0).CGColor,UIColor(red:0.80, green:0.59, blue:0.00, alpha:1.0).CGColor]
         gradient.locations = [0.0 , 1.0]
         gradient.startPoint = CGPoint(x: 1.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
