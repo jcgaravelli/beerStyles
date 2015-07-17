@@ -11,5 +11,6 @@ import UIKit
 class GlassCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var glassLabel: UILabel!
-    @IBOutlet weak var glassImage: UIImageView!
+    
+   // @IBOutlet weak var glassImage: UIImageView!
 }
