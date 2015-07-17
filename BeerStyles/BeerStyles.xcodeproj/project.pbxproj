@@ -105,6 +105,8 @@
 		853CB36A1B4AD24200DE27A5 /* BeerStylesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerStylesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CB36F1B4AD24200DE27A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerStylesTests.swift; sourceTree = "<group>"; };
+		858D535F1B599C910044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
+		858D53601B599C920044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D26E14961B5947850097F975 /* SearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayViewController.swift; sourceTree = "<group>"; };
 		D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -427,6 +429,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				853CB35F1B4AD24200DE27A5 /* Base */,
+				858D535F1B599C910044F1C7 /* pt */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				853CB3641B4AD24200DE27A5 /* Base */,
+				858D53601B599C920044F1C7 /* pt */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
