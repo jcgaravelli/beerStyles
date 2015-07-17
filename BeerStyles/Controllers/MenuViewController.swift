@@ -12,7 +12,7 @@ import Parse
 class MenuViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchResultsUpdating, UITableViewDataSource, UITableViewDelegate {
 
     let reuseIdentifier = "cellMenu"
-    var imagesMenu : [String] = ["teste62","cerveja","cerveja","cerveja"]
+    var imagesMenu : [String] = ["stylesIcon","howIcon","glassIcon","foodIcon"]
     var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
@@ -200,6 +200,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         
     }
+    
     
     
     
