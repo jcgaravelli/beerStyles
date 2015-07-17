@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv1-ah-5qu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Sv1-ah-5qu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -345,31 +345,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-cI-cyD">
-                                <rect key="frame" x="227" y="271" width="46" height="30"/>
-                                <state key="normal" title="Hybrid">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="spontaneousSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="iXk-W7-CIf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
-                                <rect key="frame" x="29" y="72" width="114" height="179"/>
-                                <state key="normal" title="ALE">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
+                                <rect key="frame" x="-27" y="49" width="229" height="197"/>
+                                <state key="normal" title="ALE" image="hipsterlogogenerator_1437079202358">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="aleSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="Zc2-tv-1LM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-y9-Wh2">
-                                <rect key="frame" x="213" y="167" width="50" height="30"/>
-                                <state key="normal" title="LAGER">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-y9-Wh2">
+                                <rect key="frame" x="16" y="334" width="218" height="177"/>
+                                <state key="normal" title="LAGER" image="hipsterlogogenerator_1437065340688">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="lagerSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="1uv-Bw-nio"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-cI-cyD">
+                                <rect key="frame" x="115" y="148" width="246" height="207"/>
+                                <state key="normal" title="Hybrid" image="hipsterlogogenerator_1437067118760">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="spontaneousSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="iXk-W7-CIf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -385,4 +385,9 @@
             <point key="canvasLocation" x="883" y="-1222"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hipsterlogogenerator_1437065340688" width="600" height="500"/>
+        <image name="hipsterlogogenerator_1437067118760" width="600" height="500"/>
+        <image name="hipsterlogogenerator_1437079202358" width="600" height="500"/>
+    </resources>
 </document>
