@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import AVFoundation
+import Bolts
 
 
 class CategotyViewController: UIViewController {
@@ -30,6 +31,10 @@ class CategotyViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,23 +43,25 @@ class CategotyViewController: UIViewController {
     
     
     @IBAction func aleSelect(sender: AnyObject) {
-        var object : PFObject = parseFind("Ale")
-        
-       // bubbleSound = createBubbleSound()
-      //  animateButton()
-        
-        performSegueWithIdentifier("categoryToFather", sender: object)
-        
-  
+        self.selectType("Ale")
     }
     
     @IBAction func lagerSelect(sender: AnyObject) {
-        var object : PFObject = parseFind("Lager")
-        performSegueWithIdentifier("categoryToFather", sender: object)
+        self.selectType("Lager")
     }
+    
     @IBAction func spontaneousSelect(sender: AnyObject) {
-        var object : PFObject = parseFind("Spontaneous")
-        performSegueWithIdentifier("categoryToFather", sender: object)
+        self.selectType("Spontaneous")
+    }
+    
+    func selectType(typeName: NSString) {
+        var promise : BFTask = parseFind(typeName)
+        promise.continueWithBlock {
+            (task: BFTask!) -> AnyObject in
+            self.performSegueWithIdentifier("categoryToFather", sender: promise.result)
+            return promise.result
+        }
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -99,11 +106,11 @@ class CategotyViewController: UIViewController {
 //    }
     
 
-    func parseFind(type:NSString)->PFObject{
+    func parseFind(type:NSString)->BFTask{
         var query = PFQuery(className:"Category")
         query.whereKey("name", equalTo:type)
-       var sender = query.getFirstObject()
-        return sender!
+       var sender = query.getFirstObjectInBackground()
+        return sender
     }
     
     

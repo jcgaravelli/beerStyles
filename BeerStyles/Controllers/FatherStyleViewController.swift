@@ -18,7 +18,20 @@ class FatherStyleViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColor()
+        
+            }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+         animateTable()
     }
+    
+    override func objectsDidLoad(error: NSError?) {
+        super.objectsDidLoad(error)
+        animateTable()
+    }
+
+    
     
     // Initialise the PFQueryTable tableview
     override init(style: UITableViewStyle, className: String!) {
@@ -28,11 +41,13 @@ class FatherStyleViewController: PFQueryTableViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+       
         // Configure the PFQueryTableView
         self.parseClassName = "FatherStyle"
         self.textKey = "name"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = false
+        
     }
     
     // Define the query that will provide the data for the table view
@@ -41,30 +56,46 @@ class FatherStyleViewController: PFQueryTableViewController {
         
         query.orderByAscending("name")
         query.whereKey("category", equalTo:categoryObject)
+        
+        
         return query
     }
+    
+    
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PFTableViewCell
         
+
+        
         
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["name"] as? String {
             cell.textLabel?.text = nameEnglish
+            
+            
         }
    
         
         return cell
+        
+       
     }
+    
+    
+    
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
         
         var row = Int(indexPath.row)
-       
+        
         
         performSegueWithIdentifier("fatherToSon", sender: objects?[row])
+        
+        
     }
     
     
@@ -74,10 +105,40 @@ class FatherStyleViewController: PFQueryTableViewController {
             if let destination = segue.destinationViewController as? StyleTableViewController {
 
                     destination.fatherObject = (sender as! PFObject)
+                
+                
                 }
             }
     
     }
+
+
+        
+    
+    
+    func animateTable() {
+        tableView.reloadData()
+        
+        let cells = tableView.visibleCells()
+        let tableHeight: CGFloat = tableView.bounds.size.height
+        
+        for i in cells {
+            let cell: UITableViewCell = i as! UITableViewCell
+            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
+        }
+        
+        var index = 0
+        
+        for a in cells {
+            let cell: UITableViewCell = a as! UITableViewCell
+            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: {
+                cell.transform = CGAffineTransformMakeTranslation(0, 0);
+                }, completion: nil)
+            
+            index += 1
+        }
+    }
+
     
 }
 
