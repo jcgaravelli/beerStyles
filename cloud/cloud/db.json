@@ -11,7 +11,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Lager"
       },
       {
          "name":"American Lager",
@@ -24,7 +24,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Lager"
       },
       {
          "name":"International Pale Lager",
@@ -37,7 +37,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Lager"
       },
       {
          "name":"Munich Helles",
@@ -50,7 +50,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Lager"
       },
       {
          "name":"Festbier",
@@ -63,7 +63,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Lager"
       },
       {
          "name":"Helles Exportbier",
@@ -76,7 +76,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Lager"
       },
       {
          "name":"German Leichtbier",
@@ -89,7 +89,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Pilsner"
       },
       {
          "name":"Czech Pale Lager",
@@ -102,7 +102,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Pilsner"
       },
       {
          "name":"German Pils",
@@ -115,7 +115,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Pilsner"
       },
       {
          "name":"Vienna Lager",
@@ -128,7 +128,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"European Amber Lager"
       },
       {
          "name":"Czech Amber Lager",
@@ -141,7 +141,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"European Amber Lager"
       },
       {
          "name":"Märzen",
@@ -154,7 +154,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"European Amber Lager"
       },
       {
          "name":"Kellerbier",
@@ -167,7 +167,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"European Amber Lager"
       },
       {
          "name":"International Dark Lager",
@@ -180,7 +180,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Dark Lager"
       },
       {
          "name":"Munich Dunkel",
@@ -193,7 +193,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Dark Lager"
       },
       {
          "name":"Czech Dark Lager",
@@ -206,7 +206,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Dark Lager"
       },
       {
          "name":"Schwarzbier",
@@ -219,7 +219,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Dark Lager"
       },
       {
          "name":"Helles Bock",
@@ -232,7 +232,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Bock"
       },
       {
          "name":"Dunkles Bock",
@@ -245,7 +245,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Bock"
       },
       {
          "name":"Doppelbock",
@@ -258,7 +258,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Bock"
       },
       {
          "name":"Eisbock",
@@ -271,7 +271,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Bock"
       },
       {
          "name":"Cream Ale",
@@ -284,7 +284,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Hybrid Beer"
       },
       {
          "name":"Blonde Ale",
@@ -297,7 +297,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Hybrid Beer"
       },
       {
          "name":"Kölsch",
@@ -310,7 +310,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Hybrid Beer"
       },
       {
          "name":"American Wheat Beer",
@@ -323,7 +323,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Light Hybrid Beer"
       },
       {
          "name":"International Amber Lager",
@@ -336,7 +336,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Amber Hybrid Lager"
       },
       {
          "name":"California Common",
@@ -349,7 +349,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Amber Hybrid Lager"
       },
       {
          "name":"Altbier",
@@ -362,7 +362,7 @@
          "tempMax":15,
          "food":"",
          "glasses":["Pint","Tulip"],
-         "fatherStyle":""
+         "fatherStyle":"Amber Hybrid Lager"
       },
       {
          "name":"Ordinary Bitter",

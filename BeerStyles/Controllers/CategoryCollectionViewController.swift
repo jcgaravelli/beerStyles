@@ -52,6 +52,7 @@ class CategoryCollectionViewController: UICollectionViewController, UICollection
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
         if indexPath.row == 0
         {
             return CGSize(width: screenWidth, height: screenWidth/3)
