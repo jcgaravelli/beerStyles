@@ -35,6 +35,8 @@ class StyleTableViewController: PFQueryTableViewController {
         self.textKey = "name"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = false
+        
+        
     }
     
     // Define the query that will provide the data for the table view
