@@ -109,7 +109,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
         case 2:
              performSegueWithIdentifier("ShowTutorial", sender: nil)
         case 3:
-             performSegueWithIdentifier("ShowCups", sender: nil)
+             performSegueWithIdentifier("ShowGlasses", sender: nil)
         case 4:
              performSegueWithIdentifier("ShowFoods", sender: nil)
         default:
