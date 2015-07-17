@@ -14,6 +14,7 @@
 		635727471B549E0900F80934 /* TutorialCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635727461B549E0900F80934 /* TutorialCollectionViewController.swift */; };
 		6357274B1B549E7100F80934 /* FoodsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357274A1B549E7100F80934 /* FoodsCollectionViewController.swift */; };
 		6357274F1B549EDB00F80934 /* FoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */; };
+		6378222A1B593C7200163D75 /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 637822291B593C7200163D75 /* bubble.mp3 */; };
 		673838F61B4EF604003468AE /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673838F51B4EF604003468AE /* ParseManager.swift */; };
 		673B0B151B57E17600493344 /* CategotyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B141B57E17600493344 /* CategotyViewController.swift */; };
 		673B0B1B1B590B6C00493344 /* GlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B1A1B590B6C00493344 /* GlassViewController.swift */; };
@@ -65,6 +66,7 @@
 		635727461B549E0900F80934 /* TutorialCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewController.swift; sourceTree = "<group>"; };
 		6357274A1B549E7100F80934 /* FoodsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewController.swift; sourceTree = "<group>"; };
 		6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		637822291B593C7200163D75 /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
 		673838F51B4EF604003468AE /* ParseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseManager.swift; path = ../BeerStyles/ParseManager.swift; sourceTree = "<group>"; };
 		673B0B141B57E17600493344 /* CategotyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategotyViewController.swift; sourceTree = "<group>"; };
 		673B0B1A1B590B6C00493344 /* GlassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlassViewController.swift; path = BeerStyles/GlassViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -246,6 +248,7 @@
 		853CB3551B4AD24200DE27A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				637822291B593C7200163D75 /* bubble.mp3 */,
 				853CB3561B4AD24200DE27A5 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -350,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6378222A1B593C7200163D75 /* bubble.mp3 in Resources */,
 				853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */,
 				853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */,
 				853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */,
