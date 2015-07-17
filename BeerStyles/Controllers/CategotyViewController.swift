@@ -40,8 +40,8 @@ class CategotyViewController: UIViewController {
     @IBAction func aleSelect(sender: AnyObject) {
         var object : PFObject = parseFind("Ale")
         
-        bubbleSound = createBubbleSound()
-        animateButton()
+       // bubbleSound = createBubbleSound()
+      //  animateButton()
         
         performSegueWithIdentifier("categoryToFather", sender: object)
         
@@ -71,32 +71,32 @@ class CategotyViewController: UIViewController {
     }
     
     
-
-    func animateButton() {
-        AudioServicesPlaySystemSound(bubbleSound)
-        buttonAle.transform = CGAffineTransformMakeScale(0.1, 0.10)
-        
-        UIView.animateWithDuration(defaultDuration,
-            delay: 1,
-            usingSpringWithDamping: CGFloat(defaultDamping),
-            initialSpringVelocity: CGFloat(defaultVelocity),
-            options: UIViewAnimationOptions.AllowUserInteraction,
-            animations: {
-                self.buttonAle.transform = CGAffineTransformIdentity
-            },
-            completion: { finished in
-                self.animateButton()
-            }
-        )
-    }
-    
-    
-    func createBubbleSound() -> SystemSoundID {
-        var soundID: SystemSoundID = 0
-        let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "bubble", "mp3", nil)
-        AudioServicesCreateSystemSoundID(soundURL, &soundID)
-        return soundID
-    }
+//
+//    func animateButton() {
+//        AudioServicesPlaySystemSound(bubbleSound)
+//        buttonAle.transform = CGAffineTransformMakeScale(0.1, 0.10)
+//        
+//        UIView.animateWithDuration(defaultDuration,
+//            delay: 1,
+//            usingSpringWithDamping: CGFloat(defaultDamping),
+//            initialSpringVelocity: CGFloat(defaultVelocity),
+//            options: UIViewAnimationOptions.AllowUserInteraction,
+//            animations: {
+//                self.buttonAle.transform = CGAffineTransformIdentity
+//            },
+//            completion: { finished in
+//                self.animateButton()
+//            }
+//        )
+//    }
+//    
+//    
+//    func createBubbleSound() -> SystemSoundID {
+//        var soundID: SystemSoundID = 0
+//        let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "bubble", "mp3", nil)
+//        AudioServicesCreateSystemSoundID(soundURL, &soundID)
+//        return soundID
+//    }
     
 
     func parseFind(type:NSString)->PFObject{
