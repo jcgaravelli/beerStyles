@@ -53,6 +53,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         testObject["foo"] = "bar"
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             println("Object has been saved.")
+            
         }
         
         
@@ -194,23 +195,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
     
-    
+ 
     
     // MARK: UICollectionViewDelegate
-    
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-    return true
-    }
-    */
-    
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-    return true
-    }
-    */
     
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
