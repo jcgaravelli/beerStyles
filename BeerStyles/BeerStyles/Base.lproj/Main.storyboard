@@ -285,7 +285,7 @@
         <!--Cups-->
         <scene sceneID="MbN-qS-cba">
             <objects>
-                <collectionViewController id="2hb-CT-Fm2" customClass="CupsCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="2hb-CT-Fm2" customClass="FoodsCollectionViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Rb5-Hs-biJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -510,15 +510,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
-                                <rect key="frame" x="-27" y="49" width="229" height="197"/>
-                                <state key="normal" title="ALE" image="hipsterlogogenerator_1437079202358">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="aleSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="Zc2-tv-1LM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-y9-Wh2">
                                 <rect key="frame" x="16" y="334" width="218" height="177"/>
                                 <state key="normal" title="LAGER" image="hipsterlogogenerator_1437065340688">
@@ -529,12 +520,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRH-cI-cyD">
-                                <rect key="frame" x="115" y="148" width="246" height="207"/>
+                                <rect key="frame" x="210" y="177" width="246" height="207"/>
                                 <state key="normal" title="Hybrid" image="hipsterlogogenerator_1437067118760">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="spontaneousSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="iXk-W7-CIf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-Jo-vXS">
+                                <rect key="frame" x="32" y="57" width="229" height="197"/>
+                                <state key="normal" title="ALE" image="hipsterlogogenerator_1437079202358">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="aleSelect:" destination="aYy-K8-6va" eventType="touchUpInside" id="Zc2-tv-1LM"/>
                                 </connections>
                             </button>
                         </subviews>
