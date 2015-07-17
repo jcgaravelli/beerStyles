@@ -45,7 +45,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.tableView.tableHeaderView = self.resultSearchController.searchBar
         
         self.tableView.reloadData()
-        
+     
         
         // Do any additional setup after loading the view.
         // Do any additional setup after loading the view, typically from a nib.
@@ -107,6 +107,10 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         return cell
     }
+    
+    
+    
+    
     
     // MARK: - Result Search Controller Delegate
     func updateSearchResultsForSearchController(searchController: UISearchController) {
