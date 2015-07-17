@@ -63,7 +63,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jTB-jw-FRa">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YGo-Ra-dWE">
                                     <size key="itemSize" width="200" height="201"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -103,7 +103,7 @@
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jTB-jw-FRa" firstAttribute="top" secondItem="AoN-AZ-G5r" secondAttribute="bottom" id="481-On-ffI"/>
                             <constraint firstAttribute="centerX" secondItem="AoN-AZ-G5r" secondAttribute="centerX" id="B4z-WP-jlH"/>
@@ -121,6 +121,7 @@
                     <navigationItem key="navigationItem" id="FTK-NR-qWN"/>
                     <connections>
                         <outlet property="backgroundView" destination="yNj-bA-gkK" id="rb0-7d-hQ4"/>
+                        <outlet property="referenceView" destination="AoN-AZ-G5r" id="3dT-GN-mfY"/>
                         <outlet property="searchDisplayController" destination="ab2-3o-MEm" id="jBo-2w-hWy"/>
                         <outlet property="tableView" destination="qy7-Yl-G7C" id="JzU-49-LaY"/>
                         <segue destination="aYy-K8-6va" kind="show" identifier="ShowCategories" id="RNm-sP-iwk"/>

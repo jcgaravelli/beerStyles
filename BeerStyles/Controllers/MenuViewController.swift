@@ -12,22 +12,34 @@ import Parse
 class MenuViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchResultsUpdating, UITableViewDataSource, UITableViewDelegate {
 
     let reuseIdentifier = "cellMenu"
-    var imagesMenu : [String] = ["teste62","cerveja","cerveja","cerveja"]
+    var imagesMenu : [String] = ["stylesIcon","howIcon","glassIcon","foodIcon"]
     var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
+    
     
     let lista : [String] = ["abc", "bcd", "cde", "def", "efg", "fgh", "ghi", "hij"]
     var listaFiltrada : [String] = [String]()
     var resultSearchController = UISearchController()
     
-    @IBOutlet var menu: UICollectionView!
+  //  @IBOutlet var menu: UICollectionView!
     
+    @IBOutlet weak var referenceView: UIView!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.tableView.hidden = true
+        
+//        self.view.bringSubviewToFront(self.referenceView)
+////      self.view.hidden(self.backgroundView)
+//        self.backgroundView?.hidden = true
+//        self.referenceView?.hidden = false
+     //   self.view.bringSubviewToFront(self.referenceView)
+        
+        gradientColor()
         screenSize = self.view.frame
         screenWidth = screenSize.width
         screenHeight = screenSize.height
@@ -111,7 +123,12 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // MARK: - Result Search Controller Delegate
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        self.view.bringSubviewToFront(self.backgroundView)
+        
+        self.tableView.hidden = false
+        
+//        self.view.bringSubviewToFront(self.backgroundView)
+//        self.backgroundView?.hidden = true
+    
         
         //remove all destinations from the filtered list
         self.listaFiltrada.removeAll(keepCapacity: false)
@@ -139,9 +156,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        if indexPath.row == -1
-    ////if indexPath.row == -1
-            
+//        if indexPath.row == 0
+    if indexPath.row == -1
+        
         {
             return CGSize(width: screenWidth, height: screenWidth/3)
         }
@@ -159,8 +176,8 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell : MenuCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellMenu", forIndexPath: indexPath) as! MenuCollectionViewCell
         
         
-        if indexPath.row == -1
-    ////if indexPath.row == -1
+//        if indexPath.row == 0
+    if indexPath.row == -1
         {
             //cell.backgroundColor = UIColor.blueColor()
         }else
@@ -196,6 +213,7 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
  
+    
     
     // MARK: UICollectionViewDelegate
     

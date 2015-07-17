@@ -17,6 +17,7 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        gradientColor()
         
         let cellWidth = ((UIScreen.mainScreen().bounds.width) - 32 - 30 ) / 3
         let cellLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -112,7 +113,31 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
 
     
     
+    //Fazendo Segue
+    // Process collectionView cell selection
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let currentObject = glasses[indexPath.row]
+        performSegueWithIdentifier("glassColectToDetails", sender: currentObject)
+    }
     
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // If a cell has been selected within the colleciton view - set currentObjact to selected
+        var currentObject : PFObject?
+        if let country = sender as? PFObject{
+            currentObject = sender as? PFObject
+        } else {
+            // No cell selected in collectionView - must be a new country record being created
+            currentObject = PFObject(className:"Glass")
+        }
+        
+        // Get a handle on the next story board controller and set the currentObject ready for the viewDidLoad method
+        var detailScene = segue.destinationViewController as! GlassDetailViewController
+        detailScene.currentObject = (currentObject)
+    }
+    
+
     
     
     
