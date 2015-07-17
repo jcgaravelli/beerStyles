@@ -28,6 +28,11 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.bringSubviewToFront(self.backgroundView)
+//        self.view.hidden(self.backgroundView)
+        self.backgroundView?.hidden = true
+        
+        gradientColor()
         screenSize = self.view.frame
         screenWidth = screenSize.width
         screenHeight = screenSize.height
@@ -111,6 +116,8 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     // MARK: - Result Search Controller Delegate
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         self.view.bringSubviewToFront(self.backgroundView)
+        self.backgroundView?.hidden = true
+    
         
         //remove all destinations from the filtered list
         self.listaFiltrada.removeAll(keepCapacity: false)
