@@ -41,6 +41,7 @@
 		67806E0D1B4DB7BC00904925 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0C1B4DB7BC00904925 /* libz.dylib */; };
 		67806E0F1B4DB7C800904925 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0E1B4DB7C800904925 /* libsqlite3.dylib */; };
 		679F465F1B5CFE82002CC18C /* NewMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */; };
+		679F46611B5D519B002CC18C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679F46601B5D519B002CC18C /* SearchTableViewCell.swift */; };
 		853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3571B4AD24200DE27A5 /* AppDelegate.swift */; };
 		853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853CB35E1B4AD24200DE27A5 /* Main.storyboard */; };
 		853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3611B4AD24200DE27A5 /* Images.xcassets */; };
@@ -96,6 +97,7 @@
 		67806E0C1B4DB7BC00904925 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		67806E0E1B4DB7C800904925 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMenuViewController.swift; sourceTree = "<group>"; };
+		679F46601B5D519B002CC18C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		853CB3521B4AD24200DE27A5 /* BeerStyles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerStyles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CB3561B4AD24200DE27A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853CB3571B4AD24200DE27A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */,
 				679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */,
+				679F46601B5D519B002CC18C /* SearchTableViewCell.swift */,
 				673B0B141B57E17600493344 /* CategotyViewController.swift */,
 				673B0B1A1B590B6C00493344 /* GlassViewController.swift */,
 				635727461B549E0900F80934 /* TutorialCollectionViewController.swift */,
@@ -384,6 +387,7 @@
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
 				673B0B211B59352800493344 /* UIViewController+Gradient.swift in Sources */,
 				679F465F1B5CFE82002CC18C /* NewMenuViewController.swift in Sources */,
+				679F46611B5D519B002CC18C /* SearchTableViewCell.swift in Sources */,
 				635727471B549E0900F80934 /* TutorialCollectionViewController.swift in Sources */,
 				674272471B553A520018D7EC /* FatherStyleViewController.swift in Sources */,
 				6357273A1B50A31F00F80934 /* MenuCollectionViewCell.swift in Sources */,
