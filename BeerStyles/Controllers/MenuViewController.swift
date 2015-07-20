@@ -150,6 +150,12 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.tableView.reloadData()
     }
     
+    
+    
+    
+    
+    
+    
     // MARK: UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -159,13 +165,15 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     
+    
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 //        if indexPath.row == 0
-    if indexPath.row == -1
-        
-        {
-            return CGSize(width: screenWidth, height: screenWidth/3)
-        }
+//    if indexPath.row == -1
+//        
+//        {
+//            return CGSize(width: screenWidth, height: screenWidth/3)
+//        }
         return CGSize(width: 180, height: 180);
         
     }
@@ -181,14 +189,14 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         
 //        if indexPath.row == 0
-    if indexPath.row == -1
-        {
-            //cell.backgroundColor = UIColor.blueColor()
-        }else
-        {
+//    if indexPath.row == -1
+//        {
+//            //cell.backgroundColor = UIColor.blueColor()
+//        }else
+//        {
             //cell.backgroundColor = UIColor.whiteColor()
             cell.imageMenu.image = UIImage(named: imagesMenu[indexPath.row])
-        }
+//        }
         
         
         
@@ -196,6 +204,10 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
+    
+    
+    
+    // MARK: -CollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         
@@ -216,24 +228,6 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
     
- 
-    
-    
-    // MARK: UICollectionViewDelegate
-    
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-    return false
-    }
-    
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-    return false
-    }
-    
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
-    }
-    */
 }
 
+    
