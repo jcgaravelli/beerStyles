@@ -16,16 +16,25 @@ import ParseUI
 class StyleDetailViewController: UIViewController {
   let gradientLayer = CAGradientLayer()
     
+    @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var tempMAX: UILabel!
     @IBOutlet weak var glasses: UILabel!
     var currentObject : PFObject!
     @IBOutlet weak var Construction: UILabel!
     
+    @IBOutlet weak var Description: UILabel!
+    @IBOutlet weak var characteristics: UILabel!
+    @IBOutlet weak var abvRange: UILabel!
+    @IBOutlet weak var foodPairing: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Description.sizeToFit()
+       
+    
+        
         
         gradientColor()
         
@@ -37,13 +46,24 @@ class StyleDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         if let object = currentObject {
                         name.text = object["name"] as? String
-                            //tempMAX.text = object["nameLocal"] as? String
-            self.name.sizeToFit()
+                        Description.text = object["description"] as? String
+                        characteristics.text = object["characteristics"] as? String
+                        foodPairing.text = object["food"] as? String
+
+            
+
+
+                        Description.sizeToFit()
+            
+            
+            //tempMAX.text = object["nameLocal"] as? String
+            
         }
         
     }
     
-    
+   
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

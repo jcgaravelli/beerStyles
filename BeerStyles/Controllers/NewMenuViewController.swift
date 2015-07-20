@@ -126,7 +126,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         
         if indexPath.row == 0{
         
-            return CGSize(width: screenWidth*0.70, height: screenWidth*0.7)
+            return CGSize(width: screenWidth*0.90, height: screenWidth*0.8)
         }else{
 
         return CGSize(width: screenWidth*0.30, height: screenWidth*0.30)
@@ -143,7 +143,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         let leftRightInset = self.view.frame.size.width / 60
         
         
-        var center = screenHeight/2 - screenWidth*0.60
+        var center = screenHeight/2.3 - screenWidth*0.60
         println(center)
         return UIEdgeInsetsMake(center, leftRightInset, 0, leftRightInset)
     }
