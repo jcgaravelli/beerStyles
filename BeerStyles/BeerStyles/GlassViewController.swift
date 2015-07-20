@@ -122,7 +122,7 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        var algo:CGSize = CGSize(width: 150, height:150)
+        var algo:CGSize = CGSize(width: 180, height:180)
         
         return algo
         
