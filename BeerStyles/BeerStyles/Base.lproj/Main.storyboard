@@ -380,13 +380,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="H89-F4-wBs">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H89-F4-wBs">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="28R-2N-JPG">
-                                <rect key="frame" x="0.0" y="108" width="320" height="461"/>
+                            <tableView clipsSubviews="YES" alpha="0.19999999999999968" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HUE-Yw-NA3">
+                                <rect key="frame" x="16" y="108" width="288" height="460"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="j3h-qD-sYi" customClass="SearchTableViewCell" customModule="BeerStyles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j3h-qD-sYi" id="fs1-7R-OUj">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THU-md-la0">
+                                                    <rect key="frame" x="123" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="searchLabel" destination="THU-md-la0" id="E50-nT-ljs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NBb-BI-vFk" id="Bui-lS-Kzi"/>
+                                    <outlet property="delegate" destination="NBb-BI-vFk" id="euF-eO-ZqC"/>
+                                </connections>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="28R-2N-JPG">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u4C-bb-FDJ">
                                     <size key="itemSize" width="203" height="192"/>
@@ -428,18 +458,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="H89-F4-wBs" firstAttribute="bottom" secondItem="HUE-Yw-NA3" secondAttribute="top" id="1Z7-Uj-sZr"/>
                             <constraint firstAttribute="trailing" secondItem="28R-2N-JPG" secondAttribute="trailing" id="4xe-ae-OOv"/>
+                            <constraint firstItem="Vxt-lK-yYP" firstAttribute="top" secondItem="HUE-Yw-NA3" secondAttribute="bottom" id="93Y-a1-pr6"/>
                             <constraint firstItem="28R-2N-JPG" firstAttribute="top" secondItem="H89-F4-wBs" secondAttribute="bottom" id="Hk6-xl-8Pd"/>
                             <constraint firstItem="28R-2N-JPG" firstAttribute="leading" secondItem="uh8-f4-mlY" secondAttribute="leading" id="UVf-bn-KoR"/>
+                            <constraint firstItem="HUE-Yw-NA3" firstAttribute="leading" secondItem="uh8-f4-mlY" secondAttribute="leadingMargin" id="bE9-lx-t60"/>
                             <constraint firstItem="Vxt-lK-yYP" firstAttribute="top" secondItem="28R-2N-JPG" secondAttribute="bottom" id="eM8-JY-CDm"/>
                             <constraint firstItem="H89-F4-wBs" firstAttribute="width" secondItem="uh8-f4-mlY" secondAttribute="width" id="eMz-bn-CZM"/>
                             <constraint firstAttribute="centerX" secondItem="H89-F4-wBs" secondAttribute="centerX" id="nZP-Vj-mQC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HUE-Yw-NA3" secondAttribute="trailing" id="s0q-Hj-E3m"/>
                             <constraint firstItem="H89-F4-wBs" firstAttribute="top" secondItem="SEj-Gr-V81" secondAttribute="bottom" id="v0T-NB-U4S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jqm-hp-dKa"/>
                     <connections>
                         <outlet property="collectionView" destination="28R-2N-JPG" id="6Iz-vL-vzu"/>
+                        <outlet property="searchBar" destination="H89-F4-wBs" id="ZDB-zO-RHb"/>
+                        <outlet property="tableView" destination="HUE-Yw-NA3" id="UOp-AJ-yZc"/>
                         <segue destination="EfK-SK-JAk" kind="push" identifier="ShowTutorial" id="VWB-q6-Mwd"/>
                         <segue destination="Xge-wu-bLR" kind="push" identifier="ShowGlasses" id="5nm-aB-kwI"/>
                         <segue destination="aYy-K8-6va" kind="push" identifier="ShowCategories" id="qWO-jc-9dN"/>

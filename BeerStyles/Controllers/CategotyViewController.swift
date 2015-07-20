@@ -27,8 +27,6 @@ class CategotyViewController: UIViewController {
         super.viewDidLoad()
         gradientColor()
 
-
-
         // Do any additional setup after loading the view.
     }
     
