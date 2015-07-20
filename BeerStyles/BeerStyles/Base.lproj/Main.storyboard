@@ -15,9 +15,6 @@
         <mutableArray key="Lobster 1.4.otf">
             <string>Lobster1.4</string>
             <string>Lobster1.4</string>
-            <string>Lobster1.4</string>
-            <string>Lobster1.4</string>
-            <string>Lobster1.4</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -233,45 +230,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
                                 <rect key="frame" x="21" y="64" width="278" height="63"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Lobster1.4" family="Lobster 1.4" pointSize="50"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-44-o0v">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-44-o0v">
                                 <rect key="frame" x="21" y="147" width="278" height="17"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-fC-yco">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Characteristics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-fC-yco">
                                 <rect key="frame" x="21" y="194" width="278" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Lobster1.4" family="Lobster 1.4" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="characteristics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-NK-iPb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="characteristics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-NK-iPb">
                                 <rect key="frame" x="21" y="248" width="278" height="17"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-C8-ZXZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ABV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-C8-ZXZ">
                                 <rect key="frame" x="21" y="295" width="278" height="44"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Lobster1.4" family="Lobster 1.4" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abvRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="abvRange" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
                                 <rect key="frame" x="21" y="349" width="278" height="17"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -321,7 +318,7 @@
                             <constraint firstItem="xZX-9V-Kbv" firstAttribute="leading" secondItem="v6u-dP-1Nh" secondAttribute="leadingMargin" constant="5" id="Vd1-ag-zcg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jae-dt-4i0" secondAttribute="trailing" constant="10" id="Vya-e0-zlt"/>
                             <constraint firstItem="s8w-C8-ZXZ" firstAttribute="leading" secondItem="v6u-dP-1Nh" secondAttribute="leadingMargin" constant="5" id="Xmu-jA-fdk"/>
-                            <constraint firstItem="Z4f-od-z3E" firstAttribute="top" secondItem="nu3-2e-n1B" secondAttribute="bottom" id="auN-4S-DFR"/>
+                            <constraint firstItem="Z4f-od-z3E" firstAttribute="top" secondItem="nu3-2e-n1B" secondAttribute="bottom" constant="5" id="auN-4S-DFR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hcX-fT-6QG" secondAttribute="trailing" constant="5" id="b98-mh-TQC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kUr-fC-yco" secondAttribute="trailing" constant="5" id="bQs-Ui-5ek"/>
                             <constraint firstItem="Z4f-od-z3E" firstAttribute="leading" secondItem="v6u-dP-1Nh" secondAttribute="leadingMargin" constant="5" id="cAd-de-4l1"/>

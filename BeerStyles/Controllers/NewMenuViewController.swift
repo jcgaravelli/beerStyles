@@ -129,7 +129,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
             return CGSize(width: screenWidth*0.90, height: screenWidth*0.8)
         }else{
 
-        return CGSize(width: screenWidth*0.30, height: screenWidth*0.30)
+        return CGSize(width: screenWidth*0.30, height: screenWidth*0.28)
         }
         
     }
