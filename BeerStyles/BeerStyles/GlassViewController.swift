@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class GlassViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate{
+class GlassViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate,  UICollectionViewDelegateFlowLayout{
 
     
     var glasses = [PFObject]()
@@ -68,30 +68,30 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
 }
     
     
-    //CollectionView
+    //CollectionViewDataSource : retorna informação sobre o numero de itens na collection view e em suas views.
     
+    //numberOfItensInSection retorna o numero de celulas para serem motradas para uma determinada secao.No nosso caso mostrata o numero de copos que temos
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.glasses.count
+    }
+    
+    //numberOfSectionsInCollectionView: Retorna o numero total de secoes
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var alfa = self.glasses.count
-         println(alfa)
-        
-        return alfa
-       
-    }
+   // cellForItemAtIndexPath: é responsavel por retornar  a celula e de dar o indexPath. Similar as celulas da tableView, as celulas da collection view são colocadas em  uma fila de reuso.
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! GlassCollectionViewCell
         
-        // Display the country name
+        // Mostra nome do copo
         if let value = self.glasses[indexPath.row]["name"] as? String {
             cell.glassLabel.text = value
         } 
         
-        // Display "initial" flag image
+        // Mostrara a imagm do copo
         var initialThumbnail = UIImage(named: "name")
        // cell.glassImage.image = initialThumbnail
         
@@ -109,48 +109,54 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
         }
         return cell
     }
-
+    
+   //MARK – UICollectionViewDelegateFlowLayout
 
     
+    // minimumInteritemSpacingForSectionAtIndex tamanho minimo entre as seções
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        var teste: CGFloat = -10
+        return teste
+        
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        var algo:CGSize = CGSize(width: 150, height:150)
+        
+        return algo
+        
+    }
+    
+    
+    /// CollectionViewDelegate é a notificaçao quando os eventos acontecem tais como as células a ser selecionado, destacads , ou removidas.
     //Fazendo Segue
-    // Process collectionView cell selection
+    
+    // didSelectItemAtIndexPath: mostra quando um item é selecionado
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let currentObject = glasses[indexPath.row]
         performSegueWithIdentifier("glassColectToDetails", sender: currentObject)
     }
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //MARK: - Navigation
+   
+    //passa os dados para a proxima tela
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        // If a cell has been selected within the colleciton view - set currentObjact to selected
+        // se a celula foi selecionada o currentObjact "setado˜
         var currentObject : PFObject?
         if let country = sender as? PFObject{
             currentObject = sender as? PFObject
         } else {
-            // No cell selected in collectionView - must be a new country record being created
+            // envia o objeto correspondente a classe do parse
+            
             currentObject = PFObject(className:"Glass")
         }
         
-        // Get a handle on the next story board controller and set the currentObject ready for the viewDidLoad method
         var detailScene = segue.destinationViewController as! GlassDetailViewController
         detailScene.currentObject = (currentObject)
     }
-    
 
     
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+    
