@@ -47,6 +47,7 @@
 		853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */; };
 		853CB3711B4AD24200DE27A5 /* BeerStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */; };
 		858D535E1B599BE30044F1C7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 853CB36F1B4AD24200DE27A5 /* Info.plist */; };
+		858D53641B5D57770044F1C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858D53631B5D57770044F1C7 /* Localizable.strings */; };
 		D26E14971B5947850097F975 /* SearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E14961B5947850097F975 /* SearchDisplayViewController.swift */; };
 		D2F3EA0F1B57F407003D1B14 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerStylesTests.swift; sourceTree = "<group>"; };
 		858D535F1B599C910044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		858D53601B599C920044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		858D53631B5D57770044F1C7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D26E14961B5947850097F975 /* SearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayViewController.swift; sourceTree = "<group>"; };
 		D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +215,7 @@
 		853CB3491B4AD24100DE27A5 = {
 			isa = PBXGroup;
 			children = (
+				858D53631B5D57770044F1C7 /* Localizable.strings */,
 				673B0B201B59352800493344 /* UIViewController+Gradient.swift */,
 				67806E101B4DB7E100904925 /* Framework */,
 				67806DED1B4DB50000904925 /* parseFramework */,
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				858D535E1B599BE30044F1C7 /* Info.plist in Resources */,
+				858D53641B5D57770044F1C7 /* Localizable.strings in Resources */,
 				6378222A1B593C7200163D75 /* bubble.mp3 in Resources */,
 				853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */,
 				853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */,
