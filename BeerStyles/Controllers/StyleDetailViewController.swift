@@ -32,14 +32,22 @@ class StyleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Description.sizeToFit()
-       
-    
         
         
         gradientColor()
         
         
             }
+    
+    func adjustContentSize() {
+        var contentRect = CGRectZero
+        for view in self.scroll.subviews {
+            contentRect = CGRectUnion(contentRect, view.frame)
+        }
+        
+        self.scroll.contentSize = contentRect.size
+    }
+    
     
     
     override func viewWillAppear(animated: Bool) {
@@ -59,6 +67,8 @@ class StyleDetailViewController: UIViewController {
             //tempMAX.text = object["nameLocal"] as? String
             
         }
+        
+        adjustContentSize()
         
     }
     
