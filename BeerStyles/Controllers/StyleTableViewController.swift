@@ -19,7 +19,10 @@ class StyleTableViewController: PFQueryTableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+       // gradientTable(tableView)
+    
         gradientColor()
+        
         self.tableView.rowHeight = 60.0
         
         

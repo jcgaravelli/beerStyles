@@ -229,9 +229,9 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         var query = PFQuery(className: "Style")
         
         // Add a where clause if there is a search criteria
-//        if search != "" {
-//            query.whereKey("name", containsString: searchBar.text.lowercaseString)
-//        }
+   if search != "" {
+            query.whereKey("name", containsString: searchBar.text.lowercaseString)
+        }
         // Order the results
         query.orderByAscending("name")
         

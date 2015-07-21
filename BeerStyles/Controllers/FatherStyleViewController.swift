@@ -14,10 +14,10 @@ import Parse
 
 class FatherStyleViewController: PFQueryTableViewController {
     var categoryObject: PFObject!
-    
+    var algo:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientColor()
+        
         self.tableView.rowHeight = 60.0
 
         
@@ -26,6 +26,7 @@ class FatherStyleViewController: PFQueryTableViewController {
     
     override func viewWillAppear(animated: Bool) {
          animateTable()
+        gradientColor()
     }
     
     override func objectsDidLoad(error: NSError?) {
@@ -58,15 +59,15 @@ class FatherStyleViewController: PFQueryTableViewController {
         
         query.orderByAscending("name")
         query.whereKey("category", equalTo:categoryObject)
-        
-        
+       
         return query
     }
     
-    
+
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
+     
         
         var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PFTableViewCell
         
