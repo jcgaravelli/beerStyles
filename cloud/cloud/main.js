@@ -184,3 +184,9 @@ Parse.Cloud.job("deleteAllStyles", function(request,status) {
     status.error(error);
   });
 });
+
+Parse.Cloud.beforeSave("Style", function(request, response) {
+  var obj = request.object;
+  obj.set("lowercaseName",obj.get('name').toLowerCase());
+    response.success();
+});
