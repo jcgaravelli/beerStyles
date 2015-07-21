@@ -155,7 +155,6 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
         var detailScene = segue.destinationViewController as! GlassDetailViewController
         detailScene.currentObject = (currentObject)
     }
-
     
     
 }

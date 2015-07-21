@@ -44,12 +44,24 @@
 		67806E0B1B4DB7A800904925 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0A1B4DB7A800904925 /* SystemConfiguration.framework */; };
 		67806E0D1B4DB7BC00904925 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0C1B4DB7BC00904925 /* libz.dylib */; };
 		67806E0F1B4DB7C800904925 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0E1B4DB7C800904925 /* libsqlite3.dylib */; };
+<<<<<<< HEAD
+=======
+		679F465F1B5CFE82002CC18C /* NewMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */; };
+		679F46611B5D519B002CC18C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679F46601B5D519B002CC18C /* SearchTableViewCell.swift */; };
+>>>>>>> 7ee38e1c0f03beb40d3b0e20a6f30147d803db86
 		853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3571B4AD24200DE27A5 /* AppDelegate.swift */; };
 		853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853CB35E1B4AD24200DE27A5 /* Main.storyboard */; };
 		853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3611B4AD24200DE27A5 /* Images.xcassets */; };
 		853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */; };
 		853CB3711B4AD24200DE27A5 /* BeerStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */; };
 		858D535E1B599BE30044F1C7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 853CB36F1B4AD24200DE27A5 /* Info.plist */; };
+		858D53641B5D57770044F1C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858D53631B5D57770044F1C7 /* Localizable.strings */; };
+		858D536C1B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb in Resources */ = {isa = PBXBuildFile; fileRef = 858D53671B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb */; };
+		858D536D1B5D749C0044F1C7 /* LobsterSource.vfb in Resources */ = {isa = PBXBuildFile; fileRef = 858D53681B5D749C0044F1C7 /* LobsterSource.vfb */; };
+		858D536E1B5D749C0044F1C7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 858D53691B5D749C0044F1C7 /* License.txt */; };
+		858D536F1B5D749C0044F1C7 /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 858D536A1B5D749C0044F1C7 /* Lobster 1.4.otf */; };
+		858D53701B5D749C0044F1C7 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 858D536B1B5D749C0044F1C7 /* Readme.txt */; };
+		858D53721B5D811E0044F1C7 /* Chunkfive.otf in Resources */ = {isa = PBXBuildFile; fileRef = 858D53711B5D81180044F1C7 /* Chunkfive.otf */; };
 		D26E14971B5947850097F975 /* SearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26E14961B5947850097F975 /* SearchDisplayViewController.swift */; };
 		D2F3EA0F1B57F407003D1B14 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +114,11 @@
 		67806E0A1B4DB7A800904925 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		67806E0C1B4DB7BC00904925 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		67806E0E1B4DB7C800904925 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+<<<<<<< HEAD
+=======
+		679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMenuViewController.swift; sourceTree = "<group>"; };
+		679F46601B5D519B002CC18C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+>>>>>>> 7ee38e1c0f03beb40d3b0e20a6f30147d803db86
 		853CB3521B4AD24200DE27A5 /* BeerStyles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerStyles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CB3561B4AD24200DE27A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853CB3571B4AD24200DE27A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +130,13 @@
 		853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerStylesTests.swift; sourceTree = "<group>"; };
 		858D535F1B599C910044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		858D53601B599C920044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		858D53631B5D57770044F1C7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		858D53671B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4 merged and optimized.vfb"; sourceTree = "<group>"; };
+		858D53681B5D749C0044F1C7 /* LobsterSource.vfb */ = {isa = PBXFileReference; lastKnownFileType = file; path = LobsterSource.vfb; sourceTree = "<group>"; };
+		858D53691B5D749C0044F1C7 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		858D536A1B5D749C0044F1C7 /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
+		858D536B1B5D749C0044F1C7 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		858D53711B5D81180044F1C7 /* Chunkfive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunkfive.otf; sourceTree = "<group>"; };
 		D26E14961B5947850097F975 /* SearchDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDisplayViewController.swift; sourceTree = "<group>"; };
 		D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +180,11 @@
 			isa = PBXGroup;
 			children = (
 				D2F3EA0E1B57F407003D1B14 /* MenuViewController.swift */,
+<<<<<<< HEAD
+=======
+				679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */,
+				679F46601B5D519B002CC18C /* SearchTableViewCell.swift */,
+>>>>>>> 7ee38e1c0f03beb40d3b0e20a6f30147d803db86
 				673B0B141B57E17600493344 /* CategotyViewController.swift */,
 				673B0B1A1B590B6C00493344 /* GlassViewController.swift */,
 				635727461B549E0900F80934 /* TutorialCollectionViewController.swift */,
@@ -222,6 +251,7 @@
 		853CB3491B4AD24100DE27A5 = {
 			isa = PBXGroup;
 			children = (
+				858D53631B5D57770044F1C7 /* Localizable.strings */,
 				673B0B201B59352800493344 /* UIViewController+Gradient.swift */,
 				67806E101B4DB7E100904925 /* Framework */,
 				67806DED1B4DB50000904925 /* parseFramework */,
@@ -257,6 +287,7 @@
 		853CB3551B4AD24200DE27A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				858D53651B5D749C0044F1C7 /* lobster */,
 				637822291B593C7200163D75 /* bubble.mp3 */,
 				853CB3561B4AD24200DE27A5 /* Info.plist */,
 			);
@@ -278,6 +309,28 @@
 				853CB36F1B4AD24200DE27A5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		858D53651B5D749C0044F1C7 /* lobster */ = {
+			isa = PBXGroup;
+			children = (
+				858D53661B5D749C0044F1C7 /* Font Lab Source */,
+				858D53691B5D749C0044F1C7 /* License.txt */,
+				858D536A1B5D749C0044F1C7 /* Lobster 1.4.otf */,
+				858D536B1B5D749C0044F1C7 /* Readme.txt */,
+			);
+			name = lobster;
+			path = ../lobster;
+			sourceTree = "<group>";
+		};
+		858D53661B5D749C0044F1C7 /* Font Lab Source */ = {
+			isa = PBXGroup;
+			children = (
+				858D53711B5D81180044F1C7 /* Chunkfive.otf */,
+				858D53671B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb */,
+				858D53681B5D749C0044F1C7 /* LobsterSource.vfb */,
+			);
+			path = "Font Lab Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,10 +416,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				858D535E1B599BE30044F1C7 /* Info.plist in Resources */,
+				858D536D1B5D749C0044F1C7 /* LobsterSource.vfb in Resources */,
+				858D53641B5D57770044F1C7 /* Localizable.strings in Resources */,
 				6378222A1B593C7200163D75 /* bubble.mp3 in Resources */,
 				853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */,
+				858D53701B5D749C0044F1C7 /* Readme.txt in Resources */,
+				858D536E1B5D749C0044F1C7 /* License.txt in Resources */,
+				858D536F1B5D749C0044F1C7 /* Lobster 1.4.otf in Resources */,
 				853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */,
+				858D536C1B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb in Resources */,
 				853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */,
+				858D53721B5D811E0044F1C7 /* Chunkfive.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +455,12 @@
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
 				63118C1E1B5D369B00C64B13 /* CupsCollectionViewController.swift in Sources */,
 				673B0B211B59352800493344 /* UIViewController+Gradient.swift in Sources */,
+<<<<<<< HEAD
 				63118C1C1B5D369300C64B13 /* NewMenuViewController.swift in Sources */,
+=======
+				679F465F1B5CFE82002CC18C /* NewMenuViewController.swift in Sources */,
+				679F46611B5D519B002CC18C /* SearchTableViewCell.swift in Sources */,
+>>>>>>> 7ee38e1c0f03beb40d3b0e20a6f30147d803db86
 				635727471B549E0900F80934 /* TutorialCollectionViewController.swift in Sources */,
 				674272471B553A520018D7EC /* FatherStyleViewController.swift in Sources */,
 				6357273A1B50A31F00F80934 /* MenuCollectionViewCell.swift in Sources */,

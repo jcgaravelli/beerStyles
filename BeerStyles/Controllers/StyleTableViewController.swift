@@ -20,6 +20,8 @@ class StyleTableViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColor()
+        self.tableView.rowHeight = 60.0
+        
         
     }
     
@@ -37,6 +39,7 @@ class StyleTableViewController: PFQueryTableViewController {
     
     override init(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
+        
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -65,12 +68,16 @@ class StyleTableViewController: PFQueryTableViewController {
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
         
-        var cell =         tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PFTableViewCell
+        var cell =  tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PFTableViewCell
+        
     
         
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["name"] as? String {
             cell.textLabel?.text = nameEnglish
+            cell.textLabel?.font = UIFont(name: "Chunkfive", size: 20)
+           
+            
         }
         
         

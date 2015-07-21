@@ -18,6 +18,8 @@ class FatherStyleViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColor()
+        self.tableView.rowHeight = 60.0
+
         
             }
     
@@ -74,7 +76,7 @@ class FatherStyleViewController: PFQueryTableViewController {
         // Extract values from the PFObject to display in the table cell
         if let nameEnglish = object?["name"] as? String {
             cell.textLabel?.text = nameEnglish
-            
+            cell.textLabel?.font = UIFont(name: "Chunkfive", size: 20)
             
         }
    
