@@ -33,6 +33,14 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         //self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.tableView.hidden = true
         
+        
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            attributes.transform3D = CATransform3DMakeTranslation(self.collectionView.bounds.size.width, 0, 0);
+            } completion:^(BOOL finished){
+            attributes.transform = CGAffineTransformMakeTranslation(0, -120);
+            //code needed to make it bounce a little
+            }];
+        
 //        self.view.bringSubviewToFront(self.referenceView)
 ////      self.view.hidden(self.backgroundView)
 //        self.backgroundView?.hidden = true
@@ -198,7 +206,11 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell.imageMenu.image = UIImage(named: imagesMenu[indexPath.row])
 //        }
         
-        
+      
+            
+  
+            
+  
         
         
         return cell
@@ -225,6 +237,9 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
             break
         }
         
+        
+        
+
         
     }
     
