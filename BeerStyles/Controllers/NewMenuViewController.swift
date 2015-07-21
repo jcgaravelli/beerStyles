@@ -38,6 +38,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         tableView.hidden = true
         collectionView.hidden = false
@@ -229,8 +230,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         var query = PFQuery(className: "Style")
         
         // Add a where clause if there is a search criteria
-//        if search != "" {
-//            query.whereKey("name", containsString: searchBar.text.lowercaseString)
+            query.whereKey("name", containsString: searchBar.text.lowercaseString)
 //        }
         // Order the results
         query.orderByAscending("name")
@@ -238,8 +238,44 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         
         return query
     }
-
-        
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("segueSearch", sender: indexPath)
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueSearch"{
+           if let destination = segue.destinationViewController  as? StyleDetailViewController{
+            if let indexPath = tableView.indexPathForSelectedRow()?.row{
+     
+            
+            
+                let row = Int(indexPath)
+                destination.currentObject = (searchList[row]) as! PFObject
+            
+            }
+            
+            }
+            
+            
+        }
+        
+    }
+    
+    
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "SearchSegue" {
+//            if let destination = segue.destinationViewController as? StyleDetailViewController {
+//                if let indexPath = tableView.indexPathForSelectedRow()?.row
+//                {
+//                    
+//                    let row = Int(indexPath)
+//                    destination.currentObject = (objects?[row] as! PFObject)
+//                    
+//                }
+//            }
+//        }
+ //   }
+
 
 }
