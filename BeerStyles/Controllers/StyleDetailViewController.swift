@@ -57,6 +57,15 @@ class StyleDetailViewController: UIViewController {
                         Description.text = object["description"] as? String
                         characteristics.text = object["characteristics"] as? String
                         foodPairing.text = object["food"] as? String
+            if let abvMin : Float = object["abvMin"] as? Float {
+                if let abvMax : Float = object["abvMax"] as? Float {
+                    abvRange.text = "\(abvMin)-\(abvMax)%"
+                } else {
+                    abvRange.text = "\(abvMin)%"
+                }
+            } else {
+                abvRange.text = "Non-alcoholic"
+            }
 
             
 
