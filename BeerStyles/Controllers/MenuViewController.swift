@@ -22,11 +22,12 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     var listaFiltrada : [String] = [String]()
     var resultSearchController = UISearchController()
     
-  //  @IBOutlet var menu: UICollectionView!
     
     @IBOutlet weak var referenceView: UIView!
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var tableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -217,8 +218,6 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     
-    
-    
     // MARK: -CollectionViewDelegate
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
@@ -236,10 +235,6 @@ class MenuViewController: UIViewController, UICollectionViewDataSource, UICollec
         default:
             break
         }
-        
-        
-        
-
         
     }
     
