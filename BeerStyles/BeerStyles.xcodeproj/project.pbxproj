@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63118C1C1B5D369300C64B13 /* NewMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63118C1B1B5D369200C64B13 /* NewMenuViewController.swift */; };
 		63118C1E1B5D369B00C64B13 /* CupsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63118C1D1B5D369B00C64B13 /* CupsCollectionViewController.swift */; };
 		63118C201B5D36C000C64B13 /* GlassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63118C1F1B5D36C000C64B13 /* GlassesViewController.swift */; };
 		63118C4A1B5D392600C64B13 /* GlassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63118C491B5D392600C64B13 /* GlassesCollectionViewCell.swift */; };
@@ -40,7 +39,6 @@
 		67806E031B4DB63300904925 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E021B4DB63300904925 /* MobileCoreServices.framework */; };
 		67806E051B4DB63F00904925 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E041B4DB63F00904925 /* QuartzCore.framework */; };
 		67806E071B4DB64C00904925 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E061B4DB64C00904925 /* Security.framework */; };
-		67806E091B4DB66800904925 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E081B4DB66800904925 /* StoreKit.framework */; };
 		67806E0B1B4DB7A800904925 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0A1B4DB7A800904925 /* SystemConfiguration.framework */; };
 		67806E0D1B4DB7BC00904925 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0C1B4DB7BC00904925 /* libz.dylib */; };
 		67806E0F1B4DB7C800904925 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0E1B4DB7C800904925 /* libsqlite3.dylib */; };
@@ -107,7 +105,6 @@
 		67806E021B4DB63300904925 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		67806E041B4DB63F00904925 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		67806E061B4DB64C00904925 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		67806E081B4DB66800904925 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		67806E0A1B4DB7A800904925 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		67806E0C1B4DB7BC00904925 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		67806E0E1B4DB7C800904925 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -143,7 +140,6 @@
 				67806E0F1B4DB7C800904925 /* libsqlite3.dylib in Frameworks */,
 				67806E0D1B4DB7BC00904925 /* libz.dylib in Frameworks */,
 				67806E0B1B4DB7A800904925 /* SystemConfiguration.framework in Frameworks */,
-				67806E091B4DB66800904925 /* StoreKit.framework in Frameworks */,
 				67806E071B4DB64C00904925 /* Security.framework in Frameworks */,
 				67806E051B4DB63F00904925 /* QuartzCore.framework in Frameworks */,
 				67806E031B4DB63300904925 /* MobileCoreServices.framework in Frameworks */,
@@ -227,7 +223,6 @@
 				67806E0E1B4DB7C800904925 /* libsqlite3.dylib */,
 				67806E0C1B4DB7BC00904925 /* libz.dylib */,
 				67806E0A1B4DB7A800904925 /* SystemConfiguration.framework */,
-				67806E081B4DB66800904925 /* StoreKit.framework */,
 				67806E061B4DB64C00904925 /* Security.framework */,
 				67806E041B4DB63F00904925 /* QuartzCore.framework */,
 				67806E021B4DB63300904925 /* MobileCoreServices.framework */,
@@ -373,7 +368,11 @@
 				TargetAttributes = {
 					853CB3511B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = GYJ684Z772;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					853CB3691B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
