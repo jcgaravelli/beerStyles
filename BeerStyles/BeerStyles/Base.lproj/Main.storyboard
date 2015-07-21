@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BP0-XL-fRM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BP0-XL-fRM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -153,7 +153,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-865" y="-1677"/>
+            <point key="canvasLocation" x="934" y="-1809"/>
         </scene>
         <!--Father Style View Controller-->
         <scene sceneID="oXA-CP-HeW">
@@ -186,7 +186,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGh-3c-L7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="-1042"/>
+            <point key="canvasLocation" x="-32" y="-1103"/>
         </scene>
         <!--Style Table View Controller-->
         <scene sceneID="JCX-Xw-j7j">
@@ -218,7 +218,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="is8-Ce-Pjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-1042"/>
+            <point key="canvasLocation" x="372" y="-1103"/>
         </scene>
         <!--Style Detail View Controller-->
         <scene sceneID="h46-1h-qUi">
@@ -361,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dog-1m-D0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1290" y="-1111"/>
+            <point key="canvasLocation" x="772" y="-1165"/>
         </scene>
         <!--Tutorial-->
         <scene sceneID="1L8-NQ-DSB">
@@ -482,12 +482,13 @@
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H89-F4-wBs">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
-                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" alpha="0.19999999999999968" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HUE-Yw-NA3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HUE-Yw-NA3">
                                 <rect key="frame" x="16" y="108" width="288" height="460"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -497,14 +498,21 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j3h-qD-sYi" id="fs1-7R-OUj">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THU-md-la0">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THU-md-la0">
                                                     <rect key="frame" x="123" y="12" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="THU-md-la0" firstAttribute="leading" secondItem="fs1-7R-OUj" secondAttribute="leadingMargin" constant="5" id="OMP-mH-Zrv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="THU-md-la0" secondAttribute="bottom" id="YVf-5h-4wd"/>
+                                                <constraint firstItem="THU-md-la0" firstAttribute="top" secondItem="fs1-7R-OUj" secondAttribute="topMargin" id="fSm-Nj-jDU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="THU-md-la0" secondAttribute="trailing" constant="5" id="zXf-0P-iOe"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="searchLabel" destination="THU-md-la0" id="E50-nT-ljs"/>
                                         </connections>
@@ -580,11 +588,12 @@
                         <segue destination="Xge-wu-bLR" kind="push" identifier="ShowGlasses" id="5nm-aB-kwI"/>
                         <segue destination="aYy-K8-6va" kind="push" identifier="ShowCategories" id="qWO-jc-9dN"/>
                         <segue destination="fYM-be-J61" kind="push" identifier="ShowFoods" id="TNL-mD-WY1"/>
+                        <segue destination="baF-L7-X6g" kind="push" identifier="segueSearch" id="jZJ-XX-aWX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcN-Bn-Oi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-865" y="-1042"/>
+            <point key="canvasLocation" x="-914" y="-1103"/>
         </scene>
         <!--Glass View Controller-->
         <scene sceneID="VOf-M2-x81">
@@ -715,7 +724,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PqK-KW-uOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1339" y="-1685"/>
+            <point key="canvasLocation" x="-1377" y="-1830"/>
         </scene>
         <!--Category-->
         <scene sceneID="TV8-dS-VwR">
@@ -831,12 +840,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3Q-lJ-T4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-342" y="-1042"/>
+            <point key="canvasLocation" x="-421" y="-1103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pRy-oq-IMR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BP0-XL-fRM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="BP0-XL-fRM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="n9d-Rp-sYE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -862,4 +871,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jZJ-XX-aWX"/>
+    </inferredMetricsTieBreakers>
 </document>

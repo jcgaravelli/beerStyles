@@ -15,17 +15,21 @@ class StyleTableViewController: PFQueryTableViewController {
     
     var fatherObject: PFObject!
     
-    // Initialise the PFQueryTable tableview
+
    
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColor()
+        
+        //TAMANHO DA LINHA
         self.tableView.rowHeight = 60.0
         
         
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
          animateTable()
     }
     
@@ -45,7 +49,7 @@ class StyleTableViewController: PFQueryTableViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        // Configure the PFQueryTableView
+        // CONFIGURAÇAO DA PFQueryTableView
         self.parseClassName = "Style"
         self.textKey = "name"
         self.pullToRefreshEnabled = true
@@ -57,7 +61,6 @@ class StyleTableViewController: PFQueryTableViewController {
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
         var objectID = fatherObject
-        //var pointer: AnyObject! = objectID["objectID"]
         var query = PFQuery(className: "Style")
         query.orderByAscending("name")
         query.whereKey("fatherStyle", equalTo:fatherObject)
@@ -73,8 +76,8 @@ class StyleTableViewController: PFQueryTableViewController {
     
         
         // Extract values from the PFObject to display in the table cell
-        if let nameEnglish = object?["name"] as? String {
-            cell.textLabel?.text = nameEnglish
+        if let name = object?["name"] as? String {
+            cell.textLabel?.text = name
             cell.textLabel?.font = UIFont(name: "Chunkfive", size: 20)
            
             
