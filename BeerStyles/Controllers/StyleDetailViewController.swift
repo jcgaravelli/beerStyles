@@ -27,7 +27,8 @@ class StyleDetailViewController: UIViewController {
     @IBOutlet weak var characteristics: UILabel!
     @IBOutlet weak var abvRange: UILabel!
     @IBOutlet weak var foodPairing: UILabel!
-    
+    @IBOutlet weak var tempRange: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,8 @@ class StyleDetailViewController: UIViewController {
         
         
             }
+    
+    //ajuste do tamnaho da scroll view e da view superior para impedir scroll horizontal
     
     func adjustContentSize() {
         var contentRect = CGRectZero
@@ -52,20 +55,41 @@ class StyleDetailViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
+        //substituição dos valores de variável do Parse no perfil da cerveja
         if let object = currentObject {
-                        name.text = object["name"] as? String
-                        Description.text = object["description"] as? String
-                        characteristics.text = object["characteristics"] as? String
-                        foodPairing.text = object["food"] as? String
+            
+            //pega o valor textual do label e iguala ao valor textual da chave em questão (name, description, etc)
+            
+            name.text = object["name"] as? String
+            Description.text = object["description"] as? String
+            characteristics.text = object["characteristics"] as? String
+            foodPairing.text = object["food"] as? String
+            
+            
+            //como os valores do range de temperatura e abv(teor alcoolico) são compostos por dois valores numericos, temos que chamá-los numa string e garantir que existam ou imprimir mensagem caso contrário
+          
             if let abvMin : Float = object["abvMin"] as? Float {
                 if let abvMax : Float = object["abvMax"] as? Float {
-                    abvRange.text = "\(abvMin)-\(abvMax)%"
+                    abvRange.text = "\(abvMin) - \(abvMax)%"
                 } else {
                     abvRange.text = "\(abvMin)%"
                 }
             } else {
                 abvRange.text = "Non-alcoholic"
             }
+           
+            if let tempMin : Float = object["tempMin"] as? Float {
+                if let tempMax : Float = object["tempMax"] as? Float {
+                    tempRange.text = "\(tempMin)º  - \(tempMax)º"
+                } else {
+                    tempRange.text = "\(tempMin)º"
+                }
+            } else {
+                tempRange.text = "No recomendation"
+            }
+
 
             
 
@@ -73,7 +97,7 @@ class StyleDetailViewController: UIViewController {
                         Description.sizeToFit()
             
             
-            //tempMAX.text = object["nameLocal"] as? String
+            
             
         }
         
