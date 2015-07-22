@@ -114,9 +114,6 @@ class FatherStyleViewController: PFQueryTableViewController {
     
     }
 
-
-        
-    
     
     func animateTable() {
         tableView.reloadData()

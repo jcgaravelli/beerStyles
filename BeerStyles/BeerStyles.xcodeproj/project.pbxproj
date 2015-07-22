@@ -56,6 +56,7 @@
 		858D53701B5D749C0044F1C7 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 858D536B1B5D749C0044F1C7 /* Readme.txt */; };
 		858D53721B5D811E0044F1C7 /* Chunkfive.otf in Resources */ = {isa = PBXBuildFile; fileRef = 858D53711B5D81180044F1C7 /* Chunkfive.otf */; };
 		85CE9B241B5ED07500DF60B1 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE9B231B5ED07500DF60B1 /* SearchTableViewCell.swift */; };
+		D2F28B591B5F62F500A21D81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2F28B581B5F62F500A21D81 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		858D536B1B5D749C0044F1C7 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		858D53711B5D81180044F1C7 /* Chunkfive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunkfive.otf; sourceTree = "<group>"; };
 		85CE9B231B5ED07500DF60B1 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		D2F28B581B5F62F500A21D81 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 		853CB3551B4AD24200DE27A5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2F28B581B5F62F500A21D81 /* Localizable.strings */,
 				858D53651B5D749C0044F1C7 /* lobster */,
 				637822291B593C7200163D75 /* bubble.mp3 */,
 				853CB3561B4AD24200DE27A5 /* Info.plist */,
@@ -359,7 +362,6 @@
 				TargetAttributes = {
 					853CB3511B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 3C75JFLMG7;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -398,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				858D535E1B599BE30044F1C7 /* Info.plist in Resources */,
+				D2F28B591B5F62F500A21D81 /* Localizable.strings in Resources */,
 				858D536D1B5D749C0044F1C7 /* LobsterSource.vfb in Resources */,
 				6378222A1B593C7200163D75 /* bubble.mp3 in Resources */,
 				853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */,
