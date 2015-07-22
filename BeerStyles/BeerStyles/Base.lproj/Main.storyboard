@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BP0-XL-fRM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BP0-XL-fRM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -12,10 +12,7 @@
             <string>ChunkFive-Roman</string>
             <string>ChunkFive-Roman</string>
             <string>ChunkFive-Roman</string>
-        </mutableArray>
-        <mutableArray key="Lobster 1.4.otf">
-            <string>Lobster1.4</string>
-            <string>Lobster1.4</string>
+            <string>ChunkFive-Roman</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -263,10 +260,10 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-jo-Z0f">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-jo-Z0f">
                                         <rect key="frame" x="32" y="289" width="256" height="44"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Lobster1.4" family="Lobster 1.4" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -277,31 +274,38 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abvRange" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abvRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
                                         <rect key="frame" x="32" y="249" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jae-dt-4i0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tempRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jae-dt-4i0">
                                         <rect key="frame" x="32" y="343" width="256" height="17"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Pairing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcX-fT-6QG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food Pairing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcX-fT-6QG">
                                         <rect key="frame" x="32" y="380" width="256" height="44"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Lobster1.4" family="Lobster 1.4" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPairing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phn-Vl-rjs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="foodPairing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phn-Vl-rjs">
                                         <rect key="frame" x="32" y="434" width="256" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Glasses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abN-1z-oAa">
+                                        <rect key="frame" x="87" y="459" width="164" height="40"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -313,11 +317,13 @@
                                     <constraint firstAttribute="centerX" secondItem="kUr-fC-yco" secondAttribute="centerX" id="A9k-Nm-XSe"/>
                                     <constraint firstItem="kUr-fC-yco" firstAttribute="top" secondItem="8FX-44-o0v" secondAttribute="bottom" constant="20" id="BQ9-Q5-5Cn"/>
                                     <constraint firstItem="8FX-44-o0v" firstAttribute="top" secondItem="Z4f-od-z3E" secondAttribute="bottom" constant="14" id="JXE-hT-dIY"/>
+                                    <constraint firstAttribute="centerX" secondItem="abN-1z-oAa" secondAttribute="centerX" id="NX8-eg-SMl"/>
                                     <constraint firstAttribute="centerX" secondItem="Jae-dt-4i0" secondAttribute="centerX" id="Pxd-ce-Tkj"/>
                                     <constraint firstItem="s8w-C8-ZXZ" firstAttribute="top" secondItem="UVK-NK-iPb" secondAttribute="bottom" constant="20" id="Q3Y-vh-KkX"/>
                                     <constraint firstAttribute="centerX" secondItem="xZX-9V-Kbv" secondAttribute="centerX" id="Qci-V1-ad9"/>
                                     <constraint firstAttribute="centerX" secondItem="8FX-44-o0v" secondAttribute="centerX" id="YV5-bt-LGr"/>
                                     <constraint firstItem="UVK-NK-iPb" firstAttribute="top" secondItem="kUr-fC-yco" secondAttribute="bottom" constant="10" id="YdC-4E-DVL"/>
+                                    <constraint firstItem="abN-1z-oAa" firstAttribute="top" secondItem="phn-Vl-rjs" secondAttribute="bottom" constant="20" id="ck7-i0-31j"/>
                                     <constraint firstAttribute="centerX" secondItem="phn-Vl-rjs" secondAttribute="centerX" id="g4h-K6-bj2"/>
                                     <constraint firstAttribute="centerX" secondItem="s8w-C8-ZXZ" secondAttribute="centerX" id="g6t-F4-e7u"/>
                                     <constraint firstItem="hcX-fT-6QG" firstAttribute="top" secondItem="Jae-dt-4i0" secondAttribute="bottom" constant="20" id="geS-eL-zfb"/>
@@ -334,6 +340,7 @@
                         <constraints>
                             <constraint firstItem="JMk-D1-ClR" firstAttribute="top" secondItem="nu3-2e-n1B" secondAttribute="bottom" constant="-40" id="4uI-cR-GMe"/>
                             <constraint firstItem="Z4f-od-z3E" firstAttribute="width" secondItem="v6u-dP-1Nh" secondAttribute="width" multiplier="0.8" id="57E-pH-cdq"/>
+                            <constraint firstItem="abN-1z-oAa" firstAttribute="width" secondItem="v6u-dP-1Nh" secondAttribute="width" multiplier="0.8" id="6xH-Y3-SxI"/>
                             <constraint firstItem="kUr-fC-yco" firstAttribute="width" secondItem="v6u-dP-1Nh" secondAttribute="width" multiplier="0.8" id="C46-WP-v5D"/>
                             <constraint firstItem="phn-Vl-rjs" firstAttribute="width" secondItem="v6u-dP-1Nh" secondAttribute="width" multiplier="0.8" id="CRo-MQ-EaC"/>
                             <constraint firstItem="Jae-dt-4i0" firstAttribute="width" secondItem="v6u-dP-1Nh" secondAttribute="width" multiplier="0.8" id="GPe-AT-xLJ"/>
@@ -357,6 +364,7 @@
                         <outlet property="foodPairing" destination="phn-Vl-rjs" id="Lpl-DL-gcj"/>
                         <outlet property="name" destination="Z4f-od-z3E" id="t4I-fo-O5f"/>
                         <outlet property="scroll" destination="JMk-D1-ClR" id="aiz-Qe-IJ7"/>
+                        <outlet property="tempRange" destination="Jae-dt-4i0" id="BZc-Ao-tvl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dog-1m-D0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -462,7 +470,7 @@
                             <outlet property="delegate" destination="fYM-be-J61" id="f1d-26-i3z"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="foods" id="gly-5o-VgQ"/>
+                    <navigationItem key="navigationItem" title="Foods" id="gly-5o-VgQ"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8n-Nb-Cb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,7 +603,7 @@
             </objects>
             <point key="canvasLocation" x="-914" y="-1103"/>
         </scene>
-        <!--Glass View Controller-->
+        <!--Glasses-->
         <scene sceneID="VOf-M2-x81">
             <objects>
                 <viewController id="Xge-wu-bLR" customClass="GlassViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
@@ -668,7 +676,7 @@
                             <constraint firstItem="Akp-nH-LAQ" firstAttribute="height" secondItem="Kuo-p1-XYJ" secondAttribute="height" id="cXQ-0u-5vP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="c3y-HN-ima"/>
+                    <navigationItem key="navigationItem" title="Glasses" id="c3y-HN-ima"/>
                     <connections>
                         <outlet property="collectionView" destination="Akp-nH-LAQ" id="RcW-1D-COV"/>
                         <segue destination="JfQ-3Q-hd6" kind="push" identifier="glassColectToDetails" id="Cdt-hr-4ew"/>
@@ -770,7 +778,7 @@
             </objects>
             <point key="canvasLocation" x="-1303" y="-93"/>
         </scene>
-        <!--Categoty View Controller-->
+        <!--Category-->
         <scene sceneID="gva-2t-c0o">
             <objects>
                 <viewController id="aYy-K8-6va" customClass="CategotyViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
@@ -833,7 +841,7 @@
                             <constraint firstItem="oLG-G3-r1C" firstAttribute="top" secondItem="dbS-y9-Wh2" secondAttribute="bottom" constant="200" id="u8d-nS-ng3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bd4-Lj-cOr"/>
+                    <navigationItem key="navigationItem" title="Category" id="bd4-Lj-cOr"/>
                     <connections>
                         <segue destination="3cQ-gF-P2t" kind="push" identifier="categoryToFather" id="ToF-c4-Xpx"/>
                     </connections>

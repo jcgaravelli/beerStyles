@@ -49,7 +49,6 @@
 		853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */; };
 		853CB3711B4AD24200DE27A5 /* BeerStylesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */; };
 		858D535E1B599BE30044F1C7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 853CB36F1B4AD24200DE27A5 /* Info.plist */; };
-		858D53641B5D57770044F1C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 858D53631B5D57770044F1C7 /* Localizable.strings */; };
 		858D536C1B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb in Resources */ = {isa = PBXBuildFile; fileRef = 858D53671B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb */; };
 		858D536D1B5D749C0044F1C7 /* LobsterSource.vfb in Resources */ = {isa = PBXBuildFile; fileRef = 858D53681B5D749C0044F1C7 /* LobsterSource.vfb */; };
 		858D536E1B5D749C0044F1C7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 858D53691B5D749C0044F1C7 /* License.txt */; };
@@ -118,7 +117,6 @@
 		853CB3701B4AD24200DE27A5 /* BeerStylesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerStylesTests.swift; sourceTree = "<group>"; };
 		858D535F1B599C910044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		858D53601B599C920044F1C7 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		858D53631B5D57770044F1C7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		858D53671B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4 merged and optimized.vfb"; sourceTree = "<group>"; };
 		858D53681B5D749C0044F1C7 /* LobsterSource.vfb */ = {isa = PBXFileReference; lastKnownFileType = file; path = LobsterSource.vfb; sourceTree = "<group>"; };
 		858D53691B5D749C0044F1C7 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		853CB3491B4AD24100DE27A5 = {
 			isa = PBXGroup;
 			children = (
-				858D53631B5D57770044F1C7 /* Localizable.strings */,
 				673B0B201B59352800493344 /* UIViewController+Gradient.swift */,
 				67806E101B4DB7E100904925 /* Framework */,
 				67806DED1B4DB50000904925 /* parseFramework */,
@@ -402,7 +399,6 @@
 			files = (
 				858D535E1B599BE30044F1C7 /* Info.plist in Resources */,
 				858D536D1B5D749C0044F1C7 /* LobsterSource.vfb in Resources */,
-				858D53641B5D57770044F1C7 /* Localizable.strings in Resources */,
 				6378222A1B593C7200163D75 /* bubble.mp3 in Resources */,
 				853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */,
 				858D53701B5D749C0044F1C7 /* Readme.txt in Resources */,
