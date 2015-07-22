@@ -134,11 +134,6 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         }
         
     }
-
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-//        let picDimension = self.view.frame.size.width / 4.0
-//        return CGSizeMake(picDimension, picDimension)
-//    }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         let leftRightInset = self.view.frame.size.width / 60

@@ -94,8 +94,8 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
         // Mostrara a imagm do copo
         var initialThumbnail = UIImage(named: "name")
        // cell.glassImage.image = initialThumbnail
-        
-        // Fetch final flag image - if it exists
+
+        // seta a imagem - sel ela existir
         if let value = glasses[indexPath.row]["flag"] as? PFFile {
             let finalImage = self.glasses[indexPath.row]["flag"] as? PFFile
             finalImage!.getDataInBackgroundWithBlock {
