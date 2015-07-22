@@ -10,9 +10,12 @@ import UIKit
 import ParseUI
 import Parse
 
+
+//criação da tela com os estilos
+
 class StyleTableViewController: PFQueryTableViewController {
 
-    
+    //criação de um objeto o parse
     var fatherObject: PFObject!
     
 
@@ -26,6 +29,7 @@ class StyleTableViewController: PFQueryTableViewController {
         
         
     }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -90,7 +94,7 @@ class StyleTableViewController: PFQueryTableViewController {
     }
     
     
-    
+    //segue para a página de perfil
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("tableToDetail", sender: nil)
     }
@@ -98,8 +102,10 @@ class StyleTableViewController: PFQueryTableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "tableToDetail" {
-                if let destination = segue.destinationViewController as? StyleDetailViewController {
-                    if let indexPath = tableView.indexPathForSelectedRow()?.row
+            
+            if let destination = segue.destinationViewController as? StyleDetailViewController {
+                
+                if let indexPath = tableView.indexPathForSelectedRow()?.row
                     {
                         
                             let row = Int(indexPath)
@@ -112,7 +118,8 @@ class StyleTableViewController: PFQueryTableViewController {
     
     
     
-    
+
+    //animação das tabelas
     func animateTable() {
         tableView.reloadData()
         

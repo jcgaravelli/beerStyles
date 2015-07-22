@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
+
 class NewMenuViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate,  UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
     
     
@@ -25,7 +26,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         screenSize = self.view.frame
@@ -124,6 +125,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
        
+        // diferencia entre as rows para poder customizar tamanhos diferentes entre as células
         
         if indexPath.row == 0{
         
@@ -134,6 +136,8 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         }
         
     }
+    
+    // posicionamento das células
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         let leftRightInset = self.view.frame.size.width / 60
@@ -148,19 +152,23 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     
     
   //MARK: - Search Button
+    
+    
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         collectionView.hidden = true
         tableView.hidden = false
         
     }
+    
+    
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         
         // Dismiss the keyboard
         searchBar.resignFirstResponder()
         
-        // Force reload of table data
-       // self.loadObjects()
     }
+    
+    
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         
@@ -168,10 +176,9 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         searchBar.resignFirstResponder()
         loadObjectsInBackground()
         
-        // Force reload of table data
-      //  self.loadObjects()
     }
     
+    // força que a busca dos objetos no parse rode background
     func loadObjectsInBackground() {
         var query = filterQuery(self.searchBar.text)
         
@@ -182,6 +189,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         }
     }
     
+    // função do comportamento do botão
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         
         // Clear any search criteria
@@ -191,11 +199,15 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         searchBar.resignFirstResponder()
         collectionView.hidden = false
         tableView.hidden = true
+        
         // Force reload of table data
         //self.loadObjects()
     }
+    
     //MARK: -  TableViewDelgate
     
+    
+    //retornos para a tableview da busca
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchList == nil) {
            return 0
@@ -208,6 +220,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         
     }
     
+    //cria as células-resultado na tabela de busca
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell =  tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! SearchTableViewCell
@@ -220,23 +233,28 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     }
     
     //MARK: - PARSE
+    
+    //função que filtra a busca de acordo com a database
     func filterQuery(search:NSString)->PFQuery{
         
         var query = PFQuery(className: "Style")
         
-        // Add a where clause if there is a search criteria
-            query.whereKey("lowercaseName", containsString: searchBar.text.lowercaseString)
-//        }
-        // Order the results
+        // garante inidiferença entre lower e upper case na busca
+        query.whereKey("lowercaseName", containsString: searchBar.text.lowercaseString)
+        
+        // Ordena o resultado
         query.orderByAscending("name")
         
         
         return query
     }
+    
+    //prepare for segue
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("segueSearch", sender: indexPath)
     }
     
+    //segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segueSearch"{
            if let destination = segue.destinationViewController  as? StyleDetailViewController{
@@ -255,22 +273,5 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         }
         
     }
-    
-    
-//    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "SearchSegue" {
-//            if let destination = segue.destinationViewController as? StyleDetailViewController {
-//                if let indexPath = tableView.indexPathForSelectedRow()?.row
-//                {
-//                    
-//                    let row = Int(indexPath)
-//                    destination.currentObject = (objects?[row] as! PFObject)
-//                    
-//                }
-//            }
-//        }
- //   }
-
 
 }

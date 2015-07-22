@@ -15,12 +15,6 @@ import Bolts
 class CategotyViewController: UIViewController {
 
     @IBOutlet weak var buttonAle: UIButton!
-    var bubbleSound: SystemSoundID!
-    
-    let defaultDuration = 1.0
-    let defaultDamping = 0.20
-    let defaultVelocity = 0.5
-    
     
     
     override func viewDidLoad() {
@@ -40,6 +34,7 @@ class CategotyViewController: UIViewController {
     }
     
     
+    //BOTÕES DE CATEGORIA
     @IBAction func aleSelect(sender: AnyObject) {
         self.selectType("Ale")
     }
@@ -52,6 +47,8 @@ class CategotyViewController: UIViewController {
         self.selectType("Spontaneous")
     }
     
+    //Promise pra garantir que a a próxima será carregarada antes do segue
+    
     func selectType(typeName: NSString) {
         var promise : BFTask = parseFind(typeName)
         promise.continueWithBlock {
@@ -62,6 +59,7 @@ class CategotyViewController: UIViewController {
 
     }
     
+    //segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "categoryToFather" {
             if let destination = segue.destinationViewController as? FatherStyleViewController {
@@ -75,35 +73,7 @@ class CategotyViewController: UIViewController {
 
     }
     
-    
-//
-//    func animateButton() {
-//        AudioServicesPlaySystemSound(bubbleSound)
-//        buttonAle.transform = CGAffineTransformMakeScale(0.1, 0.10)
-//        
-//        UIView.animateWithDuration(defaultDuration,
-//            delay: 1,
-//            usingSpringWithDamping: CGFloat(defaultDamping),
-//            initialSpringVelocity: CGFloat(defaultVelocity),
-//            options: UIViewAnimationOptions.AllowUserInteraction,
-//            animations: {
-//                self.buttonAle.transform = CGAffineTransformIdentity
-//            },
-//            completion: { finished in
-//                self.animateButton()
-//            }
-//        )
-//    }
-//    
-//    
-//    func createBubbleSound() -> SystemSoundID {
-//        var soundID: SystemSoundID = 0
-//        let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "bubble", "mp3", nil)
-//        AudioServicesCreateSystemSoundID(soundURL, &soundID)
-//        return soundID
-//    }
-    
-
+    //função que cria a query
     func parseFind(type:NSString)->BFTask{
         var query = PFQuery(className:"Category")
         query.whereKey("name", equalTo:type)

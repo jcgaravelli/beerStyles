@@ -88,7 +88,7 @@ class FatherStyleViewController: PFQueryTableViewController {
     }
     
     
-    
+    //segue
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
@@ -116,6 +116,7 @@ class FatherStyleViewController: PFQueryTableViewController {
     }
 
     
+    //animação da tabela
     func animateTable() {
         tableView.reloadData()
         
