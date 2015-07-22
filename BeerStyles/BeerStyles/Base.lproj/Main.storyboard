@@ -470,7 +470,7 @@
                             <outlet property="delegate" destination="fYM-be-J61" id="f1d-26-i3z"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="foods" id="gly-5o-VgQ"/>
+                    <navigationItem key="navigationItem" title="Foods" id="gly-5o-VgQ"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8n-Nb-Cb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -603,7 +603,7 @@
             </objects>
             <point key="canvasLocation" x="-914" y="-1103"/>
         </scene>
-        <!--Glass View Controller-->
+        <!--Glasses-->
         <scene sceneID="VOf-M2-x81">
             <objects>
                 <viewController id="Xge-wu-bLR" customClass="GlassViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
@@ -676,7 +676,7 @@
                             <constraint firstItem="Akp-nH-LAQ" firstAttribute="height" secondItem="Kuo-p1-XYJ" secondAttribute="height" id="cXQ-0u-5vP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="c3y-HN-ima"/>
+                    <navigationItem key="navigationItem" title="Glasses" id="c3y-HN-ima"/>
                     <connections>
                         <outlet property="collectionView" destination="Akp-nH-LAQ" id="RcW-1D-COV"/>
                         <segue destination="JfQ-3Q-hd6" kind="push" identifier="glassColectToDetails" id="Cdt-hr-4ew"/>
@@ -778,7 +778,7 @@
             </objects>
             <point key="canvasLocation" x="-1303" y="-93"/>
         </scene>
-        <!--Categoty View Controller-->
+        <!--Category-->
         <scene sceneID="gva-2t-c0o">
             <objects>
                 <viewController id="aYy-K8-6va" customClass="CategotyViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
@@ -841,7 +841,7 @@
                             <constraint firstItem="oLG-G3-r1C" firstAttribute="top" secondItem="dbS-y9-Wh2" secondAttribute="bottom" constant="200" id="u8d-nS-ng3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bd4-Lj-cOr"/>
+                    <navigationItem key="navigationItem" title="Category" id="bd4-Lj-cOr"/>
                     <connections>
                         <segue destination="3cQ-gF-P2t" kind="push" identifier="categoryToFather" id="ToF-c4-Xpx"/>
                     </connections>
