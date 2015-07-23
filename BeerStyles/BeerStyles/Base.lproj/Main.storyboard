@@ -575,6 +575,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="jqm-hp-dKa"/>
                     <connections>
+                        <outlet property="barraInf" destination="p5u-FN-712" id="FTz-5k-ntc"/>
+                        <outlet property="barraSup" destination="6tF-SJ-Xjs" id="048-R9-82H"/>
                         <outlet property="collectionView" destination="28R-2N-JPG" id="6Iz-vL-vzu"/>
                         <outlet property="searchBar" destination="H89-F4-wBs" id="ZDB-zO-RHb"/>
                         <outlet property="tableView" destination="HUE-Yw-NA3" id="UOp-AJ-yZc"/>
