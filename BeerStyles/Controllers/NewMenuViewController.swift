@@ -24,6 +24,8 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     var screenHeight : CGFloat!
     var searchList : NSArray!
 
+    @IBOutlet weak var barraInf: UIImageView!
+    @IBOutlet weak var barraSup: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
 
@@ -157,6 +159,8 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         collectionView.hidden = true
         tableView.hidden = false
+        self.barraInf.hidden =  true
+        self.barraSup.hidden = true
         
     }
     
@@ -199,6 +203,9 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         searchBar.resignFirstResponder()
         collectionView.hidden = false
         tableView.hidden = true
+        self.barraInf.hidden =  false
+        self.barraSup.hidden = false
+
         
         // Force reload of table data
         //self.loadObjects()
