@@ -232,29 +232,29 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMk-D1-ClR">
                                 <rect key="frame" x="0.0" y="24" width="320" height="544"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
                                         <rect key="frame" x="32" y="-10" width="256" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="45"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-44-o0v">
-                                        <rect key="frame" x="32" y="44" width="256" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-44-o0v">
+                                        <rect key="frame" x="32" y="60" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-fC-yco">
-                                        <rect key="frame" x="32" y="84" width="256" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Characteristics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-fC-yco">
+                                        <rect key="frame" x="32" y="100" width="256" height="70"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="characteristics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-NK-iPb">
-                                        <rect key="frame" x="32" y="164" width="256" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="characteristics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-NK-iPb">
+                                        <rect key="frame" x="32" y="180" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -267,15 +267,15 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-C8-ZXZ">
-                                        <rect key="frame" x="32" y="204" width="256" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ABV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-C8-ZXZ">
+                                        <rect key="frame" x="32" y="220" width="256" height="35"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abvRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
-                                        <rect key="frame" x="32" y="249" width="256" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="abvRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
+                                        <rect key="frame" x="32" y="265" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -309,14 +309,23 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="4kX-hM-gxo">
+                                        <rect key="frame" x="32" y="440" width="240" height="128"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="rFD-6G-5wW" userLabel="barra-menor-sup">
+                                        <rect key="frame" x="40" y="88" width="240" height="48"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="4kX-hM-gxo" secondAttribute="centerX" constant="8" id="4Ix-LE-uar"/>
                                     <constraint firstItem="Z4f-od-z3E" firstAttribute="top" secondItem="JMk-D1-ClR" secondAttribute="top" constant="-10" id="7HF-da-xUr"/>
                                     <constraint firstItem="NpO-jo-Z0f" firstAttribute="top" secondItem="xZX-9V-Kbv" secondAttribute="bottom" constant="20" id="7hO-xJ-5aK"/>
                                     <constraint firstItem="Jae-dt-4i0" firstAttribute="top" secondItem="NpO-jo-Z0f" secondAttribute="bottom" constant="10" id="8hv-1b-hsw"/>
                                     <constraint firstAttribute="centerX" secondItem="kUr-fC-yco" secondAttribute="centerX" id="A9k-Nm-XSe"/>
                                     <constraint firstItem="kUr-fC-yco" firstAttribute="top" secondItem="8FX-44-o0v" secondAttribute="bottom" constant="20" id="BQ9-Q5-5Cn"/>
-                                    <constraint firstItem="8FX-44-o0v" firstAttribute="top" secondItem="Z4f-od-z3E" secondAttribute="bottom" constant="14" id="JXE-hT-dIY"/>
+                                    <constraint firstItem="rFD-6G-5wW" firstAttribute="top" secondItem="Z4f-od-z3E" secondAttribute="bottom" constant="10" id="C8z-dD-Rer"/>
+                                    <constraint firstItem="8FX-44-o0v" firstAttribute="top" secondItem="rFD-6G-5wW" secondAttribute="bottom" constant="10" id="CW3-mF-3lt"/>
+                                    <constraint firstAttribute="bottom" secondItem="4kX-hM-gxo" secondAttribute="bottom" constant="10" id="NS3-Yz-Mm5"/>
                                     <constraint firstAttribute="centerX" secondItem="abN-1z-oAa" secondAttribute="centerX" id="NX8-eg-SMl"/>
                                     <constraint firstAttribute="centerX" secondItem="Jae-dt-4i0" secondAttribute="centerX" id="Pxd-ce-Tkj"/>
                                     <constraint firstItem="s8w-C8-ZXZ" firstAttribute="top" secondItem="UVK-NK-iPb" secondAttribute="bottom" constant="20" id="Q3Y-vh-KkX"/>
@@ -329,6 +338,8 @@
                                     <constraint firstItem="hcX-fT-6QG" firstAttribute="top" secondItem="Jae-dt-4i0" secondAttribute="bottom" constant="20" id="geS-eL-zfb"/>
                                     <constraint firstAttribute="centerX" secondItem="hcX-fT-6QG" secondAttribute="centerX" id="ksn-Wx-wG0"/>
                                     <constraint firstItem="phn-Vl-rjs" firstAttribute="top" secondItem="hcX-fT-6QG" secondAttribute="bottom" constant="10" id="mWn-y7-8w4"/>
+                                    <constraint firstItem="4kX-hM-gxo" firstAttribute="top" secondItem="abN-1z-oAa" secondAttribute="bottom" constant="30" id="mYA-2u-t3W"/>
+                                    <constraint firstAttribute="centerX" secondItem="rFD-6G-5wW" secondAttribute="centerX" id="nVz-wH-xJE"/>
                                     <constraint firstAttribute="centerX" secondItem="NpO-jo-Z0f" secondAttribute="centerX" id="szP-Ro-83Z"/>
                                     <constraint firstAttribute="centerX" secondItem="UVK-NK-iPb" secondAttribute="centerX" id="vSz-Dz-rSK"/>
                                     <constraint firstItem="xZX-9V-Kbv" firstAttribute="top" secondItem="s8w-C8-ZXZ" secondAttribute="bottom" constant="10" id="xXg-ez-aVR"/>
@@ -459,6 +470,9 @@
                                 <color key="barTintColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="6tF-SJ-Xjs" userLabel="barra-menor-sup">
+                                <rect key="frame" x="0.0" y="64" width="320" height="440"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HUE-Yw-NA3">
                                 <rect key="frame" x="16" y="128" width="288" height="440"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -536,19 +550,26 @@
                                     <outlet property="delegate" destination="NBb-BI-vFk" id="zZG-eB-WXt"/>
                                 </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="p5u-FN-712" userLabel="barra-menor-inf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="440"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H89-F4-wBs" firstAttribute="bottom" secondItem="HUE-Yw-NA3" secondAttribute="top" id="1Z7-Uj-sZr"/>
                             <constraint firstAttribute="trailing" secondItem="28R-2N-JPG" secondAttribute="trailing" id="4xe-ae-OOv"/>
+                            <constraint firstAttribute="centerX" secondItem="p5u-FN-712" secondAttribute="centerX" id="6JQ-yV-pkr"/>
+                            <constraint firstItem="28R-2N-JPG" firstAttribute="bottom" secondItem="p5u-FN-712" secondAttribute="top" constant="80" id="8nh-f3-hjA"/>
                             <constraint firstItem="Vxt-lK-yYP" firstAttribute="top" secondItem="HUE-Yw-NA3" secondAttribute="bottom" id="93Y-a1-pr6"/>
                             <constraint firstItem="28R-2N-JPG" firstAttribute="top" secondItem="H89-F4-wBs" secondAttribute="bottom" id="Hk6-xl-8Pd"/>
                             <constraint firstItem="28R-2N-JPG" firstAttribute="leading" secondItem="uh8-f4-mlY" secondAttribute="leading" id="UVf-bn-KoR"/>
                             <constraint firstItem="HUE-Yw-NA3" firstAttribute="leading" secondItem="uh8-f4-mlY" secondAttribute="leadingMargin" id="bE9-lx-t60"/>
                             <constraint firstItem="Vxt-lK-yYP" firstAttribute="top" secondItem="28R-2N-JPG" secondAttribute="bottom" id="eM8-JY-CDm"/>
                             <constraint firstItem="H89-F4-wBs" firstAttribute="width" secondItem="uh8-f4-mlY" secondAttribute="width" id="eMz-bn-CZM"/>
+                            <constraint firstItem="6tF-SJ-Xjs" firstAttribute="top" secondItem="H89-F4-wBs" secondAttribute="bottom" constant="20" id="ir1-UW-xKm"/>
                             <constraint firstAttribute="centerX" secondItem="H89-F4-wBs" secondAttribute="centerX" id="nZP-Vj-mQC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HUE-Yw-NA3" secondAttribute="trailing" id="s0q-Hj-E3m"/>
+                            <constraint firstAttribute="centerX" secondItem="6tF-SJ-Xjs" secondAttribute="centerX" id="tmG-OW-Okf"/>
                             <constraint firstItem="H89-F4-wBs" firstAttribute="top" secondItem="SEj-Gr-V81" secondAttribute="bottom" constant="20" id="v0T-NB-U4S"/>
                         </constraints>
                     </view>
@@ -776,6 +797,7 @@
         <image name="Ale" width="600" height="500"/>
         <image name="Lager" width="600" height="500"/>
         <image name="Spontaneous" width="600" height="500"/>
+        <image name="barra-menor" width="266" height="33"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
