@@ -353,15 +353,10 @@
       },
       {
          "name":"Altbier",
+         "namePT":"",
          "country":"Germany",
-         "description":"Altbier (German for 'old beer') is a style of beer originating in Germany.
-          It was first brewed in the historical region of Westphalia and is a speciality of the city of Düsseldorf.
-          Its name comes from its production using the technique of top fermentation, an older method than
-          bottom fermentation characteristic of other lager styles of beer.",
-         "characteristics":"Altbier is usually a dark copper colour. It is brewed at a moderate temperature using a
-          top-fermenting yeast which gives its flavour some fruitiness, but matured at a cooler temperature,
-          which gives it a cleaner and crisper taste more akin to lager beer styles than is the norm for top-fermented beers,
-          such as British pale ale.",
+         "description":"Altbier (German for 'old beer') is a style of beer originating in Germany. It was first brewed in the historical region of Westphalia and is a speciality of the city of Düsseldorf. Its name comes from its production using the technique of top fermentation, an older method than bottom fermentation characteristic of other lager styles of beer.",
+         "characteristics":"Altbier is usually a dark copper colour. It is brewed at a moderate temperature using a top-fermenting yeast which gives its flavour some fruitiness, but matured at a cooler temperature, which gives it a cleaner and crisper taste more akin to lager beer styles than is the norm for top-fermented beers, such as British pale ale.",
          "abvMin":4,
          "abvMax":7,
          "tempMin":7,
