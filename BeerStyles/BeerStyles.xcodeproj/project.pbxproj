@@ -117,7 +117,7 @@
 		858D536A1B5D749C0044F1C7 /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
 		858D536B1B5D749C0044F1C7 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		858D53711B5D81180044F1C7 /* Chunkfive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunkfive.otf; sourceTree = "<group>"; };
-		85CE9B231B5ED07500DF60B1 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		85CE9B231B5ED07500DF60B1 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewCell.swift; path = ../Controllers/SearchTableViewCell.swift; sourceTree = "<group>"; };
 		D2F28B581B5F62F500A21D81 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +158,6 @@
 		6357272E1B4EC43E00F80934 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				85CE9B231B5ED07500DF60B1 /* SearchTableViewCell.swift */,
 				679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */,
 				673B0B141B57E17600493344 /* CategotyViewController.swift */,
 				673B0B1A1B590B6C00493344 /* GlassViewController.swift */,
@@ -182,6 +181,7 @@
 				63118C491B5D392600C64B13 /* GlassesCollectionViewCell.swift */,
 				6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */,
 				673B0B1C1B590B8000493344 /* GlassCollectionViewCell.swift */,
+				85CE9B231B5ED07500DF60B1 /* SearchTableViewCell.swift */,
 			);
 			name = Views;
 			path = ../Views;
@@ -351,7 +351,6 @@
 				TargetAttributes = {
 					853CB3511B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 2MSKV8WUR9;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -360,7 +359,7 @@
 					};
 					853CB3691B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 2MSKV8WUR9;
+						DevelopmentTeam = GYJ684Z772;
 						TestTargetID = 853CB3511B4AD24200DE27A5;
 					};
 				};
@@ -566,8 +565,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parseFramework",
@@ -584,8 +583,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parseFramework",
@@ -602,8 +601,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -624,8 +623,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fernando H. M.  Bastos (NNE45SLADW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
