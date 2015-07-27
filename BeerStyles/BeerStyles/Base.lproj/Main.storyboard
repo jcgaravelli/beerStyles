@@ -232,99 +232,106 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMk-D1-ClR">
                                 <rect key="frame" x="0.0" y="24" width="320" height="544"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
-                                        <rect key="frame" x="32" y="-10" width="256" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-od-z3E">
+                                        <rect key="frame" x="32" y="-10" width="256" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="45"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-44-o0v">
-                                        <rect key="frame" x="32" y="60" width="256" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FX-44-o0v">
+                                        <rect key="frame" x="32" y="163" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Characteristics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-fC-yco">
-                                        <rect key="frame" x="32" y="100" width="256" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-fC-yco">
+                                        <rect key="frame" x="32" y="203" width="256" height="70"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="characteristics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-NK-iPb">
-                                        <rect key="frame" x="32" y="180" width="256" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="characteristics" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-NK-iPb">
+                                        <rect key="frame" x="32" y="283" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-jo-Z0f">
-                                        <rect key="frame" x="32" y="289" width="256" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpO-jo-Z0f">
+                                        <rect key="frame" x="32" y="408" width="256" height="35"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ABV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-C8-ZXZ">
-                                        <rect key="frame" x="32" y="220" width="256" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8w-C8-ZXZ">
+                                        <rect key="frame" x="32" y="323" width="256" height="35"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="abvRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
-                                        <rect key="frame" x="32" y="265" width="256" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abvRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-9V-Kbv">
+                                        <rect key="frame" x="32" y="368" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tempRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jae-dt-4i0">
-                                        <rect key="frame" x="32" y="343" width="256" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tempRange" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jae-dt-4i0">
+                                        <rect key="frame" x="32" y="453" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food Pairing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcX-fT-6QG">
-                                        <rect key="frame" x="32" y="380" width="256" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Pairing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcX-fT-6QG">
+                                        <rect key="frame" x="32" y="493" width="256" height="35"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="foodPairing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phn-Vl-rjs">
-                                        <rect key="frame" x="32" y="434" width="256" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foodPairing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phn-Vl-rjs">
+                                        <rect key="frame" x="32" y="538" width="256" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Glasses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abN-1z-oAa">
-                                        <rect key="frame" x="87" y="459" width="164" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glasses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abN-1z-oAa">
+                                        <rect key="frame" x="32" y="578" width="256" height="35"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="ChunkFive-Roman" family="ChunkFive" pointSize="35"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="4kX-hM-gxo">
-                                        <rect key="frame" x="32" y="440" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="4kX-hM-gxo">
+                                        <rect key="frame" x="19" y="643" width="266" height="33"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="rFD-6G-5wW" userLabel="barra-menor-sup">
-                                        <rect key="frame" x="40" y="88" width="240" height="48"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barra-menor" translatesAutoresizingMaskIntoConstraints="NO" id="rFD-6G-5wW" userLabel="barra-menor-sup">
+                                        <rect key="frame" x="27" y="45" width="266" height="33"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GermanyFlag" translatesAutoresizingMaskIntoConstraints="NO" id="6wA-q5-3a1" userLabel="flag">
+                                        <rect key="frame" x="130" y="88" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="XWy-YO-4SA"/>
+                                            <constraint firstAttribute="height" constant="60" id="mJ8-wJ-f4b"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="6wA-q5-3a1" firstAttribute="top" secondItem="rFD-6G-5wW" secondAttribute="bottom" constant="10" id="1R2-rX-89i"/>
                                     <constraint firstAttribute="centerX" secondItem="4kX-hM-gxo" secondAttribute="centerX" constant="8" id="4Ix-LE-uar"/>
                                     <constraint firstItem="Z4f-od-z3E" firstAttribute="top" secondItem="JMk-D1-ClR" secondAttribute="top" constant="-10" id="7HF-da-xUr"/>
                                     <constraint firstItem="NpO-jo-Z0f" firstAttribute="top" secondItem="xZX-9V-Kbv" secondAttribute="bottom" constant="20" id="7hO-xJ-5aK"/>
                                     <constraint firstItem="Jae-dt-4i0" firstAttribute="top" secondItem="NpO-jo-Z0f" secondAttribute="bottom" constant="10" id="8hv-1b-hsw"/>
                                     <constraint firstAttribute="centerX" secondItem="kUr-fC-yco" secondAttribute="centerX" id="A9k-Nm-XSe"/>
-                                    <constraint firstItem="kUr-fC-yco" firstAttribute="top" secondItem="8FX-44-o0v" secondAttribute="bottom" constant="20" id="BQ9-Q5-5Cn"/>
+                                    <constraint firstItem="8FX-44-o0v" firstAttribute="bottom" secondItem="kUr-fC-yco" secondAttribute="top" constant="-20" id="BQ9-Q5-5Cn"/>
                                     <constraint firstItem="rFD-6G-5wW" firstAttribute="top" secondItem="Z4f-od-z3E" secondAttribute="bottom" constant="10" id="C8z-dD-Rer"/>
-                                    <constraint firstItem="8FX-44-o0v" firstAttribute="top" secondItem="rFD-6G-5wW" secondAttribute="bottom" constant="10" id="CW3-mF-3lt"/>
                                     <constraint firstAttribute="bottom" secondItem="4kX-hM-gxo" secondAttribute="bottom" constant="10" id="NS3-Yz-Mm5"/>
                                     <constraint firstAttribute="centerX" secondItem="abN-1z-oAa" secondAttribute="centerX" id="NX8-eg-SMl"/>
                                     <constraint firstAttribute="centerX" secondItem="Jae-dt-4i0" secondAttribute="centerX" id="Pxd-ce-Tkj"/>
@@ -332,6 +339,8 @@
                                     <constraint firstAttribute="centerX" secondItem="xZX-9V-Kbv" secondAttribute="centerX" id="Qci-V1-ad9"/>
                                     <constraint firstAttribute="centerX" secondItem="8FX-44-o0v" secondAttribute="centerX" id="YV5-bt-LGr"/>
                                     <constraint firstItem="UVK-NK-iPb" firstAttribute="top" secondItem="kUr-fC-yco" secondAttribute="bottom" constant="10" id="YdC-4E-DVL"/>
+                                    <constraint firstAttribute="centerX" secondItem="6wA-q5-3a1" secondAttribute="centerX" id="bfv-vx-fRr"/>
+                                    <constraint firstItem="8FX-44-o0v" firstAttribute="top" secondItem="6wA-q5-3a1" secondAttribute="bottom" constant="15" id="cBu-gU-sCO"/>
                                     <constraint firstItem="abN-1z-oAa" firstAttribute="top" secondItem="phn-Vl-rjs" secondAttribute="bottom" constant="20" id="ck7-i0-31j"/>
                                     <constraint firstAttribute="centerX" secondItem="phn-Vl-rjs" secondAttribute="centerX" id="g4h-K6-bj2"/>
                                     <constraint firstAttribute="centerX" secondItem="s8w-C8-ZXZ" secondAttribute="centerX" id="g6t-F4-e7u"/>
@@ -380,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dog-1m-D0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="-1165"/>
+            <point key="canvasLocation" x="780" y="-1103"/>
         </scene>
         <!--Tutorial-->
         <scene sceneID="1L8-NQ-DSB">
@@ -797,6 +806,7 @@
     </scenes>
     <resources>
         <image name="Ale" width="600" height="500"/>
+        <image name="GermanyFlag" width="256" height="256"/>
         <image name="Lager" width="600" height="500"/>
         <image name="Spontaneous" width="600" height="500"/>
         <image name="barra-menor" width="266" height="33"/>
