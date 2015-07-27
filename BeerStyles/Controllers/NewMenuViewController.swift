@@ -158,6 +158,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         collectionView.hidden = true
+        tableView.reloadData()
         tableView.hidden = false
         self.barraInf.hidden =  true
         self.barraSup.hidden = true
