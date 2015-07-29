@@ -155,6 +155,22 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     
   //MARK: - Search Button
     
+//    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+//        searchActive = true;
+//    }
+//    
+//    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+//        searchActive = false;
+//    }
+//    
+//    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+//        searchActive = false;
+//    }
+//    
+//    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+//        searchActive = false;
+//    }
+    
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         collectionView.hidden = true
@@ -209,7 +225,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
 
         
         // Force reload of table data
-        //self.loadObjects()
+        self.loadObjectsInBackground()
     }
     
     //MARK: -  TableViewDelgate
