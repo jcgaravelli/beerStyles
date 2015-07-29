@@ -119,9 +119,8 @@ class FatherStyleViewController: PFQueryTableViewController {
     //animação da tabela
     func animateTable() {
         tableView.reloadData()
-        
-        let cells = tableView.visibleCells()
-        let tableHeight: CGFloat = tableView.bounds.size.height
+       let cells = tableView.visibleCells()
+                let tableHeight: CGFloat = tableView.bounds.size.height
         
         for i in cells {
             let cell: UITableViewCell = i as! UITableViewCell

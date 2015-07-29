@@ -40,6 +40,8 @@
 		67806E0D1B4DB7BC00904925 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0C1B4DB7BC00904925 /* libz.dylib */; };
 		67806E0F1B4DB7C800904925 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 67806E0E1B4DB7C800904925 /* libsqlite3.dylib */; };
 		679F465F1B5CFE82002CC18C /* NewMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */; };
+		67F57C491B614B8800E191A7 /* NewTutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F57C481B614B8800E191A7 /* NewTutoViewController.swift */; };
+		67F57C4B1B6161E900E191A7 /* UnderCCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F57C4A1B6161E900E191A7 /* UnderCCViewController.swift */; };
 		853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853CB3571B4AD24200DE27A5 /* AppDelegate.swift */; };
 		853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853CB35E1B4AD24200DE27A5 /* Main.storyboard */; };
 		853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3611B4AD24200DE27A5 /* Images.xcassets */; };
@@ -100,6 +102,8 @@
 		67806E0C1B4DB7BC00904925 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		67806E0E1B4DB7C800904925 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMenuViewController.swift; sourceTree = "<group>"; };
+		67F57C481B614B8800E191A7 /* NewTutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewTutoViewController.swift; path = Controllers/NewTutoViewController.swift; sourceTree = SOURCE_ROOT; };
+		67F57C4A1B6161E900E191A7 /* UnderCCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnderCCViewController.swift; path = Controllers/UnderCCViewController.swift; sourceTree = SOURCE_ROOT; };
 		853CB3521B4AD24200DE27A5 /* BeerStyles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerStyles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CB3561B4AD24200DE27A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853CB3571B4AD24200DE27A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				674272481B557A7E0018D7EC /* StyleTableViewController.swift */,
 				6742724A1B557F220018D7EC /* StyleDetailViewController.swift */,
 				673B0B1E1B59219D00493344 /* GlassDetailViewController.swift */,
+				67F57C4A1B6161E900E191A7 /* UnderCCViewController.swift */,
 			);
 			name = Controllers;
 			path = ../Controllers;
@@ -245,6 +250,7 @@
 				6357272E1B4EC43E00F80934 /* Controllers */,
 				853CB3571B4AD24200DE27A5 /* AppDelegate.swift */,
 				853CB35E1B4AD24200DE27A5 /* Main.storyboard */,
+				67F57C481B614B8800E191A7 /* NewTutoViewController.swift */,
 				853CB3611B4AD24200DE27A5 /* Images.xcassets */,
 				853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */,
 				853CB3551B4AD24200DE27A5 /* Supporting Files */,
@@ -419,10 +425,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				635727451B549DD500F80934 /* TutorialCollectionViewCell.swift in Sources */,
+				67F57C4B1B6161E900E191A7 /* UnderCCViewController.swift in Sources */,
 				63118C4A1B5D392600C64B13 /* GlassesCollectionViewCell.swift in Sources */,
 				635727431B549AE600F80934 /* CategoryCollectionViewCell.swift in Sources */,
 				6742724B1B557F220018D7EC /* StyleDetailViewController.swift in Sources */,
 				673B0B151B57E17600493344 /* CategotyViewController.swift in Sources */,
+				67F57C491B614B8800E191A7 /* NewTutoViewController.swift in Sources */,
 				85CE9B241B5ED07500DF60B1 /* SearchTableViewCell.swift in Sources */,
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
 				673B0B211B59352800493344 /* UIViewController+Gradient.swift in Sources */,
