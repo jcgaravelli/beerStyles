@@ -19,6 +19,10 @@ class CategotyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.backgroundColor = UIColor.clearColor()
+        //navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+
         gradientColor()
 
         // Do any additional setup after loading the view.
