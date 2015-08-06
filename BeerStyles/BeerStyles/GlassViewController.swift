@@ -95,21 +95,37 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
         } 
         
         // Mostrara a imagm do copo
-        var initialThumbnail = UIImage(named: "name")
-       // cell.glassImage.image = initialThumbnail
-
-        // seta a imagem - sel ela existir
-        if let value = glasses[indexPath.row]["flag"] as? PFFile {
-            let finalImage = self.glasses[indexPath.row]["flag"] as? PFFile
-            finalImage!.getDataInBackgroundWithBlock {
-                (imageData: NSData?, error: NSError?) -> Void in
-                if error == nil {
-                    if let imageData = imageData {
-                     //   cell.glassImage.image = UIImage(data:imageData)
-                    }
-                }
-            }
+        
+        if let iValue = self.glasses[indexPath.row]["imageGlasses"] as? String {
+            println(iValue)
+            cell.glassImage.image = UIImage(named: iValue)
+            
         }
+        
+        
+        
+//        var initialThumbnail = UIImage(named: "imageGlasses")
+//        cell.glassImage.image = initialThumbnail
+
+//        // seta a imagem - sel ela existir
+//        if let value = glasses[indexPath.row]["imageGlasses"] as? PFFile {
+//            let finalImage = self.glasses[indexPath.row]["imageGlasses"] as? PFFile
+//            finalImage!.getDataInBackgroundWithBlock {
+//                (imageData: NSData?, error: NSError?) -> Void in
+//                if error == nil {
+//                    if let imageData = imageData {
+//                       cell.glassImage.image = UIImage(data:imageData)
+//                    }
+//                }
+//            }
+//        }
+//        
+//        
+        
+        
+        
+        
+        
         return cell
     }
     

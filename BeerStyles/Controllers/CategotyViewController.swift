@@ -20,11 +20,19 @@ class CategotyViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         
         playVideo()
         
         //gradientColor()
         
+=======
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.backgroundColor = UIColor.clearColor()
+        //navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
+
+        gradientColor()
+>>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
 
         // Do any additional setup after loading the view.
     }
