@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import Bolts
 import ParseUI
+import MediaPlayer
 
 
 
@@ -28,14 +29,14 @@ class StyleDetailViewController: UIViewController {
     @IBOutlet weak var abvRange: UILabel!
     @IBOutlet weak var foodPairing: UILabel!
     @IBOutlet weak var tempRange: UILabel!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Description.sizeToFit()
         
+        playVideo()
         
-        gradientColor()
+        //gradientColor()
         
         
             }

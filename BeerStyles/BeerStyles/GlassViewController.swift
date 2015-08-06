@@ -20,7 +20,7 @@ class GlassViewController: UIViewController,  UICollectionViewDataSource, UIColl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientColor()
+        //gradientColor()
         
         let cellWidth = ((UIScreen.mainScreen().bounds.width) - 32 - 30 ) / 3
         let cellLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout

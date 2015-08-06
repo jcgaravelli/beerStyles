@@ -26,7 +26,7 @@ let reuseIdentifier = "Cell"
         // Register cell classes
         self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        gradientColor()
+        //gradientColor()
         // Do any additional setup after loading the view.
     }
 

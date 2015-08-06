@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" alpha="0.74999999999999978" tag="-1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Cevada_Field" translatesAutoresizingMaskIntoConstraints="NO" id="gmg-SO-N84">
+                <imageView userInteractionEnabled="NO" alpha="0.74999999999999978" tag="-1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Cevada_Field" highlightedImage="backBeer.gif" translatesAutoresizingMaskIntoConstraints="NO" id="gmg-SO-N84">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoB" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-zN-WZd">
@@ -43,5 +43,6 @@
     <resources>
         <image name="Cevada_Field" width="1680" height="1050"/>
         <image name="LogoB" width="800" height="800"/>
+        <image name="backBeer.gif" width="240" height="320"/>
     </resources>
 </document>

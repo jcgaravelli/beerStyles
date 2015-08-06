@@ -10,18 +10,24 @@ import UIKit
 import Foundation
 import ParseUI
 import Parse
+import MediaPlayer
 
 
 class FatherStyleViewController: PFQueryTableViewController {
     var categoryObject: PFObject!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientColor()
-        self.tableView.rowHeight = 60.0
-
         
-            }
+        NSOperationQueue.mainQueue().addOperationWithBlock {
+            self.playVideo()
+        }
+        
+        //gradientColor()
+        self.tableView.rowHeight = 60.0
+        self.tableView.tableFooterView = UIView.new()
+        
+    }
     
     
     override func viewWillAppear(animated: Bool) {

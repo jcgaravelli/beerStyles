@@ -9,6 +9,7 @@
 import UIKit
 import ParseUI
 import Parse
+import MediaPlayer
 
 
 //criação da tela com os estilos
@@ -17,12 +18,13 @@ class StyleTableViewController: PFQueryTableViewController {
 
     //criação de um objeto o parse
     var fatherObject: PFObject!
-    
-
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientColor()
+        
+        playVideo()
+        
+        //gradientColor()
         
         //TAMANHO DA LINHA
         self.tableView.rowHeight = 60.0

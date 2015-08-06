@@ -9,35 +9,74 @@
 import UIKit
 import Parse
 import ParseUI
+import MediaPlayer
 
 
-class NewMenuViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate,  UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
+class NewMenuViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate{
     
     
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var barraInf: UIImageView!
+    @IBOutlet weak var barraSup: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var layoutMenu: UICollectionViewLayout!
+    var moviePlayer: MPMoviePlayerController!
+    
+    
     let reuseIdentifier = "cellMenu"
-    var imagesMenu : [String] = ["stylesIcon","howIcon","glassIcon","foodIcon"]
+    
+    var imagesMenu : [String] = ["stylesIcon","HowIcon","glassIcon","foodIcon"]
     var screenSize : CGRect!
     var screenWidth : CGFloat!
     var screenHeight : CGFloat!
     var searchList : NSArray!
 
-    @IBOutlet weak var barraInf: UIImageView!
-    @IBOutlet weak var barraSup: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        //gradientColor()
+       // playVideo()
+
+//        // Load the video from the app bundle.
+//        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("beer1", withExtension: "mp4")!
+//        
+//        // Create and configure the movie player.
+//        self.moviePlayer = MPMoviePlayerController(contentURL: videoURL)
+//        
+//        self.moviePlayer.controlStyle = MPMovieControlStyle.None
+//        self.moviePlayer.scalingMode = MPMovieScalingMode.AspectFill
+//        
+//        self.moviePlayer.view.frame = self.view.frame
+//        self.view .insertSubview(self.moviePlayer.view, atIndex: 0)
+//        
+//        
+//        self.moviePlayer.play()
+//        
+//        // Loop video.
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loopVideo", name: MPMoviePlayerPlaybackDidFinishNotification, object: self.moviePlayer)
+//    
+//    
+//    
+//     
+    
+
+        
+        
         screenSize = self.view.frame
         screenWidth = screenSize.width
         screenHeight = screenSize.height
-        gradientColor()
+        
+       
 
         // Do any additional setup after loading the view.
     }
+    
+//    func loopVideo() {
+//        self.moviePlayer.play()
+//    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -45,11 +84,44 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         tableView.hidden = true
         collectionView.hidden = false
+        
+        //recarrega animações
+        collectionView.reloadData()
+        self.searchBar.transform = CGAffineTransformMakeTranslation(300, 0)
+        self.searchBar.alpha = 0.01
+        self.barraInf.alpha = 0.01
+        self.barraSup.alpha = 0.01
+
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        
+       
+            
+            
+//                let path = NSBundle.mainBundle().pathForResource("beerTorn", ofType: "gif")!
+//                let imageView = UIImageView(frame: view.frame)
+//                imageView.image = UIImage.animatedImageWithAnimatedGIFData(NSData(contentsOfFile: path))
+//                imageView.contentMode = .ScaleAspectFill
+//                
+//                
+//                imageView.frame = CGRect(x: 0.0, y: -145.0, width: self.view.frame.size.width, height: self.view.frame.size.height + 460.0)
+//        
+//                
+//                view.insertSubview(imageView, atIndex: 0)
+        
+            
+        
+        
+        
+        
+        UIView.animateWithDuration(0.75, animations: { () -> Void in
+            UIView.setAnimationCurve(UIViewAnimationCurve.EaseInOut)
+            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.navigationController!.view, cache: false)
+        })
     }
     
     
@@ -60,7 +132,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     }
    
     override func viewDidAppear(animated: Bool) {
-        
+
         // Refresh the table to ensure any data changes are displayed
        // tableView.reloadData()
         
@@ -68,7 +140,9 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         searchBar.delegate = self
     }
     
+
     
+
     //CollectionViewDataSource : retorna informação sobre o numero de itens na collection view e em suas views.
     
     //numberOfItensInSection retorna o numero de celulas para serem motradas para uma determinada secao.No nosso caso mostrata o numero de copos que temos
@@ -91,17 +165,56 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellMenu", forIndexPath: indexPath) as! MenuCollectionViewCell
+        cell.imageMenu.image = UIImage(named: imagesMenu[indexPath.row])
+    
         
+        switch indexPath.row
+        {
+        case 0:
+            UIView.animateWithDuration(1.0, animations: { //0.8
+                cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
+                cell.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            })
+        case 1:
+            
+  
+            UIView.animateWithDuration(1.4, animations: { //1.2
+                cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
+                cell.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                
+                self.searchBar.transform = CGAffineTransformMakeTranslation(0, 0)
+                self.searchBar.alpha = 1.0
+            })
+        case 2:
+
+            UIView.animateWithDuration(1.8, animations: {
+                cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
+                cell.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            })
+        case 3:
+
+            UIView.animateWithDuration(2.2, animations: {
+                cell.transform = CGAffineTransformMakeScale(0.5, 0.5)
+                cell.transform = CGAffineTransformMakeScale(1.0, 1.0)
         
-            cell.imageMenu.image = UIImage(named: imagesMenu[indexPath.row])
-        
+
+                self.barraInf.alpha = 1.0
+                self.barraSup.alpha = 1.0
+            })
+            
+        default:
+            break
+        }
+
         return cell
         
     }
     
    // MARK: - CollectionViewDelegate
+   // Define métodos que permitem gegenciar e destacar ítens da collectionview
     
     
+    //verifica ítem selecionado
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         switch indexPath.row
@@ -118,8 +231,17 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         default:
             break
         }
+        
+        
 
     }
+
+    
+    
+
+    
+    
+    
     
     // MARK: - CollectionViewFlowLayout
     
@@ -137,7 +259,14 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         return CGSize(width: screenWidth*0.30, height: screenWidth*0.28)
         }
         
+        
+        
+        
+        
     }
+    
+    
+
     
     // posicionamento das células
     
@@ -150,7 +279,7 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         return UIEdgeInsetsMake(center, leftRightInset, 0, leftRightInset)
     }
    
-    
+
     
     
   //MARK: - Search Button
@@ -173,25 +302,30 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
     
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
         collectionView.hidden = true
         tableView.reloadData()
         tableView.hidden = false
         self.barraInf.hidden =  true
         self.barraSup.hidden = true
+
         
     }
     
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        
-        // Dismiss the keyboard
+        searchBar.showsCancelButton = false
         searchBar.resignFirstResponder()
-        
+        self.barraInf.alpha = 1.0
+        self.barraSup.alpha = 1.0
     }
     
     
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
         
         // Dismiss the keyboard
         searchBar.resignFirstResponder()
@@ -226,6 +360,17 @@ class NewMenuViewController: UIViewController, UICollectionViewDataSource,UIColl
         
         // Force reload of table data
         self.loadObjectsInBackground()
+        
+        
+        
+        //recarrega animações
+        
+        searchBar.showsCancelButton = false
+        
+        
+        collectionView.reloadData()
+        
+
     }
     
     //MARK: -  TableViewDelgate

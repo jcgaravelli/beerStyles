@@ -10,22 +10,36 @@ import UIKit
 import Parse
 import AVFoundation
 import Bolts
+import MediaPlayer
+
 
 
 class CategotyViewController: UIViewController {
 
     @IBOutlet weak var buttonAle: UIButton!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientColor()
+        
+        playVideo()
+        
+        //gradientColor()
+        
 
         // Do any additional setup after loading the view.
     }
     
     
-    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
+        UIView.animateWithDuration(0.75, animations: { () -> Void in
+            UIView.setAnimationCurve(UIViewAnimationCurve.EaseInOut)
+            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.navigationController!.view, cache: false)
+        })
+        
+    }
     
 
     override func didReceiveMemoryWarning() {
