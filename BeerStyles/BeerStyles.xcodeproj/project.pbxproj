@@ -16,7 +16,7 @@
 		6357274F1B549EDB00F80934 /* FoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */; };
 		636066201B73A43400E08109 /* beer2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6360661F1B73A43400E08109 /* beer2.mp4 */; };
 		6378222A1B593C7200163D75 /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 637822291B593C7200163D75 /* bubble.mp3 */; };
-<<<<<<< HEAD
+
 		639AA3DD1B71072A00C304B0 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 639AA3DC1B71072A00C304B0 /* UIImage+animatedGIF.m */; };
 		639AA3DF1B72355000C304B0 /* backBeer.gif in Resources */ = {isa = PBXBuildFile; fileRef = 639AA3DE1B72355000C304B0 /* backBeer.gif */; };
 		639AA3E11B72771400C304B0 /* beerTorn.gif in Resources */ = {isa = PBXBuildFile; fileRef = 639AA3E01B72771400C304B0 /* beerTorn.gif */; };
@@ -24,10 +24,8 @@
 		63E5BAFC1B6FA1CB00A3F311 /* beer1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 63E5BAFA1B6FA1CB00A3F311 /* beer1.mp4 */; };
 		63E5BAFF1B6FAFE900A3F311 /* BackgroundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E5BAFE1B6FAFE800A3F311 /* BackgroundEffect.swift */; };
 		63E5BB011B70E8D700A3F311 /* beer1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 63E5BB001B70E8D700A3F311 /* beer1.gif */; };
-=======
-		67188C601B6902AD008D4389 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67188C5F1B6902AD008D4389 /* NewCategoryViewController.swift */; };
-		67188C661B691C99008D4389 /* NewCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67188C651B691C99008D4389 /* NewCategoryTableViewCell.swift */; };
->>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
+
+    
 		673B0B151B57E17600493344 /* CategotyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B141B57E17600493344 /* CategotyViewController.swift */; };
 		673B0B1B1B590B6C00493344 /* GlassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B1A1B590B6C00493344 /* GlassViewController.swift */; };
 		673B0B1D1B590B8000493344 /* GlassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B0B1C1B590B8000493344 /* GlassCollectionViewCell.swift */; };
@@ -80,7 +78,6 @@
 		6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		6360661F1B73A43400E08109 /* beer2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = beer2.mp4; path = ../beer2.mp4; sourceTree = "<group>"; };
 		637822291B593C7200163D75 /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		639AA3DA1B71072900C304B0 /* BeerStyles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeerStyles-Bridging-Header.h"; sourceTree = "<group>"; };
 		639AA3DB1B71072A00C304B0 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		639AA3DC1B71072A00C304B0 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
@@ -90,10 +87,8 @@
 		63E5BAFA1B6FA1CB00A3F311 /* beer1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = beer1.mp4; sourceTree = "<group>"; };
 		63E5BAFE1B6FAFE800A3F311 /* BackgroundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundEffect.swift; sourceTree = "<group>"; };
 		63E5BB001B70E8D700A3F311 /* beer1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beer1.gif; sourceTree = "<group>"; };
-=======
-		67188C5F1B6902AD008D4389 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewCategoryViewController.swift; path = Controllers/NewCategoryViewController.swift; sourceTree = SOURCE_ROOT; };
-		67188C651B691C99008D4389 /* NewCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryTableViewCell.swift; sourceTree = "<group>"; };
->>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
+
+
 		673B0B141B57E17600493344 /* CategotyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategotyViewController.swift; sourceTree = "<group>"; };
 		673B0B1A1B590B6C00493344 /* GlassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlassViewController.swift; path = BeerStyles/GlassViewController.swift; sourceTree = SOURCE_ROOT; };
 		673B0B1C1B590B8000493344 /* GlassCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlassCollectionViewCell.swift; path = Views/GlassCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -359,24 +354,22 @@
 				TargetAttributes = {
 					853CB3511B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
-<<<<<<< HEAD
+
 						DevelopmentTeam = NK8X65K48Z;
-=======
->>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
+
+
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
 						};
 					};
-<<<<<<< HEAD
-=======
+
 					853CB3691B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = GYJ684Z772;
 						TestTargetID = 853CB3511B4AD24200DE27A5;
 					};
->>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
 				};
 			};
 			buildConfigurationList = 853CB34D1B4AD24100DE27A5 /* Build configuration list for PBXProject "BeerStyles" */;
@@ -568,10 +561,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
-				CLANG_ENABLE_MODULES = YES;
-=======
->>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
+
+
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -593,10 +584,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
-				CLANG_ENABLE_MODULES = YES;
-=======
->>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
+
+
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -609,9 +598,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-<<<<<<< HEAD
-				SWIFT_OBJC_BRIDGING_HEADER = "BeerStyles-Bridging-Header.h";
-=======
+
 			};
 			name = Release;
 		};
@@ -650,7 +637,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeerStyles.app/BeerStyles";
->>>>>>> f6846cebe7c49038d0ed9f4c857522d89689cf32
 			};
 			name = Release;
 		};
