@@ -1,0 +1,39 @@
+
+/* Class = "UINavigationItem"; title = "Tutorial"; ObjectID = "3Sx-vM-qTp"; */
+"3Sx-vM-qTp.title" = "Tutorial";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7bq-TQ-6vg"; */
+"7bq-TQ-6vg.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "ALE"; ObjectID = "EgW-Jo-vXS"; */
+"EgW-Jo-vXS.normalTitle" = "ALE";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Z4f-od-z3E"; */
+"Z4f-od-z3E.text" = "Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "acp-xp-D3S"; */
+"acp-xp-D3S.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "LAGER"; ObjectID = "dbS-y9-Wh2"; */
+"dbS-y9-Wh2.normalTitle" = "LAGER";
+
+/* Class = "UINavigationItem"; title = "Category"; ObjectID = "ehp-yL-9cJ"; */
+"ehp-yL-9cJ.title" = "Category";
+
+/* Class = "UICollectionViewController"; title = "foods"; ObjectID = "fYM-be-J61"; */
+"fYM-be-J61.title" = "foods";
+
+/* Class = "UINavigationItem"; title = "foods"; ObjectID = "gly-5o-VgQ"; */
+"gly-5o-VgQ.title" = "foods";
+
+/* Class = "UIButton"; normalTitle = "Hybrid"; ObjectID = "mRH-cI-cyD"; */
+"mRH-cI-cyD.normalTitle" = "Hybrid";
+
+/* Class = "UINavigationItem"; title = "Cups"; ObjectID = "mr2-Y8-dkT"; */
+"mr2-Y8-dkT.title" = "Cups";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "n2K-QK-PPL"; */
+"n2K-QK-PPL.text" = "Title";
+
+/* Class = "UILabel"; text = "Under Construction"; ObjectID = "rCz-qH-7Gd"; */
+"rCz-qH-7Gd.text" = "Under Construction";
