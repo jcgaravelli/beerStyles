@@ -20,7 +20,7 @@ class GlassDetailViewController: UIViewController {
         //gradientColor()
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let object = currentObject {
             nameLabel.text = object["name"] as? String

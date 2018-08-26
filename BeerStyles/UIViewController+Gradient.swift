@@ -26,9 +26,9 @@ import UIKit
      
         1
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Beer-Wallpapers-Hd1")!)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.isTranslucent = true
         
 //        let blurEffect = UIBlurEffect(style:UIBlurEffectStyle.ExtraLight)
 //        let blurView = UIVisualEffectView(effect: blurEffect)

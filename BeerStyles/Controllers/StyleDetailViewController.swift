@@ -44,9 +44,9 @@ class StyleDetailViewController: UIViewController {
     //ajuste do tamnaho da scroll view e da view superior para impedir scroll horizontal
     
     func adjustContentSize() {
-        var contentRect = CGRectZero
+        var contentRect = CGRect.zero
         for view in self.scroll.subviews {
-            contentRect = CGRectUnion(contentRect, view.frame)
+            contentRect = contentRect.union(view.frame)
         }
         
         self.scroll.contentSize = contentRect.size
@@ -54,7 +54,7 @@ class StyleDetailViewController: UIViewController {
     
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         

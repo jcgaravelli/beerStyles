@@ -30,13 +30,13 @@ class CategotyViewController: UIViewController {
     }
     
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         
-        UIView.animateWithDuration(0.75, animations: { () -> Void in
-            UIView.setAnimationCurve(UIViewAnimationCurve.EaseInOut)
-            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.navigationController!.view, cache: false)
+        UIView.animate(withDuration: 0.75, animations: { () -> Void in
+            UIView.setAnimationCurve(UIViewAnimationCurve.easeInOut)
+            UIView.setAnimationTransition(UIViewAnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
         })
         
     }
@@ -49,34 +49,34 @@ class CategotyViewController: UIViewController {
     
     
     //BOTÕES DE CATEGORIA
-    @IBAction func aleSelect(sender: AnyObject) {
+    @IBAction func aleSelect(_ sender: AnyObject) {
         self.selectType("Ale")
     }
     
-    @IBAction func lagerSelect(sender: AnyObject) {
+    @IBAction func lagerSelect(_ sender: AnyObject) {
         self.selectType("Lager")
     }
     
-    @IBAction func spontaneousSelect(sender: AnyObject) {
+    @IBAction func spontaneousSelect(_ sender: AnyObject) {
         self.selectType("Spontaneous")
     }
     
     //Promise pra garantir que a a próxima será carregarada antes do segue
     
-    func selectType(typeName: NSString) {
-        var promise : BFTask = parseFind(typeName)
-        promise.continueWithBlock {
-            (task: BFTask!) -> AnyObject in
-            self.performSegueWithIdentifier("categoryToFather", sender: promise.result)
-            return promise.result
-        }
+    func selectType(_ typeName: NSString) {
+//        var promise : BFTask = parseFind(typeName)
+//        promise.continue {
+//            (task: BFTask!) -> AnyObject in
+//            self.performSegue(withIdentifier: "categoryToFather", sender: promise.result)
+//            return promise.result
+//        }
 
     }
     
     //segue
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "categoryToFather" {
-            if let destination = segue.destinationViewController as? FatherStyleViewController {
+            if let destination = segue.destination as? FatherStyleViewController {
                 
                 destination.categoryObject = (sender as! PFObject)
                 
@@ -88,10 +88,10 @@ class CategotyViewController: UIViewController {
     }
     
     //função que cria a query
-    func parseFind(type:NSString)->BFTask{
-        var query = PFQuery(className:"Category")
+    func parseFind(_ type:NSString)->BFTask{
+        let query = PFQuery(className:"Category")
         query.whereKey("name", equalTo:type)
-       var sender = query.getFirstObjectInBackground()
+       let sender = query.getFirstObjectInBackground()
         return sender
     }
     

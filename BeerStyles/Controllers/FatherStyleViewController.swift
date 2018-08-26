@@ -19,24 +19,24 @@ class FatherStyleViewController: PFQueryTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSOperationQueue.mainQueue().addOperationWithBlock {
+        OperationQueue.main.addOperation {
             self.playVideo()
         }
         
         //gradientColor()
         self.tableView.rowHeight = 60.0
-        self.tableView.tableFooterView = UIView.new()
+        self.tableView.tableFooterView = UIView()
         
     }
     
     
-    override func viewWillAppear(animated: Bool) {
-         animateTable()
+    override func viewWillAppear(_ animated: Bool) {
+        // animateTable()
     }
     
-    override func objectsDidLoad(error: NSError?) {
+    override func objectsDidLoad(_ error: Error?) {
         super.objectsDidLoad(error)
-        animateTable()
+      //  animateTable()
     }
 
     
@@ -46,8 +46,8 @@ class FatherStyleViewController: PFQueryTableViewController {
         super.init(style: style, className: className)
     }
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
         
        
         // Configure the PFQueryTableView
@@ -61,9 +61,9 @@ class FatherStyleViewController: PFQueryTableViewController {
     // Define the query that will provide the data for the table view
     
     override func queryForTable() -> PFQuery {
-        var query = PFQuery(className: "FatherStyle")
+        let query = PFQuery(className: "FatherStyle")
         
-        query.orderByAscending("name")
+        query.order(byAscending: "name")
         query.whereKey("category", equalTo:categoryObject)
         
         
@@ -73,9 +73,9 @@ class FatherStyleViewController: PFQueryTableViewController {
     
     //override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, object: PFObject?) -> PFTableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PFTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PFTableViewCell
         
 
         
@@ -96,22 +96,22 @@ class FatherStyleViewController: PFQueryTableViewController {
     
     //segue
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         
-        var row = Int(indexPath.row)
+        let row = Int(indexPath.row)
         
         
-        performSegueWithIdentifier("fatherToSon", sender: objects?[row])
+        performSegue(withIdentifier: "fatherToSon", sender: objects?[row])
         
         
     }
     
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fatherToSon" {
-            if let destination = segue.destinationViewController as? StyleTableViewController {
+            if let destination = segue.destination as? StyleTableViewController {
 
                     destination.fatherObject = (sender as! PFObject)
                 
@@ -123,27 +123,27 @@ class FatherStyleViewController: PFQueryTableViewController {
 
     
     //animação da tabela
-    func animateTable() {
-        tableView.reloadData()
-       let cells = tableView.visibleCells()
-                let tableHeight: CGFloat = tableView.bounds.size.height
-        
-        for i in cells {
-            let cell: UITableViewCell = i as! UITableViewCell
-            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
-        }
-        
-        var index = 0
-        
-        for a in cells {
-            let cell: UITableViewCell = a as! UITableViewCell
-            UIView.animateWithDuration(1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: {
-                cell.transform = CGAffineTransformMakeTranslation(0, 0);
-                }, completion: nil)
-            
-            index += 1
-        }
-    }
+//    func animateTable() {
+//        tableView.reloadData()
+//       let cells = tableView.visibleCells
+//                let tableHeight: CGFloat = tableView.bounds.size.height
+//        
+//        for i in cells {
+//            let cell: UITableViewCell = i 
+//            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+//        }
+//        
+//        var index = 0
+//        
+//        for a in cells {
+//            let cell: UITableViewCell = a 
+//            UIView.animateWithDuration(1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: nil, animations: {
+//                cell.transform = CGAffineTransformMakeTranslation(0, 0);
+//                }, completion: nil)
+//            
+//            index += 1
+//        }
+//    }
 
     
 }
