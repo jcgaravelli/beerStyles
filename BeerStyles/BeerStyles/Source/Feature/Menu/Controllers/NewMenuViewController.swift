@@ -9,7 +9,7 @@
 import UIKit
 
 let reuseIdentifier = "cellMenu"
-class NewMenuViewController: UIViewController {
+class NewMenuViewController: UIViewController, Storyboarded {
     
     @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var searchBar: UISearchBar?
@@ -22,21 +22,18 @@ class NewMenuViewController: UIViewController {
     private var screenWidth: CGFloat?
     private var screenHeight: CGFloat?
     private var searchList: [Int] = []
-    private var imagesMenu: [MenuItemModel] = []
+    private var menuItems: [MenuItemModel] = []
 
-    //remover let imagesMenu
-    private func model() {
-        let item1 = MenuItemModel(imageItem: "stylesIcon", segue: "stylesIcon")
-        let item2 = MenuItemModel(imageItem: "HowIcon", segue: "stylesIcon")
-        let item3 = MenuItemModel(imageItem: "glassIcon", segue: "stylesIcon")
-        let item4 = MenuItemModel(imageItem: "foodIcon", segue: "stylesIcon")
-        imagesMenu = [item1, item2, item3, item4]
+    //remover let imagesMenu    
+    static func instatiate(menuItems: [MenuItemModel]) -> NewMenuViewController {
+        let menuViewController: NewMenuViewController = UIStoryboard.viewController(from: .menu)
+        menuViewController.menuItems = menuItems
+        
+        return menuViewController
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        model()
         gradientColor()
         screenSize = self.view.frame
         screenWidth = screenSize?.width
@@ -133,7 +130,7 @@ class NewMenuViewController: UIViewController {
 extension NewMenuViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagesMenu.count
+        return menuItems.count
     }
     
     //numberOfSectionsInCollectionView: Retorna o numero total de secoes
@@ -145,7 +142,7 @@ extension NewMenuViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMenu", for: indexPath) as! MenuCollectionViewCell
-        cell.imageMenu.image = UIImage(named: imagesMenu[indexPath.row].imageItem)
+        cell.imageMenu.image = UIImage(named: menuItems[indexPath.row].imageItem)
         
         switch indexPath.row
         {

@@ -12,7 +12,7 @@
         <!--New Menu View Controller-->
         <scene sceneID="1eU-7y-pBa">
             <objects>
-                <viewController id="RVZ-HN-TQf" customClass="NewMenuViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewMenuViewController" id="RVZ-HN-TQf" customClass="NewMenuViewController" customModule="BeerStyles" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JAO-Wb-Tc6"/>
                         <viewControllerLayoutGuide type="bottom" id="jPK-SG-jEh"/>
