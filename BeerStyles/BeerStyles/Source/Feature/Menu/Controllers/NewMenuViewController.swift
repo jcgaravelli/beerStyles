@@ -9,6 +9,9 @@
 import UIKit
 
 class NewMenuViewController: UIViewController, Storyboarded {
+    private enum Constants {
+        static let alpha: CGFloat = 0.01
+    }
     
     @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var searchBar: UISearchBar?
@@ -34,7 +37,6 @@ class NewMenuViewController: UIViewController, Storyboarded {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         UIView.animate(withDuration: 0.75, animations: { () -> Void in
             UIView.setAnimationCurve(UIView.AnimationCurve.easeInOut)
             UIView.setAnimationTransition(UIView.AnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
@@ -47,9 +49,9 @@ class NewMenuViewController: UIViewController, Storyboarded {
         collectionView.isHidden = false
         collectionView.reloadData()
         searchBar?.transform = CGAffineTransform(translationX: 300, y: 0)
-        searchBar?.alpha = 0.01
-        barraInf?.alpha = 0.01
-        barraSup?.alpha = 0.01
+        searchBar?.alpha = Constants.alpha
+        barraInf?.alpha = Constants.alpha
+        barraSup?.alpha = Constants.alpha
     }
 }
 
@@ -176,16 +178,14 @@ extension NewMenuViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
-        searchBar.text = ""
-        // Dismiss the keyboard
+        searchBar.text = String()
         searchBar.resignFirstResponder()
-        //        loadObjectsInBackground()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         // Clear any search criteria
-        searchBar.text = ""
+        searchBar.text = String()
         
         // Dismiss the keyboard
         searchBar.resignFirstResponder()
