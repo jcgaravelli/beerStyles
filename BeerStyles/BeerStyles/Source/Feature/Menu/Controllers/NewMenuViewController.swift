@@ -18,12 +18,9 @@ class NewMenuViewController: UIViewController, Storyboarded {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     private var layoutMenu: UICollectionViewLayout?
-    private var screenSize: CGRect?
-    private var screenWidth: CGFloat?
-    private var screenHeight: CGFloat?
     private var searchList: [Int] = []
     private var menuItems: [MenuItemModel] = []
-
+    
     //remover let imagesMenu    
     static func instatiate(menuItems: [MenuItemModel]) -> NewMenuViewController {
         let menuViewController: NewMenuViewController = UIStoryboard.viewController(from: .menu)
@@ -34,10 +31,6 @@ class NewMenuViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gradientColor()
-        screenSize = self.view.frame
-        screenWidth = screenSize?.width
-        screenHeight = screenSize?.height
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,10 +38,10 @@ class NewMenuViewController: UIViewController, Storyboarded {
         tableView?.isHidden = true
         collectionView.isHidden = false
         collectionView.reloadData()
-        self.searchBar?.transform = CGAffineTransform(translationX: 300, y: 0)
-        self.searchBar?.alpha = 0.01
-        self.barraInf?.alpha = 0.01
-        self.barraSup?.alpha = 0.01
+        searchBar?.transform = CGAffineTransform(translationX: 300, y: 0)
+        searchBar?.alpha = 0.01
+        barraInf?.alpha = 0.01
+        barraSup?.alpha = 0.01
         
     }
     
@@ -72,16 +65,16 @@ class NewMenuViewController: UIViewController, Storyboarded {
         collectionView.isHidden = true
         tableView?.reloadData()
         tableView?.isHidden = false
-        self.barraInf?.isHidden =  true
-        self.barraSup?.isHidden = true
+        barraInf?.isHidden =  true
+        barraSup?.isHidden = true
     }
     
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
         searchBar.resignFirstResponder()
-        self.barraInf?.alpha = 1.0
-        self.barraSup?.alpha = 1.0
+        barraInf?.alpha = 1.0
+        barraSup?.alpha = 1.0
     }
     
     
@@ -93,7 +86,7 @@ class NewMenuViewController: UIViewController, Storyboarded {
         searchBar.resignFirstResponder()
         //        loadObjectsInBackground()
     }
-
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         // Clear any search criteria
@@ -103,8 +96,8 @@ class NewMenuViewController: UIViewController, Storyboarded {
         searchBar.resignFirstResponder()
         collectionView.isHidden = false
         tableView?.isHidden = true
-        self.barraInf?.isHidden =  false
-        self.barraSup?.isHidden = false
+        barraInf?.isHidden =  false
+        barraSup?.isHidden = false
         
         // Force reload of table data
         //        self.loadObjectsInBackground()
@@ -113,14 +106,14 @@ class NewMenuViewController: UIViewController, Storyboarded {
         searchBar.showsCancelButton = false
         collectionView.reloadData()
     }
-
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueSearch"{
             if let destination = segue.destination  as? StyleDetailViewController{
                 if let indexPath = tableView?.indexPathForSelectedRow?.row{
                     let row = Int(indexPath)
-//                    destination.currentObject = (searchList[row]) as! PFObject
+                    //                    destination.currentObject = (searchList[row]) as! PFObject
                 }
             }
         }
@@ -187,33 +180,37 @@ extension NewMenuViewController: UICollectionViewDataSource {
     }
     
     // MARK: - CollectionViewFlowLayout
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        // diferencia entre as rows para poder customizar tamanhos diferentes entre as células
+        let screenSize = self.view.frame
+        let screenWidth = screenSize.width
         
         if indexPath.row == 0{
             
-            return CGSize(width: screenWidth ?? CGFloat() * 0.90, height: screenWidth ?? CGFloat() * 0.8)
+            return CGSize(width: screenWidth * 0.90, height: screenWidth * 0.8)
         }else{
             
-            return CGSize(width: screenWidth ?? CGFloat() * 0.30, height: screenWidth ?? CGFloat() * 0.28)
+            return CGSize(width: screenWidth * 0.30, height: screenWidth * 0.28)
         }
     }
     
     // posicionamento das células
     
-
+    
     
 }
 
 extension NewMenuViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        let leftRightInset = self.view.frame.size.width / 60
-//
-//        var center = screenHeight ?? CGFloat() / 2.3 - screenWidth! ?? CGFloat() * 0.60
-//        return UIEdgeInsets.init(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
-//    }
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            let screenSize = self.view.frame
+            let screenWidth = screenSize.width
+            let screenHeight = screenSize.height
+            let leftRightInset = self.view.frame.size.width / 60
+    
+            let center = screenHeight / 2.3 - screenWidth * 0.60
+            return UIEdgeInsets.init(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
+        }
     
 }
 
