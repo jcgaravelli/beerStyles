@@ -8,7 +8,6 @@
 
 import UIKit
 
-let reuseIdentifier = "cellMenu"
 class NewMenuViewController: UIViewController, Storyboarded {
     
     @IBOutlet private weak var tableView: UITableView?
@@ -21,7 +20,6 @@ class NewMenuViewController: UIViewController, Storyboarded {
     private var searchList: [Int] = []
     private var menuItems: [MenuItemModel] = []
     
-    //remover let imagesMenu    
     static func instatiate(menuItems: [MenuItemModel]) -> NewMenuViewController {
         let menuViewController: NewMenuViewController = UIStoryboard.viewController(from: .menu)
         menuViewController.menuItems = menuItems
@@ -29,20 +27,9 @@ class NewMenuViewController: UIViewController, Storyboarded {
         return menuViewController
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView?.isHidden = true
-        collectionView.isHidden = false
-        collectionView.reloadData()
-        searchBar?.transform = CGAffineTransform(translationX: 300, y: 0)
-        searchBar?.alpha = 0.01
-        barraInf?.alpha = 0.01
-        barraSup?.alpha = 0.01
-        
+        setupView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -54,69 +41,15 @@ class NewMenuViewController: UIViewController, Storyboarded {
         })
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    private func setupView() {
         searchBar?.delegate = self
-    }
-    
-    //MARK: - Search Button
-    
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = true
-        collectionView.isHidden = true
-        tableView?.reloadData()
-        tableView?.isHidden = false
-        barraInf?.isHidden =  true
-        barraSup?.isHidden = true
-    }
-    
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.resignFirstResponder()
-        barraInf?.alpha = 1.0
-        barraSup?.alpha = 1.0
-    }
-    
-    
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.text = ""
-        // Dismiss the keyboard
-        searchBar.resignFirstResponder()
-        //        loadObjectsInBackground()
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-        // Clear any search criteria
-        searchBar.text = ""
-        
-        // Dismiss the keyboard
-        searchBar.resignFirstResponder()
-        collectionView.isHidden = false
         tableView?.isHidden = true
-        barraInf?.isHidden =  false
-        barraSup?.isHidden = false
-        
-        // Force reload of table data
-        //        self.loadObjectsInBackground()
-        
-        //recarrega animações
-        searchBar.showsCancelButton = false
+        collectionView.isHidden = false
         collectionView.reloadData()
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueSearch"{
-            if let destination = segue.destination  as? StyleDetailViewController{
-                if let indexPath = tableView?.indexPathForSelectedRow?.row{
-                    let row = Int(indexPath)
-                    //                    destination.currentObject = (searchList[row]) as! PFObject
-                }
-            }
-        }
+        searchBar?.transform = CGAffineTransform(translationX: 300, y: 0)
+        searchBar?.alpha = 0.01
+        barraInf?.alpha = 0.01
+        barraSup?.alpha = 0.01
     }
 }
 
@@ -202,15 +135,15 @@ extension NewMenuViewController: UICollectionViewDataSource {
 }
 
 extension NewMenuViewController: UICollectionViewDelegateFlowLayout {
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            let screenSize = self.view.frame
-            let screenWidth = screenSize.width
-            let screenHeight = screenSize.height
-            let leftRightInset = self.view.frame.size.width / 60
-    
-            let center = screenHeight / 2.3 - screenWidth * 0.60
-            return UIEdgeInsets.init(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let screenSize = self.view.frame
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        let leftRightInset = self.view.frame.size.width / 60
+        
+        let center = screenHeight / 2.3 - screenWidth * 0.60
+        return UIEdgeInsets.init(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
+    }
     
 }
 
@@ -222,6 +155,52 @@ extension NewMenuViewController: UICollectionViewDelegate {
 }
 
 extension NewMenuViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+        collectionView.isHidden = true
+        tableView?.reloadData()
+        tableView?.isHidden = false
+        barraInf?.isHidden =  true
+        barraSup?.isHidden = true
+    }
+    
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+        barraInf?.alpha = 1.0
+        barraSup?.alpha = 1.0
+    }
+    
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        // Dismiss the keyboard
+        searchBar.resignFirstResponder()
+        //        loadObjectsInBackground()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        // Clear any search criteria
+        searchBar.text = ""
+        
+        // Dismiss the keyboard
+        searchBar.resignFirstResponder()
+        collectionView.isHidden = false
+        tableView?.isHidden = true
+        barraInf?.isHidden =  false
+        barraSup?.isHidden = false
+        
+        // Force reload of table data
+        //        self.loadObjectsInBackground()
+        
+        //recarrega animações
+        searchBar.showsCancelButton = false
+        collectionView.reloadData()
+    }
     
 }
 
