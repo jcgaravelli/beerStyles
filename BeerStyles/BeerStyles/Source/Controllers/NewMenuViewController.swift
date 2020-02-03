@@ -112,8 +112,8 @@ class NewMenuViewController: UIViewController, UISearchBarDelegate, UITableViewD
         
         
         UIView.animate(withDuration: 0.75, animations: { () -> Void in
-            UIView.setAnimationCurve(UIViewAnimationCurve.easeInOut)
-            UIView.setAnimationTransition(UIViewAnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
+            UIView.setAnimationCurve(UIView.AnimationCurve.easeInOut)
+            UIView.setAnimationTransition(UIView.AnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
         })
     }
     
@@ -227,7 +227,7 @@ class NewMenuViewController: UIViewController, UISearchBarDelegate, UITableViewD
         
         
         var center = screenHeight/2.3 - screenWidth*0.60
-        return UIEdgeInsetsMake(center, leftRightInset, 0, leftRightInset)
+        return UIEdgeInsets.init(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
     }
     
     

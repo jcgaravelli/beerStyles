@@ -55,7 +55,6 @@
 		853CB3601B4AD24200DE27A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853CB35E1B4AD24200DE27A5 /* Main.storyboard */; };
 		853CB3621B4AD24200DE27A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3611B4AD24200DE27A5 /* Images.xcassets */; };
 		853CB3651B4AD24200DE27A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */; };
-		858D535E1B599BE30044F1C7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 853CB36F1B4AD24200DE27A5 /* Info.plist */; };
 		858D536C1B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb in Resources */ = {isa = PBXBuildFile; fileRef = 858D53671B5D749C0044F1C7 /* Lobster 1.4 merged and optimized.vfb */; };
 		858D536D1B5D749C0044F1C7 /* LobsterSource.vfb in Resources */ = {isa = PBXBuildFile; fileRef = 858D53681B5D749C0044F1C7 /* LobsterSource.vfb */; };
 		858D536E1B5D749C0044F1C7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 858D53691B5D749C0044F1C7 /* License.txt */; };
@@ -374,8 +373,7 @@
 				TargetAttributes = {
 					853CB3511B4AD24200DE27A5 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = NK8X65K48Z;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -409,7 +407,6 @@
 			files = (
 				636066201B73A43400E08109 /* beer2.mp4 in Resources */,
 				63C928621B6C09E2007CAE8F /* Beer background.mp4 in Resources */,
-				858D535E1B599BE30044F1C7 /* Info.plist in Resources */,
 				678BE411213371F00049AED9 /* Menu.storyboard in Resources */,
 				D2F28B591B5F62F500A21D81 /* Localizable.strings in Resources */,
 				858D536D1B5D749C0044F1C7 /* LobsterSource.vfb in Resources */,
@@ -598,6 +595,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parseFramework",
@@ -611,7 +609,8 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeerStyles-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -621,6 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/parseFramework",
@@ -632,7 +632,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "aaa.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

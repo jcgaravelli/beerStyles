@@ -35,8 +35,8 @@ class CategotyViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         
         UIView.animate(withDuration: 0.75, animations: { () -> Void in
-            UIView.setAnimationCurve(UIViewAnimationCurve.easeInOut)
-            UIView.setAnimationTransition(UIViewAnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
+            UIView.setAnimationCurve(UIView.AnimationCurve.easeInOut)
+            UIView.setAnimationTransition(UIView.AnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
         })
         
     }

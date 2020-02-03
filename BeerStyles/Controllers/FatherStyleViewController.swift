@@ -42,7 +42,7 @@ class FatherStyleViewController: PFQueryTableViewController {
     
     
     // Initialise the PFQueryTable tableview
-    override init(style: UITableViewStyle, className: String!) {
+    override init(style: UITableView.Style, className: String!) {
         super.init(style: style, className: className)
     }
     
