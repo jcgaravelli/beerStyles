@@ -66,7 +66,7 @@ class StyleTableViewController: PFQueryTableViewController {
     
     // Define the query that will provide the data for the table view
     override func queryForTable() -> PFQuery {
-        var objectID = fatherObject
+        _ = fatherObject
         let query = PFQuery(className: "Style")
         query.order(byAscending: "name")
         query.whereKey("fatherStyle", equalTo:fatherObject)

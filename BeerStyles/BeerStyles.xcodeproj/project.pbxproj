@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E85919323E86A2E00307561 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85919223E86A2E00307561 /* MenuItemModel.swift */; };
 		63118C4A1B5D392600C64B13 /* GlassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63118C491B5D392600C64B13 /* GlassesCollectionViewCell.swift */; };
 		6357273A1B50A31F00F80934 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635727391B50A31F00F80934 /* MenuCollectionViewCell.swift */; };
 		635727431B549AE600F80934 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635727421B549AE600F80934 /* CategoryCollectionViewCell.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E85919223E86A2E00307561 /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		63118C491B5D392600C64B13 /* GlassesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassesCollectionViewCell.swift; sourceTree = "<group>"; };
 		635727391B50A31F00F80934 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		635727421B549AE600F80934 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -159,6 +161,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E85918F23E869EA00307561 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				4E85919023E869F900307561 /* Menu */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		4E85919023E869F900307561 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4E85919123E86A0B00307561 /* Model */,
+				678BE40E21336D880049AED9 /* Controllers */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		4E85919123E86A0B00307561 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E85919223E86A2E00307561 /* MenuItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6357272E1B4EC43E00F80934 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +251,7 @@
 		678BE40D21336D5F0049AED9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				678BE40E21336D880049AED9 /* Controllers */,
+				4E85918F23E869EA00307561 /* Feature */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -442,6 +469,7 @@
 				67F57C491B614B8800E191A7 /* NewTutoViewController.swift in Sources */,
 				85CE9B241B5ED07500DF60B1 /* SearchTableViewCell.swift in Sources */,
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
+				4E85919323E86A2E00307561 /* MenuItemModel.swift in Sources */,
 				63E5BAFF1B6FAFE900A3F311 /* BackgroundEffect.swift in Sources */,
 				673B0B211B59352800493344 /* UIViewController+Gradient.swift in Sources */,
 				679F465F1B5CFE82002CC18C /* NewMenuViewController.swift in Sources */,
@@ -602,14 +630,13 @@
 					"$(PROJECT_DIR)/Controllers/Checkout/beerstyles/BeerStyles/parseFramework",
 				);
 				INFOPLIST_FILE = BeerStyles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "aaa.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BeerStyles-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -627,12 +654,11 @@
 					"$(PROJECT_DIR)/Controllers/Checkout/beerstyles/BeerStyles/parseFramework",
 				);
 				INFOPLIST_FILE = BeerStyles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "aaa.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

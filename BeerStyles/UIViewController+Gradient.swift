@@ -23,8 +23,6 @@ import UIKit
 //        
 //        self.view.layer.insertSublayer(gradient, atIndex: 0)
 
-     
-        1
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Beer-Wallpapers-Hd1")!)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
