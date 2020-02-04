@@ -11,6 +11,7 @@ import UIKit
 class NewMenuViewController: UIViewController, Storyboarded {
     private enum Constants {
         static let alpha: CGFloat = 0.01
+        static let animationTime: Double = 0.75
     }
     
     @IBOutlet private weak var tableView: UITableView?
@@ -38,7 +39,7 @@ class NewMenuViewController: UIViewController, Storyboarded {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
  
-        UIView.animate(withDuration: 0.75) {
+        UIView.animate(withDuration: Constants.animationTime) {
             UIView.setAnimationCurve(UIView.AnimationCurve.easeInOut)
             guard let view = self.navigationController?.view else { return }
             UIView.setAnimationTransition(UIView.AnimationTransition.flipFromLeft, for: view, cache: false)
@@ -63,7 +64,6 @@ extension NewMenuViewController: UICollectionViewDataSource {
         return menuItems.count
     }
     
-    //numberOfSectionsInCollectionView: Retorna o numero total de secoes
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -136,13 +136,6 @@ extension NewMenuViewController: UICollectionViewDelegateFlowLayout {
         
         let center = screenHeight / 2.3 - screenWidth * 0.60
         return UIEdgeInsets(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
-    }
-}
-
-extension NewMenuViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let indexItens = ["ShowCategories", "ShowTutorial", "ShowGlasses", "ShowFoods" ]
-        performSegue(withIdentifier: indexItens[indexPath.row], sender: nil)
     }
 }
 
