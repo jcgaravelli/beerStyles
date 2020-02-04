@@ -12,10 +12,11 @@
 		4E80438023E9B94E00AEC591 /* VitalStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80437F23E9B94E00AEC591 /* VitalStatistics.swift */; };
 		4E80438223E9BB1100AEC591 /* Guidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80438123E9BB1100AEC591 /* Guidelines.swift */; };
 		4E80438423E9BD9E00AEC591 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80438323E9BD9E00AEC591 /* Tag.swift */; };
-		4E80438623E9BE1E00AEC591 /* CommercialExemple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80438523E9BE1E00AEC591 /* CommercialExemple.swift */; };
+		4E80438623E9BE1E00AEC591 /* CommercialExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80438523E9BE1E00AEC591 /* CommercialExample.swift */; };
 		4E80438823E9BEC500AEC591 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80438723E9BEC500AEC591 /* Subcategory.swift */; };
 		4E80438A23E9C05D00AEC591 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80438923E9C05D00AEC591 /* Beer.swift */; };
 		4E80438E23E9C0CD00AEC591 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80438D23E9C0CC00AEC591 /* Beers.swift */; };
+		4E80439123E9C20800AEC591 /* BeersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E80439023E9C20800AEC591 /* BeersProvider.swift */; };
 		4E85919323E86A2E00307561 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85919223E86A2E00307561 /* MenuItemModel.swift */; };
 		4E85919523E86DBB00307561 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85919423E86DBB00307561 /* Storyboarded.swift */; };
 		4E85919723E86F3300307561 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85919623E86F3300307561 /* UIStoryboard.swift */; };
@@ -68,10 +69,11 @@
 		4E80437F23E9B94E00AEC591 /* VitalStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitalStatistics.swift; sourceTree = "<group>"; };
 		4E80438123E9BB1100AEC591 /* Guidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidelines.swift; sourceTree = "<group>"; };
 		4E80438323E9BD9E00AEC591 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
-		4E80438523E9BE1E00AEC591 /* CommercialExemple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialExemple.swift; sourceTree = "<group>"; };
+		4E80438523E9BE1E00AEC591 /* CommercialExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialExample.swift; sourceTree = "<group>"; };
 		4E80438723E9BEC500AEC591 /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
 		4E80438923E9C05D00AEC591 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		4E80438D23E9C0CC00AEC591 /* Beers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beers.swift; sourceTree = "<group>"; };
+		4E80439023E9C20800AEC591 /* BeersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersProvider.swift; sourceTree = "<group>"; };
 		4E85919223E86A2E00307561 /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		4E85919423E86DBB00307561 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		4E85919623E86F3300307561 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
@@ -158,11 +160,19 @@
 				4E80437F23E9B94E00AEC591 /* VitalStatistics.swift */,
 				4E80438123E9BB1100AEC591 /* Guidelines.swift */,
 				4E80438323E9BD9E00AEC591 /* Tag.swift */,
-				4E80438523E9BE1E00AEC591 /* CommercialExemple.swift */,
+				4E80438523E9BE1E00AEC591 /* CommercialExample.swift */,
 				4E80438723E9BEC500AEC591 /* Subcategory.swift */,
 				4E80438923E9C05D00AEC591 /* Beer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4E80438F23E9C1BE00AEC591 /* Provider  */ = {
+			isa = PBXGroup;
+			children = (
+				4E80439023E9C20800AEC591 /* BeersProvider.swift */,
+			);
+			path = "Provider ";
 			sourceTree = "<group>";
 		};
 		4E85918F23E869EA00307561 /* Feature */ = {
@@ -244,6 +254,7 @@
 		678BE40D21336D5F0049AED9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4E80438F23E9C1BE00AEC591 /* Provider  */,
 				4E80437E23E9B92F00AEC591 /* Model */,
 				4E85919923E8718100307561 /* Coordinators */,
 				4E85918F23E869EA00307561 /* Feature */,
@@ -520,13 +531,14 @@
 				673B0B151B57E17600493344 /* CategotyViewController.swift in Sources */,
 				4E80438423E9BD9E00AEC591 /* Tag.swift in Sources */,
 				67F57C491B614B8800E191A7 /* NewTutoViewController.swift in Sources */,
-				4E80438623E9BE1E00AEC591 /* CommercialExemple.swift in Sources */,
+				4E80438623E9BE1E00AEC591 /* CommercialExample.swift in Sources */,
 				85CE9B241B5ED07500DF60B1 /* SearchTableViewCell.swift in Sources */,
 				4E85919F23E871D900307561 /* Coordinator.swift in Sources */,
 				4E80438E23E9C0CD00AEC591 /* Beers.swift in Sources */,
 				853CB3581B4AD24200DE27A5 /* AppDelegate.swift in Sources */,
 				4E85919323E86A2E00307561 /* MenuItemModel.swift in Sources */,
 				63E5BAFF1B6FAFE900A3F311 /* BackgroundEffect.swift in Sources */,
+				4E80439123E9C20800AEC591 /* BeersProvider.swift in Sources */,
 				673B0B211B59352800493344 /* UIViewController+Gradient.swift in Sources */,
 				679F465F1B5CFE82002CC18C /* NewMenuViewController.swift in Sources */,
 				635727471B549E0900F80934 /* TutorialCollectionViewController.swift in Sources */,

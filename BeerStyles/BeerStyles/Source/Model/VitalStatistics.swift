@@ -8,6 +8,14 @@
 import Foundation
 
 struct VitalStatistics: Decodable {
+    let vsOG: String?
+    let vsFG: String?
+    let abv: String?
+    let ibu: String?
+    let srm: String?
+}
+
+extension VitalStatistics {
     enum CodingKeys: String, CodingKey {
         case vsOG = "og"
         case vsFG = "fg"
@@ -16,9 +24,13 @@ struct VitalStatistics: Decodable {
         case srm
     }
     
-    let vsOG: String
-    let vsFG: String
-    let abv: String
-    let ibu: String
-    let srm: String
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        vsOG = try? container.decode(String.self, forKey: .vsOG)
+        vsFG = try? container.decode(String.self, forKey: .vsFG)
+        abv = try? container.decode(String.self, forKey: .abv)
+        ibu = try? container.decode(String.self, forKey: .ibu)
+        srm = try? container.decode(String.self, forKey: .srm)
+    }
 }

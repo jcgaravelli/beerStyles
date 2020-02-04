@@ -1,5 +1,5 @@
 //
-//  Tags.swift
+//  CommercialExample.swift
 //  BeerStyles
 //
 //  Created by Paulo Cesar Morandi Massuci on 04/02/20.
@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct Tag {
-    let tag: String?
+struct CommercialExample {
+    let name: String?
     
-    init(tag: String) {
-        self.tag = tag
+    init(name: String?) {
+        self.name = name
     }
 }
 
-extension Tag: Decodable {
+extension CommercialExample: Decodable {
     enum CodingKeys: String, CodingKey {
-        case tag
+        case name
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        tag = try? container.decode(String.self, forKey: .tag)
+        name = try? container.decode(String.self, forKey: .name)
     }
 }

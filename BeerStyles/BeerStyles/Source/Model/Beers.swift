@@ -7,10 +7,22 @@
 
 import Foundation
 
-struct Beers: Decodable {
+struct Beers {
+    let beers: [Beer]?
+    
+    init(beers: [Beer]) {
+        self.beers = beers
+    }
+}
+
+extension Beers: Decodable {
     enum CodingKeys: String, CodingKey {
         case beers
     }
     
-    let beers: [Beer]
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        beers = try? container.decode([Beer].self, forKey: .beers)
+    }
 }

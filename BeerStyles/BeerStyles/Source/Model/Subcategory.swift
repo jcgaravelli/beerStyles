@@ -7,18 +7,30 @@
 
 import Foundation
 
-struct Subcategory: Decodable {
+struct Subcategory {
+    let name: String?
+    let letter: String?
+    let guidelines: Guidelines?
+    let tags: [Tag]?
+    let commercialExamples: [CommercialExample]?
+}
+
+extension Subcategory: Decodable {
     enum CodingKeys: String, CodingKey {
         case name
         case letter
-        case subcategories
+        case guidelines
         case tags
         case commercialExamples
     }
     
-    let name: String
-    let letter: String
-    let subcategories: [Subcategory]
-    let tags: [Tag]
-    let commercialExamples: [CommercialExemple]
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        name = try? container.decode(String.self, forKey: .name)
+        letter = try? container.decode(String.self, forKey: .letter)
+        guidelines = try? container.decode(Guidelines.self, forKey: .letter)
+        tags = try? container.decode([Tag].self, forKey: .letter)
+        commercialExamples = try? container.decode([CommercialExample].self, forKey: .letter)
+    }
 }
