@@ -35,7 +35,7 @@ class NewCategoryViewController: UIViewController, UITableViewDataSource{
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cellChicken", forIndexPath: indexPath) as! UITableViewCell
+        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cellChicken", forIndexPath: indexPath) as? UITableViewCell
         
         
         return cell

@@ -81,7 +81,7 @@ class MenuCollectionViewController: UICollectionViewController, UICollectionView
 
         
         
-        let cell : MenuCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! MenuCollectionViewCell
+        let cell : MenuCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as? MenuCollectionViewCell
         
         
         if indexPath.row == 0

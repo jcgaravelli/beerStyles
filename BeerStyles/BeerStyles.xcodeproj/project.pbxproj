@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11733BC33A039ECD2F2AAB31 /* Pods_BeerStyles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8C75B74446180C769E0BB6 /* Pods_BeerStyles.framework */; };
 		4E85919323E86A2E00307561 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85919223E86A2E00307561 /* MenuItemModel.swift */; };
 		4E85919523E86DBB00307561 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85919423E86DBB00307561 /* Storyboarded.swift */; };
 		4E85919723E86F3300307561 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E85919623E86F3300307561 /* UIStoryboard.swift */; };
@@ -67,12 +68,12 @@
 		635727461B549E0900F80934 /* TutorialCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewController.swift; sourceTree = "<group>"; };
 		6357274A1B549E7100F80934 /* FoodsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewController.swift; sourceTree = "<group>"; };
 		6357274E1B549EDB00F80934 /* FoodsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewCell.swift; sourceTree = "<group>"; };
-		6360661F1B73A43400E08109 /* beer2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = beer2.mp4; path = ../beer2.mp4; sourceTree = "<group>"; };
+		6360661F1B73A43400E08109 /* beer2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = beer2.mp4; sourceTree = "<group>"; };
 		637822291B593C7200163D75 /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
 		639AA3DA1B71072900C304B0 /* BeerStyles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeerStyles-Bridging-Header.h"; sourceTree = "<group>"; };
 		639AA3DB1B71072A00C304B0 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		639AA3DC1B71072A00C304B0 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
-		639AA3DE1B72355000C304B0 /* backBeer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = backBeer.gif; path = ../backBeer.gif; sourceTree = "<group>"; };
+		639AA3DE1B72355000C304B0 /* backBeer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = backBeer.gif; sourceTree = "<group>"; };
 		639AA3E01B72771400C304B0 /* beerTorn.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = beerTorn.gif; sourceTree = "<group>"; };
 		63C928611B6C09E2007CAE8F /* Beer background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beer background.mp4"; sourceTree = "<group>"; };
 		63E5BAFA1B6FA1CB00A3F311 /* beer1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = beer1.mp4; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		679F465E1B5CFE82002CC18C /* NewMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMenuViewController.swift; sourceTree = "<group>"; };
 		67F57C481B614B8800E191A7 /* NewTutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewTutoViewController.swift; path = Controllers/NewTutoViewController.swift; sourceTree = SOURCE_ROOT; };
 		67F57C4A1B6161E900E191A7 /* UnderCCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnderCCViewController.swift; path = Controllers/UnderCCViewController.swift; sourceTree = SOURCE_ROOT; };
+		7D79675D5788B26A7B6068F9 /* Pods-BeerStyles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerStyles.release.xcconfig"; path = "Target Support Files/Pods-BeerStyles/Pods-BeerStyles.release.xcconfig"; sourceTree = "<group>"; };
 		853CB3521B4AD24200DE27A5 /* BeerStyles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerStyles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		853CB3561B4AD24200DE27A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		853CB3571B4AD24200DE27A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,8 @@
 		858D536B1B5D749C0044F1C7 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		858D53711B5D81180044F1C7 /* Chunkfive.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chunkfive.otf; sourceTree = "<group>"; };
 		85CE9B231B5ED07500DF60B1 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewCell.swift; path = ../Controllers/SearchTableViewCell.swift; sourceTree = "<group>"; };
+		8A1F13C6E6BCBC34696287DC /* Pods-BeerStyles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerStyles.debug.xcconfig"; path = "Target Support Files/Pods-BeerStyles/Pods-BeerStyles.debug.xcconfig"; sourceTree = "<group>"; };
+		AF8C75B74446180C769E0BB6 /* Pods_BeerStyles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerStyles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F28B581B5F62F500A21D81 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,12 +119,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11733BC33A039ECD2F2AAB31 /* Pods_BeerStyles.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4410F5D035C84FD7CA02B0BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A1F13C6E6BCBC34696287DC /* Pods-BeerStyles.debug.xcconfig */,
+				7D79675D5788B26A7B6068F9 /* Pods-BeerStyles.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4E85918F23E869EA00307561 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +231,12 @@
 		678BE40F213371C50049AED9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				63C928611B6C09E2007CAE8F /* Beer background.mp4 */,
+				639AA3E01B72771400C304B0 /* beerTorn.gif */,
+				639AA3DE1B72355000C304B0 /* backBeer.gif */,
+				6360661F1B73A43400E08109 /* beer2.mp4 */,
+				63E5BAFA1B6FA1CB00A3F311 /* beer1.mp4 */,
+				63E5BB001B70E8D700A3F311 /* beer1.gif */,
 				678BE410213371F00049AED9 /* Menu.storyboard */,
 			);
 			path = Resource;
@@ -233,6 +253,8 @@
 				853CB36D1B4AD24200DE27A5 /* BeerStylesTests */,
 				853CB3531B4AD24200DE27A5 /* Products */,
 				639AA3DA1B71072900C304B0 /* BeerStyles-Bridging-Header.h */,
+				4410F5D035C84FD7CA02B0BC /* Pods */,
+				9AA37C95E51913BA28D23FBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,12 +277,6 @@
 				853CB35E1B4AD24200DE27A5 /* Main.storyboard */,
 				67F57C481B614B8800E191A7 /* NewTutoViewController.swift */,
 				853CB3611B4AD24200DE27A5 /* Images.xcassets */,
-				63C928611B6C09E2007CAE8F /* Beer background.mp4 */,
-				639AA3E01B72771400C304B0 /* beerTorn.gif */,
-				639AA3DE1B72355000C304B0 /* backBeer.gif */,
-				6360661F1B73A43400E08109 /* beer2.mp4 */,
-				63E5BAFA1B6FA1CB00A3F311 /* beer1.mp4 */,
-				63E5BB001B70E8D700A3F311 /* beer1.gif */,
 				853CB3631B4AD24200DE27A5 /* LaunchScreen.xib */,
 				853CB3551B4AD24200DE27A5 /* Supporting Files */,
 			);
@@ -317,6 +333,14 @@
 			path = "Font Lab Source";
 			sourceTree = "<group>";
 		};
+		9AA37C95E51913BA28D23FBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF8C75B74446180C769E0BB6 /* Pods_BeerStyles.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 853CB3741B4AD24200DE27A5 /* Build configuration list for PBXNativeTarget "BeerStyles" */;
 			buildPhases = (
+				975D88E905C55DE43BB31612 /* [CP] Check Pods Manifest.lock */,
 				853CB34E1B4AD24200DE27A5 /* Sources */,
 				853CB34F1B4AD24200DE27A5 /* Frameworks */,
 				853CB3501B4AD24200DE27A5 /* Resources */,
+				4E5979C223E9A4BC00B766CB /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -402,6 +428,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E5979C223E9A4BC00B766CB /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		975D88E905C55DE43BB31612 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeerStyles-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		853CB34E1B4AD24200DE27A5 /* Sources */ = {
@@ -571,6 +640,7 @@
 		};
 		853CB3751B4AD24200DE27A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1F13C6E6BCBC34696287DC /* Pods-BeerStyles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -590,6 +660,7 @@
 		};
 		853CB3761B4AD24200DE27A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D79675D5788B26A7B6068F9 /* Pods-BeerStyles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -69,22 +69,22 @@ extension NewMenuViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMenu", for: indexPath) as! MenuCollectionViewCell
-        cell.imageMenu.image = UIImage(named: menuItems[indexPath.row].imageItem)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMenu", for: indexPath) as? MenuCollectionViewCell
+        cell?.imageMenu.image = UIImage(named: menuItems[indexPath.row].imageItem)
         
         switch indexPath.row
         {
         case 0:
             UIView.animate(withDuration: 1.0, animations: {
-                cell.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                cell.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                cell?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                cell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             })
         case 1:
             
             
             UIView.animate(withDuration: 1.4, animations: {
-                cell.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                cell.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                cell?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                cell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 
                 self.searchBar?.transform = CGAffineTransform(translationX: 0, y: 0)
                 self.searchBar?.alpha = 1.0
@@ -92,14 +92,14 @@ extension NewMenuViewController: UICollectionViewDataSource {
         case 2:
             
             UIView.animate(withDuration: 1.8, animations: {
-                cell.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                cell.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                cell?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                cell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             })
         case 3:
             
             UIView.animate(withDuration: 2.2, animations: {
-                cell.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                cell.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                cell?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                cell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 
                 
                 self.barraInf?.alpha = 1.0
@@ -110,7 +110,7 @@ extension NewMenuViewController: UICollectionViewDataSource {
             break
         }
         
-        return cell
+        return cell ?? UICollectionViewCell()
         
     }
     
@@ -223,11 +223,11 @@ extension NewMenuViewController: UITableViewDataSource {
     
     //cria as células-resultado na tabela de busca
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchTableViewCell
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SearchTableViewCell
         //        let obj: PFObject = searchList.object(at: indexPath.row) as! PFObject
         //        cell.searchLabel.text = (obj["name"] as! String)
         
-        return cell
+        return cell ?? UITableViewCell()
     }
     
 }
