@@ -4,13 +4,13 @@
 //
 //  Created by Paulo Cesar Morandi Massuci on 03/02/20.
 //
+//
 
 import UIKit
 
 protocol Storyboarded {}
 
 extension Storyboarded where Self: UIViewController {
-    
     /// Cria um identifier usando o nome da classe
     static var storyboardIdentifier: String {
         return String(describing: self)

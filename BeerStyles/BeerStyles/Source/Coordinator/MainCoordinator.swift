@@ -16,8 +16,8 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = NewMenuViewController.instatiate(menuItems: createModel())
-        navigationController.pushViewController(vc, animated: false)
+        let menuViewController = NewMenuViewController.instatiate(menuItems: createModel())
+        navigationController.pushViewController(menuViewController, animated: false)
     }
     
     private func createModel() -> [MenuItemModel] {

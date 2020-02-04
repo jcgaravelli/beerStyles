@@ -1,10 +1,10 @@
-////
-////  GlassViewController.swift
-////  BeerStyles
-////
-////  Created by Paulo César Morandi Massuci on 16/07/15.
-////
-////
+//
+//  GlassViewController.swift
+//  BeerStyles
+//
+//  Created by Paulo César Morandi Massuci on 16/07/15.
+//
+//
 //
 //
 ////EM CONSTRUÇÃO
@@ -129,7 +129,6 @@
 //        return cell
 //    }
 //    
-//   //MARK – UICollectionViewDelegateFlowLayout
 //
 //    
 //    // minimumInteritemSpacingForSectionAtIndex tamanho minimo entre as seções
@@ -156,7 +155,6 @@
 //        let currentObject = glasses[indexPath.row]
 //        performSegue(withIdentifier: "glassColectToDetails", sender: currentObject)
 //    }
-//    //MARK: - Navigation
 //   
 //    //passa os dados para a proxima tela
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

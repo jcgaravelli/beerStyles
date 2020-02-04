@@ -10,8 +10,7 @@ import UIKit
 
 class GlassDetailViewController: UIViewController {
 
-    @IBOutlet weak var nameLabel: UILabel!
-    
+    @IBOutlet private weak var nameLabel: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +18,7 @@ class GlassDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
 //        if let object = currentObject {
 //            nameLabel.text = object["name"] as? String
 //        }

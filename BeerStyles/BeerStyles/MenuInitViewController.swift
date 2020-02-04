@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Parse
-
 
 ////, UICollectionViewDataSource, UICollectionViewDelegate
 //class MenuInitViewController:UIViewController, UISearchBarDelegate, {

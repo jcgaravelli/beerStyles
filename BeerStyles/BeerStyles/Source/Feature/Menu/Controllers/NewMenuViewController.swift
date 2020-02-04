@@ -37,10 +37,12 @@ class NewMenuViewController: UIViewController, Storyboarded {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        UIView.animate(withDuration: 0.75, animations: { () -> Void in
+ 
+        UIView.animate(withDuration: 0.75) {
             UIView.setAnimationCurve(UIView.AnimationCurve.easeInOut)
-            UIView.setAnimationTransition(UIView.AnimationTransition.flipFromLeft, for: self.navigationController!.view, cache: false)
-        })
+            guard let view = self.navigationController?.view else { return }
+            UIView.setAnimationTransition(UIView.AnimationTransition.flipFromLeft, for: view, cache: false)
+        }
     }
     
     private func setupView() {
@@ -66,22 +68,18 @@ extension NewMenuViewController: UICollectionViewDataSource {
         return 1
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMenu", for: indexPath) as? MenuCollectionViewCell
         cell?.imageMenu.image = UIImage(named: menuItems[indexPath.row].imageItem)
         
-        switch indexPath.row
-        {
+        switch indexPath.row {
         case 0:
             UIView.animate(withDuration: 1.0, animations: {
                 cell?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
                 cell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             })
         case 1:
-            
-            
             UIView.animate(withDuration: 1.4, animations: {
                 cell?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
                 cell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
@@ -101,7 +99,6 @@ extension NewMenuViewController: UICollectionViewDataSource {
                 cell?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
                 cell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 
-                
                 self.barraInf?.alpha = 1.0
                 self.barraSup?.alpha = 1.0
             })
@@ -111,7 +108,6 @@ extension NewMenuViewController: UICollectionViewDataSource {
         }
         
         return cell ?? UICollectionViewCell()
-        
     }
     
     // MARK: - CollectionViewFlowLayout
@@ -121,19 +117,14 @@ extension NewMenuViewController: UICollectionViewDataSource {
         let screenSize = self.view.frame
         let screenWidth = screenSize.width
         
-        if indexPath.row == 0{
+        if indexPath.row == 0 {
             
             return CGSize(width: screenWidth * 0.90, height: screenWidth * 0.8)
-        }else{
+        } else {
             
             return CGSize(width: screenWidth * 0.30, height: screenWidth * 0.28)
         }
     }
-    
-    // posicionamento das células
-    
-    
-    
 }
 
 extension NewMenuViewController: UICollectionViewDelegateFlowLayout {
@@ -144,15 +135,14 @@ extension NewMenuViewController: UICollectionViewDelegateFlowLayout {
         let leftRightInset = self.view.frame.size.width / 60
         
         let center = screenHeight / 2.3 - screenWidth * 0.60
-        return UIEdgeInsets.init(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
+        return UIEdgeInsets(top: center, left: leftRightInset, bottom: 0, right: leftRightInset)
     }
-    
 }
 
 extension NewMenuViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let indexItens = ["ShowCategories", "ShowTutorial", "ShowGlasses", "ShowFoods" ]
-        performSegue(withIdentifier: indexItens[indexPath.row] , sender: nil)
+        performSegue(withIdentifier: indexItens[indexPath.row], sender: nil)
     }
 }
 
@@ -162,10 +152,9 @@ extension NewMenuViewController: UISearchBarDelegate {
         collectionView.isHidden = true
         tableView?.reloadData()
         tableView?.isHidden = false
-        barraInf?.isHidden =  true
+        barraInf?.isHidden = true
         barraSup?.isHidden = true
     }
-    
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
@@ -173,8 +162,6 @@ extension NewMenuViewController: UISearchBarDelegate {
         barraInf?.alpha = 1.0
         barraSup?.alpha = 1.0
     }
-    
-    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
@@ -191,7 +178,7 @@ extension NewMenuViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         collectionView.isHidden = false
         tableView?.isHidden = true
-        barraInf?.isHidden =  false
+        barraInf?.isHidden = false
         barraSup?.isHidden = false
         
         // Force reload of table data
@@ -201,7 +188,6 @@ extension NewMenuViewController: UISearchBarDelegate {
         searchBar.showsCancelButton = false
         collectionView.reloadData()
     }
-    
 }
 
 extension NewMenuViewController: UITableViewDelegate {
@@ -211,7 +197,7 @@ extension NewMenuViewController: UITableViewDelegate {
 }
 
 extension NewMenuViewController: UITableViewDataSource {
-    //MARK: -  TableViewDelgate
+    // MARK: - TableViewDelgate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchList.count
@@ -223,11 +209,10 @@ extension NewMenuViewController: UITableViewDataSource {
     
     //cria as células-resultado na tabela de busca
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SearchTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SearchTableViewCell
         //        let obj: PFObject = searchList.object(at: indexPath.row) as! PFObject
         //        cell.searchLabel.text = (obj["name"] as! String)
         
         return cell ?? UITableViewCell()
     }
-    
 }
