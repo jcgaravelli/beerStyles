@@ -23,11 +23,4 @@ extension UIViewController: UIWebViewDelegate {
         
         view.insertSubview(imageView, at: 0)
     }
-    
 }
-
-
-
-
-
-

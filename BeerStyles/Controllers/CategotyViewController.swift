@@ -7,17 +7,15 @@
 //
 
 import UIKit
-import Parse
 import AVFoundation
-import Bolts
 import MediaPlayer
 
 
 
 class CategotyViewController: UIViewController {
-
+    
     @IBOutlet weak var buttonAle: UIButton!
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +23,7 @@ class CategotyViewController: UIViewController {
         
         //gradientColor()
         
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -41,7 +39,7 @@ class CategotyViewController: UIViewController {
         
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,47 +62,26 @@ class CategotyViewController: UIViewController {
     //Promise pra garantir que a a próxima será carregarada antes do segue
     
     func selectType(_ typeName: NSString) {
-//        var promise : BFTask = parseFind(typeName)
-//        promise.continue {
-//            (task: BFTask!) -> AnyObject in
-//            self.performSegue(withIdentifier: "categoryToFather", sender: promise.result)
-//            return promise.result
+        //        var promise : BFTask = parseFind(typeName)
+        //        promise.continue {
+        //            (task: BFTask!) -> AnyObject in
+        //            self.performSegue(withIdentifier: "categoryToFather", sender: promise.result)
+        //            return promise.result
+        //        }
+        
+    }
+    
+//    //segue
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "categoryToFather" {
+//            if let destination = segue.destination as? FatherStyleViewController {
+//
+//                destination.categoryObject = (sender as! PFObject)
+//
+//
+//
+//            }
 //        }
-
-    }
     
-    //segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "categoryToFather" {
-            if let destination = segue.destination as? FatherStyleViewController {
-                
-                destination.categoryObject = (sender as! PFObject)
-                
-                
-              
-            }
-        }
-
-    }
-    
-    //função que cria a query
-    func parseFind(_ type:NSString)->BFTask{
-        let query = PFQuery(className:"Category")
-        query.whereKey("name", equalTo:type)
-       let sender = query.getFirstObjectInBackground()
-        return sender
-    }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    }
 }

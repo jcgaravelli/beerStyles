@@ -6,12 +6,7 @@
 //  Copyright (c) 2015 Fernando H M Bastos. All rights reserved.
 //
 
-//hue
 import UIKit
-import Parse
-import Bolts
-
-//teste git
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

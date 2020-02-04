@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import Parse
 
 class GlassDetailViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
-    var currentObject : PFObject?
     
     
     override func viewDidLoad() {
@@ -21,10 +19,10 @@ class GlassDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let object = currentObject {
-            nameLabel.text = object["name"] as? String
-        }
+//        super.viewWillAppear(animated)
+//        if let object = currentObject {
+//            nameLabel.text = object["name"] as? String
+//        }
     }
 
     override func didReceiveMemoryWarning() {
